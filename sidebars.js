@@ -18,5 +18,13 @@ module.exports = {
       "angular/RoutingAndNavigation",
       "angular/typescript",
     ],
+    Django: [
+      "django/home",
+      "django/django_authentication_authorization",
+      "django/django_introduction",
+      "django/django_other",
+      "django/django_saving_data_to_db",
+      "django/django_template_engine",
+    ],
   },
 };
