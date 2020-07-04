@@ -1,0 +1,53 @@
+# Unit 1
+
+## HTML
+
+- Elements(Tags), Attributes
+  - Tags - Opening Tag, Closing tag, Self closing Tags
+  - Attributes provide additional information about the HTML element
+- Parts of the HTML Page
+  - Document Type
+  - HEAD - It is used to define the Information about the web Page
+  - BODY - It is used to define the Content to be displayed on the Web Page
+- HEAD Tag
+  - title
+- BODY Tags
+  - Headings, Paragraphs, Lists, Image, Table, Form
+  - Div, Span, id, class
+- Comments
+- Linking Pages
+- Formatting Elements
+  - em, strong, i, b, hr, br, sub, sup, u, code, pre, abbr, address
+- Media Elements
+  - img, audio, video, iframe
+- Multimedia and embedding
+  - images
+  - figure, figcaption
+  - video, audio
+  - iframe
+  - embed, object
+  - SVG -
+  - adding image using picture and source tag
+- Working With Form
+  - textarea, input, select, option
+  - Input Types
+    - Radio
+    - Checkbox
+    - Datalist Tag
+  - form, label, input, textarea, button
+  - action, method
+  - label: for
+  - input: type, name, value, required, readonly, range
+  - fieldset, leged
+  - select, option
+  - input type: radio, checkbox, file: (custom file upload), email, password, number, date
+  - button: type
+  - textarea: col, row , wrap
+- Tables
+  - Tages: th, td, tr, thead, tbody, tfoot, colgroup, col, caption
+- HTML5 Organization Tags
+  - section, article, nav, header, footer, aside, main
+- HTML page validation
+- Adding Meta Information
+  - author, description
+- Adding custom icon
