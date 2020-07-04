@@ -5,4 +5,4 @@ sidebar_label: Home Page
 ---
 
 - [Angular](angular)
-- [React](react)
+- [React](react/home)

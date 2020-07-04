@@ -1,17 +1,22 @@
 module.exports = {
   docs: {
-    Docusaurus: ["doc1", "doc2", "doc3"],
-    Features: ["mdx"],
-    Angular: ["angular"],
-    React: ["react/introduction"],
-    // Guides: [
-    //   "angular",
-    //   {
-    //     type: "category",
-    //     label: "Docs",
-    //     collapsed: false,
-    //     items: ['angular'],
-    //   },
-    // ],
+    React: ["react/home", "react/introduction"],
+    Angular: [
+      "angular/home",
+      "angular/Introduction",
+      "angular/AccessingServerOverHTTP",
+      "angular/angular_material",
+      "angular/ComponentsAndTemplates",
+      "angular/DependencyInjection",
+      "angular/FormsForUserInput",
+      "angular/generating_mockdata_using_facker",
+      "angular/NgModules",
+      "angular/ObservableAndRxjs",
+      "angular/Others",
+      "angular/others_angular",
+      "angular/project_file_structure",
+      "angular/RoutingAndNavigation",
+      "angular/typescript",
+    ],
   },
 };
