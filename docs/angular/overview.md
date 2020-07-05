@@ -1,7 +1,7 @@
 ---
 # id: angular
 title: Angular Overview
-# sidebar_label: Angular Overview
+sidebar_label: Angular Overview
 hide_title: true
 # hide_table_of_contents: false
 # custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md

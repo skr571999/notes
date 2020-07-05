@@ -1,14 +1,14 @@
 module.exports = {
-  title: "My Site",
+  title: "My Docs",
   tagline: "The tagline of my site",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "skr571999", // Usually your GitHub org/user name.
+  projectName: "mydocs", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "My Site",
+      title: "My Docs",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
@@ -75,7 +75,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} My Docs, Inc. Built with Docusaurus.`,
     },
   },
   presets: [

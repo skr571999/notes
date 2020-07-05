@@ -1,5 +1,5 @@
 const Angular = [
-  "angular/home",
+  "angular/overview",
   "angular/Introduction",
   "angular/AccessingServerOverHTTP",
   "angular/angular_material",
@@ -17,6 +17,7 @@ const Angular = [
 ];
 
 const C_Language = [
+  "c_language/overview",
   "c_language/01intro",
   "c_language/02devenv",
   "c_language/03variables",
@@ -34,7 +35,7 @@ const C_Language = [
 ];
 
 const Django = [
-  "django/home",
+  "django/overview",
   "django/django_authentication_authorization",
   "django/django_introduction",
   "django/django_other",
@@ -43,7 +44,7 @@ const Django = [
 ];
 
 const ML_DL = [
-  "ml_dl/home",
+  "ml_dl/overview",
   "ml_dl/dl_intro",
   "ml_dl/intro_ai",
   "ml_dl/matplotlib",
@@ -117,6 +118,7 @@ const React = [
 ];
 
 const Tools = [
+  "tools/overview",
   "tools/cmd",
   "tools/git_github",
   "tools/heroku",
@@ -130,6 +132,7 @@ const Tools = [
 ];
 
 const Web = [
+  "web/overview",
   "web/bom_1",
   "web/bom_2",
   "web/css",
