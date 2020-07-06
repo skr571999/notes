@@ -110,7 +110,6 @@ const Python = [
 
 const React = [
   "react/overview",
-  "react/introduction",
   "react/codeevolution_course-1",
   "react/codeevolution_course-2",
   "react/codeevolution_course-3",
