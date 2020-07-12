@@ -36,11 +36,11 @@ const C_Language = [
 
 const Django = [
   "django/overview",
-  "django/django_authentication_authorization",
   "django/django_introduction",
-  "django/django_other",
-  "django/django_saving_data_to_db",
   "django/django_template_engine",
+  "django/django_saving_data_to_db",
+  "django/django_authentication_authorization",
+  "django/django_other",
 ];
 
 const ML_DL = [
@@ -55,23 +55,23 @@ const ML_DL = [
 
 const NodeJS = [
   "nodejs/overview",
-  "nodejs/authentication_and_authorization",
-  "nodejs/data_validation_using_joi",
-  "nodejs/expressjs_getting_data_from_client",
+  "nodejs/nodejs_introduction",
+  "nodejs/nodejs_builtin_modules",
+  "nodejs/nodejs_module_system",
+  "nodejs/npm_introduction",
+  "nodejs/nodejs_mongodb",
   "nodejs/expressjs_introduction",
   "nodejs/expressjs_template_engine_ejs",
   "nodejs/expressjs_template_engine_pug",
+  "nodejs/expressjs_getting_data_from_client",
+  "nodejs/data_validation_using_joi",
   "nodejs/file_upload_using_multer",
-  "nodejs/making_rest_api",
-  "nodejs/mvc_architecture",
-  "nodejs/nodejs_builtin_modules",
-  "nodejs/nodejs_introduction",
-  "nodejs/nodejs_module_system",
-  "nodejs/nodejs_mongodb",
-  "nodejs/npm_introduction",
-  "nodejs/other",
   "nodejs/saving_data_to_db_using_mongoose",
+  "nodejs/authentication_and_authorization",
   "nodejs/sending_mail_using_nodemailer",
+  "nodejs/mvc_architecture",
+  "nodejs/making_rest_api",
+  "nodejs/other",
 ];
 
 const Python = [

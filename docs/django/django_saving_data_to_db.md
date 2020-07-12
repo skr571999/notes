@@ -1,4 +1,6 @@
-# Saving Data to DB in Django
+---
+title: Saving Data to DB using Django
+---
 
 - To save data to the Database django used the concept of ORM (Object Relational Mapping)
 - ORM - is a technique used to manipulate data of a database using the concept of OOPs.

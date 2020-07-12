@@ -57,6 +57,8 @@ hide_title: true
 - [https://www.edyoda.com/program/full-stack-developer-program/](https://www.edyoda.com/program/full-stack-developer-program/)
 - [https://learnnode.com/](https://learnnode.com/)
 - [https://pro.academind.com/p/nodejs-the-complete-guide-incl-mvc-rest-apis-graphql](https://pro.academind.com/p/nodejs-the-complete-guide-incl-mvc-rest-apis-graphql)
+- [Book Practical Node v2](https://github.com/azat-co/practicalnode)
+- [MongoDB University Aggregation](https://www.youtube.com/playlist?list=PLWkguCWKqN9OwcbdYm4nUIXnA2IoXX0LI)
 
 ## Articles
 

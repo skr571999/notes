@@ -1,4 +1,6 @@
-# ExpressJS Template Engine - EJS
+---
+title: ExpressJS Template Engine EJS
+---
 
 - EJS - Template Engine
 

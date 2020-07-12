@@ -1,4 +1,6 @@
-# UPNEXT
+---
+title: Django Others
+---
 
 ## Modal Form
 

@@ -1,4 +1,6 @@
-# Sending Mail
+---
+title: Sending Mail using Nodemailer
+---
 
 - Using nodemailer
 
@@ -13,8 +15,8 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: SENDER_MAIL,
-    pass: process.env.EMAIL_PASSWORD
-  }
+    pass: process.env.EMAIL_PASSWORD,
+  },
 });
 
 transporter
@@ -23,12 +25,12 @@ transporter
     to: RECEIVER_MAIL,
     subject: "Friday Sale",
     text: "Apple iPhone X 11 pro Sale",
-    html: "<h1>Apple iPhone X 11 pro Sale</h1>"
+    html: "<h1>Apple iPhone X 11 pro Sale</h1>",
   })
-  .then(result => {
+  .then((result) => {
     console.log(result);
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(err);
   });
 

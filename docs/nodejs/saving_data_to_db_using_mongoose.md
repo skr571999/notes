@@ -1,4 +1,6 @@
-# Saving Data to DB using Mongoose
+---
+title: Saving Data to DB using Mongoose
+---
 
 - What is ORM
   - ORM is a technique for converting data between incompatible type systems using object-oriented programming languages.
@@ -15,7 +17,7 @@ const dbURL = "mongodb://localhost/sunday";
 
 mongoose
   .connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(res => {
+  .then((res) => {
     // console.dir(res, { depth: 0 });
     console.log("DB connected");
 
@@ -24,7 +26,7 @@ mongoose
 
     // res.connection.close();
   })
-  .catch(err => {
+  .catch((err) => {
     console.log("Error in DB Connection : ", err.name);
   });
 
@@ -32,8 +34,8 @@ let Employe = mongoose.model(
   "Employe",
   new mongoose.Schema({
     name: {
-      type: String
-    }
+      type: String,
+    },
   })
 );
 

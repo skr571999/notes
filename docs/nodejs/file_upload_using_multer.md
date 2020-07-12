@@ -1,4 +1,6 @@
-# File Upload Using Multer
+---
+title: File Upload Using Multer
+---
 
 ```js
 // npm i multer
@@ -21,7 +23,7 @@ let storage = multer.diskStorage({
       null,
       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
     );
-  }
+  },
 });
 
 let upload = multer({ storage: storage });

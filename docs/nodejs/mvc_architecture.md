@@ -1,4 +1,6 @@
-# MVC Architectures
+---
+title: MVC Architectures
+---
 
 - MVC - Model, View, Controller
 - Model - This part describe the structure of the data to be stored

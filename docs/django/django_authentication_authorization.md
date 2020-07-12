@@ -1,4 +1,6 @@
-# Authentication and Authorization
+---
+title: Authentication and Authorization in Django
+---
 
 - Authentication is the process of verifying the identity of a user.
 - Authorization is the process of giving permission to access a page using authentication.

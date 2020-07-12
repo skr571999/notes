@@ -1,4 +1,6 @@
-# ExpressJS Template Engine - PUG
+---
+title: ExpressJS Template Engine PUG
+---
 
 ```js
 // npm i pug

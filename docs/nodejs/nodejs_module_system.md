@@ -1,4 +1,6 @@
-# NodeJS Module System
+---
+title: NodeJS Module System
+---
 
 - **Why use Module System** - a member defined inside a module is not available inside another module but we can do that explicitly
 - NodeJS Uses the **commonjs** module system
@@ -35,7 +37,7 @@ RUN: node app
 ```js
 // Date.js
 // Exporting a single member
-exports.Date = function() {
+exports.Date = function () {
   return Date();
 };
 
@@ -55,7 +57,7 @@ console.log(sum.a);
 
 module.exports = {
   a: "Hello",
-  b: 123
+  b: 123,
 };
 
 // This will throw the error, when we are to export 2 or more member we need to use module.exports

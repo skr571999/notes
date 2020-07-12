@@ -1,4 +1,6 @@
-# Data validation
+---
+title: Data validation using Joi
+---
 
 - Using Joi
   - Installtion : `npm i @hapi/joi`
@@ -10,20 +12,17 @@ const Joi = require("@hapi/joi");
 
 let data = {
   name: "Sn",
-  email: "abc@gmail.com"
+  email: "abc@gmail.com",
 };
 
 const schema = Joi.object({
-  name: Joi.string()
-    .min(3)
-    .max(12)
-    .required(),
+  name: Joi.string().min(3).max(12).required(),
   email: Joi.string()
     .email({
       minDomainSegments: 2,
-      tlds: { allow: ["com", "net"] }
+      tlds: { allow: ["com", "net"] },
     })
-    .required()
+    .required(),
 });
 
 let { value, error } = schema.validate(data);

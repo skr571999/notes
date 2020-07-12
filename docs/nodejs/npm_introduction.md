@@ -1,4 +1,6 @@
-# NPM Introduction
+---
+title: NPM Introduction
+---
 
 ## Basic Commands
 

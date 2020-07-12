@@ -1,4 +1,6 @@
-# REST API
+---
+title: Making REST API
+---
 
 - API - Application Programming Interface
 - REST - Representational state transfer
@@ -50,7 +52,19 @@
   - CURL
   - Postman
 
-<!--
-- Book Practical Node v2 - https://github.com/azat-co/practicalnode
-- MongoDB Aggregation : https://www.youtube.com/playlist?list=PLWkguCWKqN9OwcbdYm4nUIXnA2IoXX0LI
--->
+## CORS Headers
+
+```js
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PATCH, DELETE, OPTIONS"
+  );
+  next();
+});
+```

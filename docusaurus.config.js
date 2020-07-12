@@ -1,16 +1,16 @@
 module.exports = {
-  title: "My Docs",
-  tagline: "The tagline of my site",
+  title: "SKR Notes",
+  tagline: "SKR Notes",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "skr571999", // Usually your GitHub org/user name.
-  projectName: "mydocs", // Usually your repo name.
+  projectName: "skrnotes", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "My Docs",
+      title: "SKR Notes",
       logo: {
-        alt: "My Site Logo",
+        alt: "SKR Notes Logo",
         src: "img/logo.svg",
       },
       links: [
@@ -20,7 +20,7 @@ module.exports = {
           label: "Docs",
           position: "left",
         },
-        // { to: "blog", label: "Blog", position: "left" },
+        { to: "blog", label: "Blog", position: "left" },
         // {
         //   href: 'https://github.com/facebook/docusaurus',
         //   label: 'GitHub',
@@ -35,17 +35,17 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Style Guide",
-              to: "docs/",
+              label: "Angular",
+              to: "docs/angular/overview",
             },
             {
-              label: "Second Doc",
-              to: "docs/doc2/",
+              label: "NodeJS",
+              to: "docs/nodejs/overview",
             },
           ],
         },
         {
-          title: "Community",
+          title: "Docusaurus Community",
           items: [
             {
               label: "Stack Overflow",
@@ -75,7 +75,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Docs, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <b>SKR Notes</b>. Built using <a target="_blank" href="https://docusaurus.io">Docusaurus</a>.`,
     },
   },
   presets: [
@@ -94,8 +94,8 @@ module.exports = {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/blog/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/edit/master/website/blog/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

@@ -18,15 +18,6 @@ hide_title: true
 - Modalformfileupload
 - Searchbar
 
-## New
-
-- Poolapp
-- Poolapp2
-- Restapi
-- Restcrud
-- restdemo1
-- restcrud2
-
 ## Projects
 
 - Ecare

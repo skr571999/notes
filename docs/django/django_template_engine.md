@@ -1,4 +1,6 @@
-# Django Template Engine
+---
+title: Django Template Engine
+---
 
 - Template Engine are used to generate dynamic HTML pages. Django has a builtin template engine called - Django template language(DTL)
 - Using the default Folder inside app

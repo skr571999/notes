@@ -1,4 +1,6 @@
-# MongoDB using NodeJS
+---
+title: NodeJS MongoDB
+---
 
 ## Basic Connection
 
@@ -68,7 +70,7 @@ collection.insertOne({ name: "Sachin Kumar", branch: "CSE" }, (err, res) => {
 // Method - 2
 let documents = [
   { name: "Mradul Kumar", branch: "ME" },
-  { name: "Rajneesh Kumar", branch: "EC" }
+  { name: "Rajneesh Kumar", branch: "EC" },
 ];
 
 collection.insertMany(documents, (err, res) => {
@@ -117,9 +119,9 @@ const dbURL = "mongodb://localhost:27017/sunday";
 
 MongoClient.connect(dbURL, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 })
-  .then(client => {
+  .then((client) => {
     // console.dir(client, { depth: 0 });
 
     // let collection = client.db().collection("student");
@@ -180,7 +182,7 @@ MongoClient.connect(dbURL, {
 
     client.close();
   })
-  .catch(err => {
+  .catch((err) => {
     console.log("Error Occured During Connection", err.name);
   });
 ```

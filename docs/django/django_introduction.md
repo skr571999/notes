@@ -1,4 +1,6 @@
-# Django Introduction
+---
+title: Django Introduction
+---
 
 ## About Django
 

@@ -1,4 +1,6 @@
-# Others
+---
+title: Others
+---
 
 ## Other Tasks
 

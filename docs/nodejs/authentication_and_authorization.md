@@ -1,4 +1,6 @@
-# Authentication and Authorization
+---
+title: Authentication and Authorization
+---
 
 - Cookes, Sessions
 - Flash Messages
