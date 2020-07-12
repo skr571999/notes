@@ -1,4 +1,6 @@
-# Git and GitHub
+---
+title: Git and GitHub Intrioduction
+---
 
 - Git - Distributed Version Control System
 

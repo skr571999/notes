@@ -1,4 +1,6 @@
-# VIM
+---
+title: VIM Introduction
+---
 
 ## Modes
 
@@ -7,6 +9,7 @@
 
 ## Working with Files
 
+```cmd
 - Opening a file in vim
  	- vim hello.txt
 
@@ -28,3 +31,4 @@ iii) To save a file and Quit Vim
 	- k - up
 	- h - left
 	- l - right
+```

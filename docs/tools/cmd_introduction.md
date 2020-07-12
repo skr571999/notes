@@ -1,6 +1,8 @@
-# CMD
+---
+title: CMD Introduction
+---
 
-<!--
+```cmd
 cd
 cls
 cd ..
@@ -75,4 +77,4 @@ D:
 - systeminfo ==> show hardware information
 
 - wmic product get name ==> show installed programes on system
--->
+```

@@ -1,4 +1,6 @@
-# VSCode Shortcuts
+---
+title: Shortcuts VSCode
+---
 
 - shift + alt : column selection
 - alt + scroll : to scroll with the 5x speed

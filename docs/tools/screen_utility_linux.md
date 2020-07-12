@@ -1,6 +1,8 @@
-# Screen Commands in Linux
+---
+title: Screen Commands in Linux
+---
 
-By using Screen command in Linux we can start multiple shell session at the same time and use them. 
+By using Screen command in Linux we can start multiple shell session at the same time and use them.
 
 ## Resource
 
@@ -8,6 +10,7 @@ By using Screen command in Linux we can start multiple shell session at the same
 
 ## Usage
 
+```cmd
 - Installing Screen
 	- sudo apt install screen
 - Start a Screen Session
@@ -29,4 +32,5 @@ By using Screen command in Linux we can start multiple shell session at the same
 	- II - (CTRL + A) + type :sessionname NEW_SESSION_NAME
 - To see the current Session name
 	- I - Go to that Session
-	- II - echo $STY 
+	- II - echo $STY
+```

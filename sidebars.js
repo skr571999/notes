@@ -118,16 +118,15 @@ const React = [
 
 const Tools = [
   "tools/overview",
-  "tools/cmd",
-  "tools/git_github",
-  "tools/heroku",
+  "tools/cmd_introduction",
+  "tools/git_github_introduction",
+  "tools/heroku_introduction",
   "tools/markdown_introduction",
-  "tools/others",
   "tools/screen_utility_linux",
   "tools/Shortcut_Sublime",
   "tools/Shortcut_VSCode",
-  "tools/tools",
-  "tools/vim",
+  "tools/vim_introduction",
+  "tools/others",
 ];
 
 const Web = [
