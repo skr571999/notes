@@ -1,7 +1,7 @@
 module.exports = {
   title: "SKR Notes",
   tagline: "SKR Notes",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://skrnotes.netlify.app",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "skr571999", // Usually your GitHub org/user name.
