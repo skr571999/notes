@@ -10,7 +10,7 @@ module.exports = {
     navbar: {
       title: "SKR Notes",
       logo: {
-        alt: "SKR Notes Logo",
+        alt: "Logo",
         src: "img/logo.svg",
       },
       links: [
@@ -22,9 +22,9 @@ module.exports = {
         },
         { to: "blog", label: "Blog", position: "left" },
         // {
-        //   href: 'https://github.com/facebook/docusaurus',
-        //   label: 'GitHub',
-        //   position: 'right',
+        //   href: "https://github.com/skr571999",
+        //   label: "GitHub",
+        //   position: "right",
         // },
       ],
     },
@@ -45,19 +45,15 @@ module.exports = {
           ],
         },
         {
-          title: "Docusaurus Community",
+          title: "Connect",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "GitHub",
+              href: "https://github.com/skr571999",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/in/skr571999/",
             },
           ],
         },
@@ -68,14 +64,10 @@ module.exports = {
               label: "Blog",
               to: "blog",
             },
-            {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
-            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <b>SKR Notes</b>. Built using <a target="_blank" href="https://docusaurus.io">Docusaurus</a>.`,
+      copyright: `Built using <a target="_blank" href="https://docusaurus.io">Docusaurus</a>.`,
     },
   },
   presets: [
