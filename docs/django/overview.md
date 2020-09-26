@@ -1,6 +1,5 @@
 ---
 title: Django Overview
-hide_title: true
 ---
 
 ## Learning Topics(docs)
@@ -10,24 +9,6 @@ hide_title: true
 - Django - Saving Data to DB
 - Django - Authentication and Authorization
 - Django - Others
-
-## Examples
-
-- DjangoFormDemo
-- GenericeViewDemo
-- Modalformfileupload
-- Searchbar
-
-## Projects
-
-- Ecare
-- Ecommerce
-- EDoctorApp
-- Eshop
-- MyTodo
-- PoolsApp
-- QuizApp
-- Railway
 
 ## Todo
 

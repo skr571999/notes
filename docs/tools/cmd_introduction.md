@@ -77,4 +77,7 @@ D:
 - systeminfo ==> show hardware information
 
 - wmic product get name ==> show installed programes on system
+
+- explorer "https://google.com" # to open default browser
+- start opera "https://google.com" # to open opera
 ```

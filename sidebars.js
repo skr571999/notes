@@ -40,7 +40,9 @@ const Django = [
   "django/django_template_engine",
   "django/django_saving_data_to_db",
   "django/django_authentication_authorization",
+  "django/django_modal_fields",
   "django/django_other",
+  "django/drf_random",
 ];
 
 const ML_DL = [
@@ -151,8 +153,8 @@ const Web = [
   "web/js_core/operaors",
   "web/js_core/others",
   "web/js_core/prototype_demo",
-  "web/js_core/questions/10DaysOfJavaScript",
-  "web/js_core/questions/questions",
+  // "web/js_core/questions/10DaysOfJavaScript",
+  // "web/js_core/questions/questions",
   "web/js_core/README",
   "web/js_core/regex",
   "web/js_core/variable_scope",
