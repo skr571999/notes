@@ -4,4 +4,4 @@
 
 - Clone the Repo
 - `cd website`
-- `npm start`
+- `yarn start`

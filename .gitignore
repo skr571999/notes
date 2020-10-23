@@ -1,3 +1,6 @@
+# pythonenv for github Codespaces
+pythonenv*
+
 # Dependencies
 /node_modules
 
