@@ -1,14 +1,14 @@
 module.exports = {
-  title: "SKR Notes",
-  tagline: "SKR Notes",
+  title: "SKR Web Notes",
+  tagline: "Web Development Learning Notes",
   url: "https://skrnotes.netlify.app",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "skr571999", // Usually your GitHub org/user name.
-  projectName: "skrnotes", // Usually your repo name.
+  projectName: "skrwebnotes", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "SKR Notes",
+      title: "SKR WebNotes",
       logo: {
         alt: "Logo",
         src: "img/logo.svg",
@@ -16,16 +16,15 @@ module.exports = {
       links: [
         {
           to: "docs/",
-          activeBasePath: "docs1",
           label: "Docs",
           position: "left",
         },
         { to: "blog", label: "Blog", position: "left" },
-        // {
-        //   href: "https://github.com/skr571999",
-        //   label: "GitHub",
-        //   position: "right",
-        // },
+        {
+          href: "https://github.com/skr571999/skrwebnotes",
+          label: "GitHub",
+          position: "right",
+        },
       ],
     },
     footer: {
