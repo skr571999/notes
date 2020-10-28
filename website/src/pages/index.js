@@ -20,7 +20,7 @@ const features = [
     ),
   },
   {
-    title: <>Level - 3</>,
+    title: <>Level - 2</>,
     imageUrl: "img/undraw_docusaurus_react.svg",
     description: <>Mastering the Technology.</>,
   },

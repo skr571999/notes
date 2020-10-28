@@ -1,4 +1,89 @@
-# Object Demos
+---
+title: JS Objects
+---
+
+## Object
+
+- Using the `Object()` Constructor
+
+```js
+let std = new Object();
+std.name = "Manoj";
+std.course = "CSE";
+std.log = function () {
+  console.log(`Hello, ${this.name}`);
+};
+console.log(std.log());
+
+Object(12); // Number() object
+Object("Ram"); // String() object
+Object(true); // Boolean() object
+Object({ name: "Ram" }); // Object() object
+```
+
+- Object Creation using the Constructor Function
+
+- `Object.freeze()`
+
+```js
+const math = {
+  PI: 3.14,
+};
+
+math.PI = 99;
+Object.freeze(math);
+("use strict");
+math.PI = 99; // Error
+```
+
+## Using Math
+
+```js
+a = 3.14;
+console.log(Math.floor(a)); // 3 - to min
+console.log(Math.ceil(a)); // 4 - to max
+
+// Random number
+let upper = 6;
+let lower = 1;
+let radNum = Math.ceil(Math.random() * (upper - lower + 1)) + lower;
+console.log("Random num : ", radNum);
+
+// Generate a random number between a range
+Math.floor(Math.random() * (maxNo - minNo + 1)) + minNo;
+```
+
+---
+
+## Using JSON
+
+JavaScript Object Notation
+
+```js
+let a, b, c;
+a = {
+  id: 11,
+  name: "Abc",
+  branch: "CSE",
+};
+
+console.log(a);
+// Javascript Value to the JSON string
+b = JSON.stringify(a);
+console.log(b);
+
+// Json String to the JavaScript object
+c = JSON.parse(b);
+console.log(c);
+
+a = [1, 2, 3, 4];
+console.log(JSON.stringify(a));
+
+a = "hello JavaScript";
+console.log(JSON.stringify(a));
+```
+
+## Object Demos
 
 ```js
 // object literal
@@ -6,10 +91,10 @@
   let std = {
     name: "Piyush",
     rollno: 1001,
-    desc: function() {
+    desc: function () {
       //console.log(`Piyush ${name} Rollno: ${this.rollno} `);
       console.log(`${this.name} Rollno: ${this.rollno} `);
-    }
+    },
   };
   std.desc();
 }
@@ -20,9 +105,9 @@
     return {
       name: name,
       rollno: rollno,
-      desc: function() {
+      desc: function () {
         console.log(`${name} Rollno: ${this.rollno} `);
-      }
+      },
     };
   }
 
@@ -40,7 +125,7 @@
     console.log(this);
     this.name = name;
     this.rollno = rollno;
-    this.desc = function() {
+    this.desc = function () {
       console.log(`${this.name} Rollno: ${this.rollno} `);
     };
   }
@@ -71,7 +156,7 @@
   function Student(name, rollno) {
     this.name = name;
     this.rollno = rollno;
-    this.desc = function() {
+    this.desc = function () {
       console.log(`${this.name} Rollno: ${this.rollno} `);
     };
   }
@@ -94,7 +179,7 @@
   function Student(name, rollno) {
     this.name = name;
     this.rollno = rollno;
-    this.desc = function() {
+    this.desc = function () {
       console.log(`${this.name} Rollno: ${this.rollno} `);
     };
   }
@@ -146,7 +231,7 @@
   function Student(name, rollno) {
     this.name = name;
     this.rollno = rollno;
-    this.desc = function() {
+    this.desc = function () {
       console.log(`${this.name} Rollno: ${this.rollno} `);
     };
   }
@@ -177,17 +262,17 @@
     this.rollno = rollno;
 
     let courses = ["HTML", "CSS"];
-    this.getCourses = function() {
+    this.getCourses = function () {
       return courses;
     };
 
     Object.defineProperty(this, "courses", {
-      get: function() {
+      get: function () {
         return courses;
       },
-      set: function(newcourses) {
+      set: function (newcourses) {
         courses = newcourses;
-      }
+      },
     });
   }
 
@@ -199,4 +284,72 @@
   std.courses = ["Python", "Django"];
   console.log(std.courses);
 }
+```
+
+## Object Methods
+
+```js
+// Object.freeze()
+function Student() {
+  this.name = "Ram Kumar";
+}
+
+let s1 = new Student();
+
+Object.freeze(s1); // prevent the Addition of any property to s1
+
+s1.class = "CSE";
+console.log(s1);
+
+Object.freeze(Student); // prevent the addition of any property to the Student
+Student.apple = "Google";
+
+let s2 = { name: "Google" };
+
+Object.defineProperty(s2, "class", {
+  writable: false,
+  value: "CSE",
+});
+
+// // Returns the names of the own properties of an object. The own properties of an object are those that are defined directly on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
+// console.log(Object.getOwnPropertyNames(s2))
+
+// // Gets the own property descriptor of the specified object. An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
+// console.log(Object.getOwnPropertyDescriptor(s2, 'name'))
+
+// // Returns an object containing all own property descriptors of an object
+// console.log(Object.getOwnPropertyDescriptors(s2))
+
+// // Returns the names of the enumerable string properties and methods of an object.
+// console.log(Object.keys(s2))
+
+// // Returns a value that indicates whether new properties can be added to an object.
+// console.log(Object.isExtensible(s2.name))
+
+// // Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
+// console.log(Object.isFrozen(s1))
+
+// // Returns true if the values are the same value, false otherwise.
+// Object.is(ob1, ob2)
+
+//----------- Second way of defining the Attributes on the property ----------------
+// function Item(color, count) {
+//     this.color = color;
+//     this.count = count;
+//     Object.defineProperty(this, "size",
+//         { value: 7, writable: true, enumerable: false, configurable: "true" });
+// }
+
+// Creating the Copy of the Object
+let a = { name: "Mohit" };
+let c = { branch: "CSE" };
+
+let b = Object.assign({}, a, c);
+let d = { ...b };
+
+a.name = "Ram";
+
+console.log(a);
+console.log(b);
+console.log(d);
 ```

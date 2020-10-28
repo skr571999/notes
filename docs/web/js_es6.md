@@ -1,4 +1,6 @@
-# ES6
+---
+title: JS ES6
+---
 
 ## Classes
 
@@ -291,7 +293,7 @@ console.log(aa.sub(12, 2));
 // MyMath.js
 // Keywords used - export, default, import, as, from
 // Test - 1
-export const sum = function(a, b) {
+export const sum = function (a, b) {
   return a + b;
 };
 
@@ -305,7 +307,7 @@ export const name = "Rajneesh";
 
 export const data = {
   name: "Mradul",
-  course: "Python"
+  course: "Python",
 };
 
 function sub(a, b) {
@@ -319,12 +321,12 @@ export { sub };
 
 ```js
 let a = new Promise((resolve, reject) => {
-  setTimeout(function() {
+  setTimeout(function () {
     resolve("Success!");
   }, 1000);
 });
 
-a.then(successMessage => {
+a.then((successMessage) => {
   console.log("Yay! " + successMessage);
 });
 ```
@@ -398,24 +400,24 @@ async function getDataAsync() {
 
 function getData() {
   fetch(URL)
-    .then(res => res.json())
-    .then(result => {
+    .then((res) => res.json())
+    .then((result) => {
       console.log(result);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log("Error", err.name);
     });
 }
 
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-var add = async function(x) {
+var add = async function (x) {
   // async function expression assigned to a variable
   var a = await resolveAfter2Seconds(20);
   var b = await resolveAfter2Seconds(30);
@@ -426,12 +428,12 @@ var add = async function(x) {
 //   console.log(v);  // prints 60 after 4 seconds.
 // });
 
-(async function(x) {
+(async function (x) {
   // async function expression used as an IIFE
   var p_a = resolveAfter2Seconds(20);
   var p_b = resolveAfter2Seconds(30);
   return x + (await p_a) + (await p_b);
-})(10).then(v => {
+})(10).then((v) => {
   console.log(v); // prints 60 after 2 seconds.
 });
 ```
@@ -511,7 +513,7 @@ console.log(a.next());
 const std = {
   name: "Piyush",
   rollno: 111,
-  course: "Python"
+  course: "Python",
 };
 
 const { name, course } = std;
@@ -526,12 +528,12 @@ let std = {
   name: "Asdf",
   course: {
     web: ["HTML", "CSS", "JS"],
-    android: ["Java", "Android"]
-  }
+    android: ["Java", "Android"],
+  },
 };
 
 const {
-  course: { web: courses }
+  course: { web: courses },
 } = std;
 
 // ARRAY Destructing
@@ -557,7 +559,7 @@ detail(std);
 ```js
 let name = "Manoj";
 let a = {
-  name: name
+  name: name,
 };
 let b = { name }; // both a and b result the same Output
 ```
@@ -569,7 +571,7 @@ let a = {
   name: "Mradul",
   getDetail() {
     return "Hello World";
-  }
+  },
 };
 ```
 
@@ -754,7 +756,7 @@ console.log(std);
 a = [
   ["one", 1],
   ["two", 2],
-  ["three", 3]
+  ["three", 3],
 ];
 
 std = new Map(a);

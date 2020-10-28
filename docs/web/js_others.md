@@ -1,4 +1,6 @@
-# Others
+---
+title: JS Others
+---
 
 ## Strict Mode
 
@@ -75,7 +77,7 @@ function aa() {
 }
 ```
 
-## Asynchronuous Programming
+## Asynchronous Programming
 
 - Asynchronous programming is a means of writing non-blocking code by running a task on a separate thread than the main application thread and notifying the main thread about its progress, completion or failure.
 
@@ -94,7 +96,7 @@ function aa() {
 </video>
 
 <script>
-  document.querySelector("#video1").addEventListener("contextmenu", e => {
+  document.querySelector("#video1").addEventListener("contextmenu", (e) => {
     e.preventDefault();
   });
 </script>
@@ -102,21 +104,19 @@ function aa() {
 
 ---
 
-## Geolocation
+## Geo Location
 
 ```html
 <h1>Golocation Demo</h1>
 <script>
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(position => {
+    navigator.geolocation.getCurrentPosition((position) => {
       console.log("Latitude: ", position.coords.latitude);
       console.log("Longitude: ", position.coords.longitude);
     });
   }
 </script>
 ```
-
-## Embeding Google Map
 
 ## Form Validation
 
@@ -149,7 +149,7 @@ alert(a.toString());
 
 // Hidden properties
 let a = {
-  a: "AAA"
+  a: "AAA",
 };
 
 let b = Symbol();
@@ -205,4 +205,91 @@ console.log(a === b);
     box.style.background = g;
   }, 1000);
 </script>
+```
+
+## Regular Expression
+
+Regular Expression are used to perform pattern matching and search-and-replace functions on text
+
+### Syntax
+
+- `/pattern/modifers;`
+
+- Exmpale:
+
+```js
+let a = /abc/i;
+```
+
+here,
+
+|        |     |                          |
+| ------ | :-: | ------------------------ |
+| /abc/i |  :  | is the reguar expression |
+| abc    |  :  | is the pattern           |
+| i      |  :  | is the modifer           |
+
+### Regex Methods
+
+- exec()
+- test()
+- toString()
+
+### String Methods
+
+- match()
+- search()
+- matchAll()
+
+### **Modifers**
+
+are used to perform the case insentive and global match
+
+|     |     |                                  |
+| --- | :-: | -------------------------------- |
+| g   |  :  | perform the global match         |
+| i   |  :  | perform the case-insentive match |
+| m   |  :  | perform the multiline match      |
+
+### **Brackets**
+
+are used to find a range of the character
+
+|          |     |                                               |
+| -------- | :-: | --------------------------------------------- |
+| `[abc]`  |  :  | find any character in the bracket             |
+| `[^abc]` |  :  | find any character not in the bracket         |
+| `[0-9]`  |  :  | find any digit here, any digit between 0 to 9 |
+| `(x      | y)` | :                                             | find any one of the specified |
+|          |     |                                               |
+
+### **Meta characters**
+
+- these are the characters with a special meaning
+
+|      |     |                                                           |
+| ---- | :-: | --------------------------------------------------------- |
+| `.`  |  :  | matches any single character except the newline character |
+| `\w` |  :  | find a word character                                     |
+| `\W` |  :  | find a non-word character                                 |
+| `\d` |  :  | find a digit                                              |
+| `\D` |  :  | find a non digit                                          |
+| `\s` |  :  | find a White space Characrer                              |
+| `\S` |  :  | find a White non-space Characrer                          |
+| `\b` |  :  | find a match at the beginning/end                         |
+| `\B` |  :  | find the match but should not at the start or end         |
+
+### **Quantifiers**
+
+|      |     |                                                    |
+| ---- | :-: | -------------------------------------------------- |
+| `a+` |  :  | matches string having at least one occurence of a  |
+| `a*` |  :  | matches string having zero or more occurence of ad |
+| `a?` |  :  |                                                    |
+
+### Example
+
+```js
+// Email verification
+let rex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 ```
