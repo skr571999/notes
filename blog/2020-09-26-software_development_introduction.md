@@ -10,6 +10,8 @@ tags: [Software Development Introduction]
 
 Simple notes about the Software and software development.
 
+<!--truncate-->
+
 - **Software** - is the set of instructions or programs that tell a computer what to do.
 
 - **Software development** - refers to a set of activities dedicated to the process of Creating, Designing, Deploying and Supporting software.

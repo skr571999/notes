@@ -8,6 +8,10 @@ author_image_url: https://avatars0.githubusercontent.com/u/31756244?s=460&u=0710
 tags: [Web Development Introduction]
 ---
 
+Web Development Introduction
+
+<!--truncate-->
+
 - **What is Web Development?** - It is the work involved in developing a website for the Internet. Web development can range from developing a simple single static page of plain text to complex web-based internet applications, electronic businesses, and social network services.
 
 - **Frontend Technologies**
