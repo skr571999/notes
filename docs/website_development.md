@@ -1,9 +1,279 @@
 ---
-id: bom
-title: BOM
-hide_title: true
-sidebar_label: BOM
+title: Website Development
 ---
+
+## HTML Introduction
+
+- Hypertext Markup Language
+- HTML is used to describe the structure of the web page.
+- HTML Document extension (.html)
+- HTML is not Case sensitive
+
+## CSS Introduction
+
+- Cascading Stylesheet
+- Used to describe the Style for the HTML document
+- Ways of adding CSS to HTML page
+  - Inline - Style attribute
+  - Internal - Style tag
+  - External - (.css) file
+- Working: Selector --> Property --> Value
+
+## JS Introduction
+
+- It is used to give behavior to the Web page
+- Interpreted
+- Free <!-- and Open source -->
+- Developed By - **Brendan Eich** in `1995`
+- Automatic Semicolon Insertion(ASI)
+- Dynamic Type - data type of variable can be changed
+- Case Sensitive
+  <!-- - JavaScript engines uses JIT(Just-In-Time)
+    - Run-Time compilations
+  - Programming Syntax
+    - Scripting
+    - Function
+    - Object Oriented(Prototype based)
+    - Module Based -->
+- JS Versions
+
+| Year    |     | Name                 |
+| ------- | :-: | -------------------- |
+| 1995    |  -  | Creation by Netscape |
+| 1997    |  -  | ES1                  |
+| 2009-10 |  -  | ES5                  |
+| 2015    |  -  | ES6                  |
+| 2017    |  -  | ES7                  |
+|         |     |                      |
+
+<!-- - **ECMAScript** is the Specification defined by the _ECMA Organization_
+  - ECMAScript - European Computer manufactures Association Script
+- **JavaScript** is the language that obey ECMAScript specification -->
+
+- Other Applications of JS
+  - Browser - Chrome, Opera
+  - Server side - NodeJS
+  - SPA - ReactJS, Angular
+  - Desktop App - ElectronJS
+  - Android, iOS App - React Native, Iconic
+
+<!-- - VR, AR(React 360, React VR)
+    - ML (Tensorflow.js)
+    - IOT
+- Where JS Run
+  - **Browser** - have JavaScript Engines like, `v8`, `Spider-Monkey`, etc.
+  - **NodeJS** - It is a c++ program that includes _Google V8_ engine.
+  - _JavaScript Engine_ is a software program that execute JavaScript Code. -->
+
+- Ways of Adding JS to a Web Page
+  - Internal
+  - External(extension- .js)
+- Prompt Boxes(alert, confirm, prompt)
+- Comments
+
+```js
+// Single Line Comment
+/*
+  multiple lines
+  Comments
+*/
+
+// Dynamic Typing
+let a; // undefined
+a = "Manoj"; // string
+a = true; // booleam
+a = [1, 2, 3, 4]; // array object
+a = { name: "Manoj" }; // object
+```
+
+<!--
+- We can divide javascript into three parts
+  - Core
+  - Browser
+  - NodeJS
+- In Core JS ==> ES5, ES6, above ES6
+- In Browser JS ==> we have Browser Object model
+  - Location, Window, Navigator, History, Document, Screen
+- In NodeJS we have builtin modules and Others
+
+- JavaScript Course :https://course.profitwithjavascript.com/
+-->
+
+<!--
+console.log(document.body) // will log body as html document
+console.dir(document.body) // will log body as JS object
+-->
+
+## HTML
+
+- Elements(Tags), Attributes
+  - Tags - Opening Tag, Closing tag, Self closing Tags
+  - Attributes provide additional information about the HTML element
+- Parts of the HTML Page
+  - Document Type
+  - HEAD - It is used to define the Information about the web Page
+  - BODY - It is used to define the Content to be displayed on the Web Page
+- HEAD Tag
+  - title
+- BODY Tags
+  - Headings, Paragraphs, Lists, Image, Table, Form
+  - Div, Span, id, class
+- Comments
+- Linking Pages
+- Formatting Elements
+  - em, strong, i, b, hr, br, sub, sup, u, code, pre, abbr, address
+- Media Elements
+  - img, audio, video, iframe
+- Multimedia and embedding
+  - images
+  - figure, figcaption
+  - video, audio
+  - iframe
+  - embed, object
+  - SVG -
+  - adding image using picture and source tag
+- Working With Form
+  - textarea, input, select, option
+  - Input Types
+    - Radio
+    - Checkbox
+    - Datalist Tag
+  - form, label, input, textarea, button
+  - action, method
+  - label: for
+  - input: type, name, value, required, readonly, range
+  - fieldset, leged
+  - select, option
+  - input type: radio, checkbox, file: (custom file upload), email, password, number, date
+  - button: type
+  - textarea: col, row , wrap
+- Tables
+  - Tages: th, td, tr, thead, tbody, tfoot, colgroup, col, caption
+- HTML5 Organization Tags
+  - section, article, nav, header, footer, aside, main
+- HTML page validation
+- Adding Meta Information
+  - author, description
+- Adding custom icon
+
+## CSS
+
+- Selectors
+  - Tag, Class, Id, Multiple
+- properties and values
+  - color, background-color, width, height, margin, padding, font-family, font-size, font-weight, border, text-align
+  - color Values
+- width in percentage: responsive design
+- Comments
+- Advance Selector
+  - `ul li`
+  - `ul > li`
+  - `h1, h2`
+  - `input[type=text]`
+  - Pseudo Selectors
+    - Styling at a particular state of a Element
+    - `:hover`
+    - `::before`
+    - `::selection`
+- Properties Categories
+  - Styling Text
+    - Font formatting
+    - Links, List Styling
+  - Styling Box
+    - Background
+    - Border
+    - Margin, Padding
+    - Height, Width
+- Responsive Design
+  - View Port
+  - Media Queries
+  - Flexbox
+  - Grid
+- CSS Variables
+- Transform
+- Transition
+- Animation
+
+### FlexBox Properties
+
+- Container Properties
+  - flex-direction
+  - flex-wrap
+  - flex-flow - shorthand for flex-direction and flex-wrap
+  - justify-content
+  - align-items
+  - align-content
+- Child Element Properties
+  - order
+  - flex-grow
+  - flex-shrink
+  - flex-basis - specify the initial width
+  - flex - shorthand property for flex-grow, flex-shrink, and flex-basis
+  - align-self
+
+### Media Queries
+
+- Media Types
+  - all
+  - print
+  - screen
+  - speech
+
+```css
+@media screen and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+}
+```
+
+- Specifing media for style sheet
+
+```html
+<link
+  rel="stylesheet"
+  media="screen and (min-width: 900px)"
+  href="widescreen.css"
+/>
+```
+
+### CSS Variables
+
+- Are Case Sensitive
+- Must be declared in Selector Scope OR for global scope use `:root`
+- variable name must start with `--`
+- declaration
+
+```css
+:root {
+  --mycolor: red;
+}
+```
+
+- Usage
+
+```css
+body {
+  background-color: var(--mycolor);
+}
+```
+
+<!--
+- Freecode camp (YouTube) - CSS3 30 Days
+  - https://www.youtube.com/playlist?list=PLWKjhJtqVAbl1AfjiGyYxwpdAPi5v-1OU
+-->
+
+<!--
+- Layout
+  - float, flex, position, grid, table
+- Color Values
+  - rgb()
+  - rgba(red, green, blue, alpha)
+  - HEX value
+  - hsl(hue, saturation, lightness)
+  - hsl(hue, saturation, lightness, alpha)
+- CSS clip-path maker => https://bennettfeely.com/clippy/
+-->
 
 ## BOM
 
@@ -806,3 +1076,271 @@ document.onkeyup = e => {
   }
 };
 -->
+
+## Pug Introduction
+
+### Installation
+
+```cmd
+npm i pug-cli -g
+pug --help
+intro> pug -w ./ -o ./html -P
+
+// folder
+// - intro
+//    - html
+//    - index.pug
+```
+
+### Usage
+
+- directly with node/browser
+- using build tool(gulp, webpack)
+- express intergation
+- Doctypes - `doctype html` -- {html, xml, strict}
+- multiple line
+
+```pug
+p.
+    this is a text
+    this is also a text
+p.text-center.
+    this is a text
+    this is also a text
+```
+
+### Id and class
+
+```pug
+h1#pageTitle
+p.big-text
+p.text-center.text-primary
+```
+
+- Attributes `input(type='text' name='name')`
+
+- Javascript `- var a = 13;`
+
+## SASS Introduction
+
+### Basics
+
+- Installation `npm i sass -g`, `sass --help`
+- Output Styles
+  - Commpressed
+  - Compact
+  - Expanded
+  - Nested
+- Usage
+
+```cmd
+// convert the scss file of styles/scss folder to styles/css
+sass --watch styles/scss:styles/css
+// converting sass <--> scss
+sass-convert styles.sass style.scss
+sass-convert styles.scss style.sass
+```
+
+### Variables
+
+```scss
+$primary-color: #00ffff;
+body {
+  color: $primary-color;
+}
+```
+
+### Nesting
+
+```scss
+body {
+  color: grey;
+  h1 {
+    color: lightgreen;
+  }
+}
+```
+
+### Partials and imports
+
+```scss
+// _break.scss
+h1 {
+  color: red;
+}
+
+// main.scss
+@import "break" body {
+  margin: 0;
+}
+```
+
+### Mixins
+
+```scss
+@mixin transform($property) {
+  --web-kit-transform: $property;
+  --ms-transform: $property;
+  transform: $property;
+}
+
+.box {
+  @include transform(rotate(30deg));
+}
+```
+
+### Extend and Inheritance
+
+```scss
+%message {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.message-success {
+  @extend %message;
+  color: green;
+}
+```
+
+## jQuery Introduction
+
+- jQuery is a JavaScript Library
+- Features of Jquery
+  - Easy to Use
+  - Cross browser Community
+  - Support AJAX
+  - Have Plugins
+  - Light Weight
+- Usage
+  - Using CDN - Google CDN Link
+  - By Downloading - From [jQuery Website](https://jquery.com/download/)
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+```
+
+### Working
+
+```js
+// - Element Selection
+$("h1");
+
+// - Adding the Action
+$("a").click(function (event) {
+  alert("As you can see, the link no longer took you to jquery.com");
+  event.preventDefault();
+});
+
+// - Launching code on Document Ready
+$(document).ready(function () {
+  // Your code here.
+});
+
+//  Attributes
+// As a setter
+$("a").attr("href", "about.html");
+$("a").attr({
+  title: "About Page",
+  href: "about.html",
+});
+// As a getter
+$("a");
+// ///// Changing the Content
+$("div").html("<p>Hello World</p>");
+$("div").text("<p>Hello World</p>");
+```
+
+```html
+<!--  Doing Change On Some Event -->
+<p>1</p>
+<button>Click to Add 1</button>
+
+<script>
+  $("button").click(() => {
+    $("p").text(parseInt($("p").text()) + 1);
+  });
+</script>
+
+<!-- OR -->
+<script>
+  $("button").on("click", () => {
+    $("p").text(parseInt($("p").text()) + 1);
+  });
+</script>
+```
+
+- Example
+
+```js
+$("button").on("click", () => {
+  $("p").text(parseInt($("p").text()) + 1);
+});
+
+$("button").off("click");
+
+$("button").one("click", () => {
+  console.log("Clicked Once");
+});
+```
+
+### Effects
+
+```html
+<div>
+  <p>Apple</p>
+  <p>Microsoft</p>
+  <p>Google</p>
+  <p>Dell</p>
+</div>
+
+<button>Hide Div</button>
+<script>
+  $("button").click(() => {
+    //$('div').toggle()
+    //$('div').show(1000)
+    //$('div').fadeIn(2000)
+    $("div").fadeToggle(2000);
+  });
+
+  $("button").dblclick(() => {
+    //$('div').hide('slow')
+    $("div").fadeOut("slow");
+  });
+</script>
+```
+
+### AJAX Call
+
+```html
+<button class="getData">Get Data</button>
+<button class="sendData">Send Data</button>
+
+<script>
+  $(".getData").click(() => {
+    $.get({
+      url: "http://localhost:3000/api/users/",
+    }).done((res) => {
+      console.log(res);
+    });
+  });
+
+  $(".sendData").click(() => {
+    $.post({
+      url: "http://localhost:3000/api/users/",
+      data: {
+        name: "Mradul",
+        courses: "Python",
+      },
+    }).done((res) => {
+      console.log(res);
+    });
+  });
+</script>
+```
+
+### Cash
+
+- Similar to jQuery
+
+<!-- https://kenwheeler.github.io/cash/ -->

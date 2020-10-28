@@ -16,23 +16,7 @@ const Angular = [
   "angular/typescript",
 ];
 
-const C_Language = [
-  "c_language/overview",
-  "c_language/01intro",
-  "c_language/02devenv",
-  "c_language/03variables",
-  "c_language/04operators",
-  "c_language/05Example1",
-  "c_language/06controlstatements",
-  "c_language/07looping",
-  "c_language/08functions",
-  "c_language/09array",
-  "c_language/10pointers",
-  "c_language/11strings",
-  "c_language/12structures",
-  "c_language/13unions",
-  "c_language/14files",
-];
+const C_Language = ["c_language"];
 
 const Django = [
   "django/overview",
@@ -45,15 +29,7 @@ const Django = [
   "django/drf_random",
 ];
 
-const ML_DL = [
-  "ml_dl/overview",
-  "ml_dl/dl_intro",
-  "ml_dl/intro_ai",
-  "ml_dl/matplotlib",
-  "ml_dl/ml_intro",
-  "ml_dl/numpy",
-  "ml_dl/pandas",
-];
+const ML_DL = ["ml_dl"];
 
 const NodeJS = [
   "nodejs/overview",
@@ -110,36 +86,11 @@ const Python = [
   "python/unit_9",
 ];
 
-const React = [
-  "react/overview",
-  "react/codeevolution_course-1",
-  "react/codeevolution_course-2",
-  "react/codeevolution_course-3",
-  "react/mosh_course",
-];
+const React = ["reactjs"];
 
-const Tools = [
-  "tools/overview",
-  "tools/git_github_introduction",
-  "tools/shortcuts_sublime_vscode",
-  "tools/others",
-];
+const Tools = ["tools"];
 
-const Web = [
-  "web/introduction",
-  "web/html",
-  "web/pug_sass_jquery",
-  "web/bom",
-  "web/js_basic_structure",
-  "web/js_data_types_operators",
-  "web/js_flow_control_statements",
-  "web/js_functions_inheritance",
-  "web/js_scope_prototype",
-  "web/js_exception_closure",
-  "web/js_objects",
-  "web/js_others",
-  "web/js_es6",
-];
+const Web = ["website_development", "javascript"];
 
 module.exports = {
   docs: {

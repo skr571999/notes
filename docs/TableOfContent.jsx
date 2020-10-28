@@ -1,24 +1,55 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function TableOfContent(props) {
+export default function TableOfContent() {
   const pages = [
-    "Angular",
-    "C_Language",
-    "Django",
-    "ML_DL",
-    "NodeJS",
-    "Python",
-    "React",
-    "Tools",
-    "Web",
+    {
+      name: "Angular",
+      link: "Angular",
+    },
+    {
+      name: "C_Language",
+      link: "c_language",
+    },
+    {
+      name: "Django",
+      link: "Django",
+    },
+    {
+      name: "JavaScript",
+      link: "javascript",
+    },
+    {
+      name: "ML_DL",
+      link: "ml_dl",
+    },
+    {
+      name: "NodeJS",
+      link: "NodeJS",
+    },
+    {
+      name: "Python",
+      link: "Python",
+    },
+    {
+      name: "React",
+      link: "reactjs",
+    },
+    {
+      name: "Tools",
+      link: "tools",
+    },
+    {
+      name: "Website Development",
+      link: "website_development",
+    },
   ];
 
   return (
     <div className="tableOfContentContainer">
       {pages.map((page, index) => (
-        <Link key={index} to={page.toLowerCase() + "/overview"}>
-          {page}
+        <Link key={index} to={page.link}>
+          {page.name}
         </Link>
       ))}
     </div>
