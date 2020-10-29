@@ -5,7 +5,7 @@ export default function TableOfContent() {
   const pages = [
     {
       name: "Angular",
-      link: "Angular",
+      link: "angular",
     },
     {
       name: "C_Language",
