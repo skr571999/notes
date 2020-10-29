@@ -18,16 +18,7 @@ const Angular = [
 
 const C_Language = ["c_language"];
 
-const Django = [
-  "django/overview",
-  "django/django_introduction",
-  "django/django_template_engine",
-  "django/django_saving_data_to_db",
-  "django/django_authentication_authorization",
-  "django/django_modal_fields",
-  "django/django_other",
-  "django/drf_random",
-];
+const Django = ["django"];
 
 const ML_DL = ["ml_dl"];
 

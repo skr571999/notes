@@ -13,7 +13,7 @@ export default function TableOfContent() {
     },
     {
       name: "Django",
-      link: "Django",
+      link: "django",
     },
     {
       name: "JavaScript",
