@@ -31,26 +31,7 @@ const Django = [
 
 const ML_DL = ["ml_dl"];
 
-const NodeJS = [
-  "nodejs/overview",
-  "nodejs/nodejs_introduction",
-  "nodejs/nodejs_builtin_modules",
-  "nodejs/nodejs_module_system",
-  "nodejs/npm_introduction",
-  "nodejs/nodejs_mongodb",
-  "nodejs/expressjs_introduction",
-  "nodejs/expressjs_template_engine_ejs",
-  "nodejs/expressjs_template_engine_pug",
-  "nodejs/expressjs_getting_data_from_client",
-  "nodejs/data_validation_using_joi",
-  "nodejs/file_upload_using_multer",
-  "nodejs/saving_data_to_db_using_mongoose",
-  "nodejs/authentication_and_authorization",
-  "nodejs/sending_mail_using_nodemailer",
-  "nodejs/mvc_architecture",
-  "nodejs/making_rest_api",
-  "nodejs/other",
-];
+const NodeJS = ["nodejs"];
 
 const Python = [
   "python/overview",

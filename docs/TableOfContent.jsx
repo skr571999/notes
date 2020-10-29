@@ -25,7 +25,7 @@ export default function TableOfContent() {
     },
     {
       name: "NodeJS",
-      link: "NodeJS",
+      link: "nodejs",
     },
     {
       name: "Python",
