@@ -33,39 +33,7 @@ const ML_DL = ["ml_dl"];
 
 const NodeJS = ["nodejs"];
 
-const Python = [
-  "python/overview",
-  "python/builtin_modules/builtin_modules",
-  "python/builtin_modules/datetime",
-  "python/builtin_modules/json",
-  "python/builtin_modules/logging",
-  "python/builtin_modules/py_testing",
-  "python/builtin_modules/re",
-  "python/builtin_modules/tkinter",
-  "python/files/async_await",
-  "python/files/builtin_functions",
-  "python/files/iterator_generator",
-  "python/files/operators",
-  "python/files/others_datatypes",
-  "python/files/pep",
-  "python/files/string_formatting",
-  "python/files/tasks",
-  "python/pdbc/pdbc_mysql",
-  "python/pdbc/pdbc_sqlite",
-  "python/pdbc/unit_12",
-  "python/Python Introduction",
-  "python/Unit - 1",
-  "python/unit_10",
-  "python/unit_11",
-  "python/unit_2",
-  "python/unit_3",
-  "python/unit_4",
-  "python/unit_5",
-  "python/unit_6",
-  "python/unit_7",
-  "python/unit_8",
-  "python/unit_9",
-];
+const Python = ["python"];
 
 const React = ["reactjs"];
 

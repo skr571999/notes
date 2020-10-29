@@ -29,7 +29,7 @@ export default function TableOfContent() {
     },
     {
       name: "Python",
-      link: "Python",
+      link: "python",
     },
     {
       name: "React",
