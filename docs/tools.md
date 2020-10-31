@@ -26,19 +26,18 @@ title: Tools
   - [https://developers.google.com/speed/pagespeed/insights/](https://developers.google.com/speed/pagespeed/insights/)
   - [https://webhint.io/](https://webhint.io/)
 
-## Git and GitHub Introduction
+## Git and GitHub
 
 - Git - Distributed Version Control System
 
-### Content
-
-- Introduction
-- Staging and Remote
-- Cloning and Branching
-- Collaboration
-- Branching
-- Rebase Belong to Us
-- History and Configuration
+- Content
+  - Introduction
+  - Staging and Remote
+  - Cloning and Branching
+  - Collaboration
+  - Branching
+  - Rebase Belong to Us
+  - History and Configuration
 
 ### Introduction
 
@@ -61,7 +60,7 @@ git config user.email
 git config --list
 ```
 
-### Hello World
+- Basic Usage
 
 ```cmd
 git init
@@ -85,9 +84,9 @@ git add "*.txt" - add all files in the whole project
 
 ### Different Areas of Snapshot
 
-- Working Area - tracked and Untracked files
+- Working Area - tracked and Un-tracked files
 - Staging Area
-- Commited Area
+- Committed Area
 
 ### Staging and Remote
 
@@ -140,7 +139,7 @@ git reset --soft HEAD - Undoing a commit, --soft(reset into staging area)
     - I - git fetch
     - II - git merge origin/master
 
-### Remote Branching and Taging
+### Remote Branching and Tagging
 
 - Listing all the remote branches `git branch -r`
 
@@ -185,15 +184,63 @@ git merge origin/master
 - Monorepos
 - [Git large File Storage](https://git-lfs.github.com)
 
+### GitHub Code Hosting
+
+- GitHub Account
+- About - Feature
+  - Branches
+- Usage
+  - Creating a repo
+  - adding it to local repo
+  - cloning the repo
+  - pushing the changes
+  - Working in VSCode
+
 ## Postman
 
 - [Postman Collection Sharing Docs](https://learning.postman.com/docs/postman/collections/sharing-collections/)
 - Software similar to POSTMAN[(Insomnia)](https://support.insomnia.rest)
 
+### Setup Environment Variable in a Collection
+
+- Code to be pasted in Tests Tab of a Request
+
+```js
+var jsonData = JSON.parse(responseBody);
+pm.environment.set("ACCESS_TOKEN", jsonData["access"]);
+```
+
+- Using the Set variable : `{{ACCESS_TOKEN}}`
+
 ## VSCode
 
-- [Configure recomended Extensions for sharing extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
+- Installation
+- About - Feature
+- Usage
+
+  - Opening Folder
+  - Extensions
+  - Changing the Theme, Coloring
+  - Shortcuts
+  - Integration With Git, GitHub
+  - Integrated Terminal
+
+- [Configure recommended Extensions for sharing extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
 - [VSCode in Browser](https://enterprise.coder.com/docs)
+
+### VSCode Shortcuts
+
+|        Key Binding         |                 Detail                  |
+| :------------------------: | :-------------------------------------: |
+|       `shift + alt`        |            column selection             |
+|       `alt + scroll`       |       to scroll with the 5x speed       |
+|        `ctrl + k z`        |             toggle zen mode             |
+|       `ctrl + click`       |         to add multiple cursors         |
+| `shift + alt + left/right` |            to select blocks             |
+|     `ctrl + shift + o`     |             to goto symbols             |
+|     `ctrl + shift + [`     |        to close the code folding        |
+|     `ctrl + shift + ]`     |        to open the code folding         |
+|       `ctrl + space`       | for the suggestions of the code members |
 
 ## Heroku Introduction
 
@@ -262,9 +309,9 @@ By using Screen command in Linux we can start multiple shell session at the same
 	- II - echo $STY
 ```
 
-## CMD Introduction
+## CMD Usage
 
-```cmd
+```sh
 cd
 cls
 cd ..
@@ -273,72 +320,72 @@ exit
 md
 D:
 
-- rd/rmdir ==> to delete an empty directory
-- rmdir /s DIRECTORY_NAME ==> to delete an directory containing file
-- copy ==> to move files to another location
-- more ==> to see the content of a file
-- path ==> to set or display the PATH Environment Variable
-- ren/rename ==> to rename a file
-- calc ==> to open the calculator
-- title ==> to set the window title
+- rd/rmdir # to delete an empty directory
+- rmdir /s DIRECTORY_NAME # to delete an directory containing file
+- copy # to move files to another location
+- more # to see the content of a file
+- path # to set or display the PATH Environment Variable
+- ren/rename # to rename a file
+- calc # to open the calculator
+- title # to set the window title
 - vol
-- dir > hello.txt  [to create a file]
-- C: [ to change the drive]
-- cd / chdir  [ to change the directory]
-- cd.. [ to go to the parent directory]
-- cd  [to show the current directory]
-- mkdir/md [to make the directory]
-- mkdir src build/{html, images, js} ==> to make folders
-- type hello.txt [ to show the content of a file]
-- ver - [to show the version of the window]
-- date - [ to show or set the date]
-- time - to show or set the time
-- start - to start a new window of the cmd
-- tasklist - to show currently running tasks and services
-- cls - to clear the screen
-- del filename - to delete one or more files
-- dir - to show the list of the files and directory in current directory
+- dir > hello.txt # [to create a file]
+- C: # [ to change the drive]
+- cd / chdir #  [ to change the directory]
+- cd..  # [ to go to the parent directory]
+- cd  # [to show the current directory]
+- mkdir/md # [to make the directory]
+- mkdir src build/{html, images, js} # to make folders
+- type hello.txt # [ to show the content of a file]
+- ver # [to show the version of the window]
+- date # [ to show or set the date]
+- time # to show or set the time
+- start # to start a new window of the cmd
+- tasklist # to show currently running tasks and services
+- cls # to clear the screen
+- del filename # to delete one or more files
+- dir # to show the list of the files and directory in current directory
 - help
 - exit
-- move ../hello.txt ./  [to move or rename a file]
-- dir /ah ==> to show hidden directory
-- dir /ah-d ==> to show hidden file not hidden directories
-- dir /a ==> to show all hidden and not hidden dirs
+- move ../hello.txt ./ # [to move or rename a file]
+- dir /ah # to show hidden directory
+- dir /ah-d # to show hidden file not hidden directories
+- dir /a # to show all hidden and not hidden dirs
 - help
 - OTHER
-- code . ==> to open VSCode with current folder
-- start chrome ==> to open the Chrome
-- start chrome <URL> ==> to open the chrome at URL
-- start IExplore ==> to open the Internet Explorer
-- start microsoft-edge: ==> to open microsoft Edge
-- start . ==> open file explorer in current location
-- netstat ==> show active connections
-- ipconfig ==> retrive information about network
-- ipconfig \a ==>
+- code . # to open VSCode with current folder
+- start chrome # to open the Chrome
+- start chrome <URL> # to open the chrome at URL
+- start IExplore # to open the Internet Explorer
+- start microsoft-edge: # to open microsoft Edge
+- start . # open file explorer in current location
+- netstat # show active connections
+- ipconfig # retrieve information about network
+- ipconfig \a #
 - help color
-- color 0-f 0-f ==> for background and foreground color of the cmd
-- color ==> set the default color
+- color 0-f 0-f # for background and foreground color of the cmd
+- color # set the default color
 
-- prompt TEXT ==> change the prompt of cmd
-- prompt ==> set the default prompt
+- prompt TEXT # change the prompt of cmd
+- prompt # set the default prompt
 
-- ipconfig | clip ==> to copy cmd output to the clipboard
+- ipconfig | clip # to copy cmd output to the clipboard
 
-- TO See Wifi Password
+# - TO See Wi-fi Password
 - netsh
 - netsh> wlan show profile
 - netsh> wlan show profile skr key=clear
 
-- To show the cmd history
+# - To show the cmd history
 - f7
 - doskey /history
-- doskey /history >history.txt ==> to save the history to a file
+- doskey /history >history.txt # to save the history to a file
 
-- driverquery ==> list installed drivers
-- netstat -an ==> list open ports
-- systeminfo ==> show hardware information
+- driverquery # list installed drivers
+- netstat -an # list open ports
+- systeminfo # show hardware information
 
-- wmic product get name ==> show installed programes on system
+- wmic product get name # show installed programs on system
 
 - explorer "https://google.com" # to open default browser
 - start opera "https://google.com" # to open opera
@@ -441,10 +488,19 @@ _Italic Text_
 
 - [GitHub Markdown Guide](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-## Shortcuts Sublime
+## Sublime3
+
+- Installation
+- About - Feature
+- Usage
+  - Opening Folder
+  - Changing the Theme, Coloring
+  - Shortcuts
+
+### Sublime Shortcuts
 
 ```cmd
-- ctrl + alt + down_arror : to make multiple cursor
+- ctrl + alt + down_arrow : to make multiple cursor
 - alt + f3 : to select all the same text on which currently cursor is
 - ctrl + click : to add cursor to the position where we click
 - ctrl + d : make multiple cursor at the next text under the cursor
@@ -456,48 +512,23 @@ _Italic Text_
 - alt + shift+ (1,2,3,4): to open multiple layout
 - alt + shift + (8,9) : to open to row layout
 - alt + shift+ 5: to open 4 layout grid
-- ctrl + shift + (up,down): to move a line up or dowm
+- ctrl + shift + (up,down): to move a line up or down
 - esc : to close the down bar
-- ctrl + k + ctrl + b : to toogle the side bar
+- ctrl + k + ctrl + b : to toggle the side bar
 - ctrl + b : to run the build system
 - ctrl + shift + b : to choose the build system
 - ctrl + / : to do comment
 - .someClassul>ul>li>a*8
 ```
 
-## Shortcuts VSCode
+## Browser Usage
 
-- shift + alt : column selection
-- alt + scroll : to scroll with the 5x speed
-
-- code --help
-
-- ctrl+k z : toogle zen mode
-- ctrl + click : to add multiple cursors
-- shift + alt + left/right : to select blocks
-
-- ctrl + shift + o : to goto symbols
-  @:
-  @
-
-- ctrl + shift + [ : to close the code folding
-- ctrl + shift + ] : to open the code folding
-
-- ctrl + space : for the suggestions of the code menbers
-
-- to goto the defination
-  alt + click :
-  f12
-  ctrl + click
-  alt + left : to goto back the previous location
-
-  alt + f12 : for the peek in the same file
-
-<!--
-{
-    "workbench.colorCustomizations": {
-        "window.activeBorder": "#1eff00",
-        "window.inactiveBorder": "#ff0000"
-    }
-}
--->
+- Installation
+- About - Feature
+- Usage
+  - Looking the Source Code(Ctrl + u)
+- Shortcuts
+- Make as default Browser
+- Browser Developer Tools
+  - Console
+- G-Mail Account
