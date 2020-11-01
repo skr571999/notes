@@ -106,6 +106,8 @@ title: Website Development
 - Transform
 - Transition
 - Animation
+- Typography
+- CSS design pattern (bem, oocss, smacss)
 
 ### FlexBox Properties
 
@@ -188,11 +190,33 @@ body {
 - CSS clip-path maker => https://bennettfeely.com/clippy/
 -->
 
-## BOM
+## Using JavaScript in Browser
 
 - **Prerequisite - JavaScript**
+  - Ways to add JS
+  - Running JS in Dev-tools
+  - Variables, Data types(+array, +object), Conditional and Looping Statements
+  - Array, String, Object Important Methods
+  - Functions
+  - Some coding Questions
+  - Date
+  - ES6 Intro
+  - OOPs
+    - Prototype, this, instantiation, inheritance
+  - API Usage(AJAX)
+    - Movie API, YouTube API, etc.
+  - Mini projects
+    - Simple js clock, countdown timer, rock paper scissors game
+  - JS design patterns(Singleton, module, revelling module)
 - Browser Object Model(BOM)(window) is an interface that allow javascript to interact with the browser
 - And the DOM(Document Object Model)(window.document) is a property of the window using which we can interact with the HTML Document
+- DOM
+  - Selecting the Element
+  - Changing the Content
+  - creating new element node, adding new node
+  - Adding Events - onclick, onmouseover
+  - Ways to add event
+  - Reading the Value from Form
 - The Browser converts a web page into the tree of node of HTML Elements
 
   - It Defines an HTML Element as Object which have properties and Methods
@@ -255,7 +279,7 @@ body {
   - https://www.chartjs.org
 -->
 
-### Modifying Element Constent
+### Modifying Element Content
 
 ```js
 <!DOCTYPE html>
@@ -991,6 +1015,31 @@ document.onkeyup = e => {
 };
 -->
 
+### Resources
+
+- [Namaste 🙏 JavaScript - Akshay Saini](https://www.youtube.com/watch?v=pN6jk0uUrD8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP)
+
+## Bootstrap
+
+- About
+- Ways to add Bootstrap
+- Content
+  - Typography
+  - Table
+  - Images
+- Components
+  - Alert
+  - Buttons
+  - Badge
+  - Tooltip(if jQuery)
+- Utils
+  - Color(background, text)
+  - Shadow
+  - Sizing
+  - Spacing
+  - Text
+- Layout - Grid
+
 ## Pug Introduction
 
 ### Installation
@@ -1258,3 +1307,14 @@ $("button").one("click", () => {
 - Similar to jQuery
 
 <!-- https://kenwheeler.github.io/cash/ -->
+
+## Build Tools
+
+- Webpack
+- Gulp
+
+## Projects
+
+- Simple Portfolio Site
+- Todo App OR User List App
+- Photo Like Dislike App
