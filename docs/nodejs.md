@@ -8,6 +8,7 @@ title: NodeJS
 - NodeJS Module System
 - NodeJS Builtin Modules
 - NodeJS with MongoDB
+- NPM Guide
 - ExpressJS Introduction
 - ExpressJS Template Engine { EJS, PUG }
 - ExpressJS - Getting Data from the Client
@@ -18,55 +19,12 @@ title: NodeJS
 - File Upload using Multer
 - Sending Mail using Nodemailer
 - Making REST API
-
-## Examples
-
-- Chatdemo1
-- dotenv
-- Hello
-- MySQL-NodeJS
-- Mongodb
-- Nodemailer
-- PagingDemo
-- Passport
-- Testing New
-
-### New
-
-- ExpressGeneratorDemo
-- GraphQLDemo
-- NeDB
-- PuppeteerDemo
-- Sequelize Demo
-
-## Projects
-
-- API-Design-Node-v3
-- Express-locallibrary(MDN)
-- Image Resize
-- Myroomy
-- Noteapp-pug
-- ShopRestAPI
-- TodoAPI
-- TodoApp
-- Userlist App
-
-## Others TODO
-
-- [https://www.edyoda.com/program/full-stack-developer-program/](https://www.edyoda.com/program/full-stack-developer-program/)
-- [https://learnnode.com/](https://learnnode.com/)
-- [https://pro.academind.com/p/nodejs-the-complete-guide-incl-mvc-rest-apis-graphql](https://pro.academind.com/p/nodejs-the-complete-guide-incl-mvc-rest-apis-graphql)
-- [Book Practical Node v2](https://github.com/azat-co/practicalnode)
-- [MongoDB University Aggregation](https://www.youtube.com/playlist?list=PLWkguCWKqN9OwcbdYm4nUIXnA2IoXX0LI)
-
-## Articles
-
-- [Handling JSON Parsing Error in Express](https://stackoverflow.com/questions/53048642/node-js-handle-body-parser-invalid-json-error/53049009)
+- Others
 
 ## NodeJS Introduction
 
 - About NodeJS
-  - NodeJS is created by Ryan Dahl in 2009. It is a javascrit runtime that uses the V8 engine inside to run the javascript code.
+  - NodeJS is created by Ryan Dahl in 2009. It is a JavaScript runtime that uses the V8 engine inside to run the javascript code.
   - Basically it is a c++ program that run the V8 engine.
   - Website : [https://nodejs.org/en/](https://nodejs.org/en/)
   - What is the use of NodeJS
@@ -101,7 +59,7 @@ title: NodeJS
   - For Collaboration Environment
   - Streaming Servers
 - When not to Use NodeJS
-  - When we require long processing time, because it uses single thread to process if a request need nore time in background then it would not be able to serve other requests.
+  - When we require long processing time, because it uses single thread to process if a request need more time in background then it would not be able to serve other requests.
 -->
 
 ### Running First Program
@@ -814,7 +772,7 @@ MongoClient.connect(dbURL, {
   });
 ```
 
-## NPM Introduction
+## NPM Guide
 
 ### Basic Commands
 
@@ -834,7 +792,7 @@ npm update -g <package_name>
 npm outdated -g <package_name>
 ```
 
-- to install the dependencies not the devdependencies `npm i --production`
+- to install the dependencies not the dev-dependencies `npm i --production`
 
 ### Npm Scripts
 
@@ -1069,6 +1027,54 @@ h1 Data : #{data}
 - for
 - Template Inheritance
 
+## ExpressJS Getting Data from Client
+
+- Using GET Method
+- Using POST Method
+- Parameterized URL
+- Same interface for both GET and POST request
+
+```js
+// submitting form data using get Method
+app.get("/", (req, res) => {
+  console.log(req.query);
+  res.render("index");
+});
+
+// same interface for both GET and POST request
+app.use("/same", (req, res) => {
+  if (req.method === "GET") {
+    res.send("Same GET Request");
+  } else if (req.method === "POST") {
+    res.send("Same POST request");
+  }
+});
+
+// Parameterised URL
+app.get("/std/:id", (req, res) => {
+  console.log(req.params);
+
+  res.render("index");
+});
+
+// rendering the signup form
+app.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
+// app.use(express.json()); // used if we are getting of contentType - json
+app.use(express.urlencoded({ extended: true }));
+
+// getting the post data
+app.post("/signup", (req, res) => {
+  console.log(req.method);
+  console.log(req.body);
+  res.send("POST signup form Submitted");
+});
+
+app.listen(3000, console.log(`Server on 3000`));
+```
+
 ## MVC Architectures
 
 - MVC - Model, View, Controller
@@ -1187,6 +1193,242 @@ let conn = mongoose.connection;
 <!--
 - _id ==> ObjectId(4 bytes timestamp, 3 bytes machineid, 2 bytes process id, 3 bytes incrementer)
 -->
+
+## Authentication and Authorization
+
+- Cookies, Sessions
+- Flash Messages
+- Password Encryption
+- JWT Token
+- Using Passport
+
+### Cookies
+
+- Cookies are client side storage used to identify the identity of the user sending the request
+- Options in cookies
+
+  - name, value, path, maxAge, httpOnly, etc
+
+- Working With Cookies
+
+```js
+const cookieParser = require("cookie-parser"); // required for reading the cookies coming from the browser
+app.use(cookieParser());
+console.log(req.cookies);
+
+// Accessing the cookies at the client side
+console.log(document.cookie);
+
+// Setting the Cookies at server side
+// - this does not require the `cookie-parser` module
+res.cookie("appname", "Express App");
+res.cookie("appname", "Express App", {
+  maxAge: 30000, // time in milliseconds
+});
+
+res.clearCookie("appname");
+```
+
+### Session
+
+- **Session**
+  - Sessions are Server Side storage.
+  - In storing the Session data the cookies are stored
+  - Module Used `express-session`
+    - `express-session` defaultly uses the MemoryStore to store the Session data
+    - Installation : `npm i express-session`
+
+```js
+const session = require("express-session");
+// setting up
+app.use(
+  session({
+    secret: "MySite",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+// Creating a session
+req.session.name = "MyDataIn Session";
+console.log(req.sessionID); // session ID
+console.log(req.session.name);
+delete req.session.name;
+
+req.session.cookie;
+req.session.destroy(); // delete the session for the current request
+```
+
+```js
+// Calculate the Visitor Count
+let count = 0;
+app.get("/", (req, res) => {
+  console.log(req.session);
+  if (!req.session.count) {
+    req.session.count = "visited";
+    count++;
+  }
+  res.render("index", { count: count });
+});
+```
+
+### Flash Messages
+
+- Sending flash messages using `express-flash`
+- `express-flash` uses `express-session` for storing the messages
+
+```js
+// npm i express-flash
+const session = require("express-session");
+const flash = require("express-flash");
+
+app.set("view engine", "pug");
+app.use(
+  session({
+    saveUninitialized: false,
+    resave: false,
+    secret: "My App",
+  })
+);
+app.use(flash());
+
+app.get("/", (req, res) => {
+  req.flash("info", "Login Success");
+  res.render("index");
+});
+```
+
+```html
+<%- messages.info %>
+```
+
+- `express-flash` is the extended version of the `connect-flash` in which we are not required to pass the message explicitly it will implicitly pass the message automatically
+
+```js
+const session = require("express-session");
+const flash = require("connect-flash");
+
+app.set("view engine", "pug");
+app.use(
+  session({
+    saveUninitialized: false,
+    resave: false,
+    secret: "My App",
+  })
+);
+app.use(flash());
+
+app.get("/", (req, res) => {
+  req.flash("info", "Login Success");
+  res.render("index", { messages: req.flash() });
+});
+```
+
+### Authentication using Session
+
+- Authentication - the process of verifying the identity of a user. or It is controlling if an incoming request can proceed or not.
+- Authorization - the process of giving permission of Usage or It is controlling if an authentication request has the correct permission to access a resource
+- identification - is determining who the requester is.
+
+- Using session to authenticate the user
+
+  - Registration
+  - Login
+  - Logout
+  - Saving Data for a Particular user
+  - mongoose populate
+
+- [NodeJS Handling Authentication using Passport and JWT FreeCOdeCamp](https://www.freecodecamp.org/news/learn-how-to-handle-authentication-with-node-using-passport-js-4a56ed18e81e/)
+
+### Password Encryption(Hashing)
+
+- For doing password encryption we can use any one of the following module
+  - crypto(builtin nodejs)
+  - bcrypt
+  - bcryptjs
+- Process of Password Encryption
+  - During Registration
+    - we get the password from the user, we generate the hash of the password(by password and the salt)
+    - now we have the hash so we will save this hash to the database not the password
+  - During login
+    - we will get the password from the user, we will now create hash again using the password
+    - after the hash has been created now we will compare this new hash with the old hash that we have saved to the database
+    - if both the hashes matches that means that the password user has given is same as he give during the registration
+    - so not we will allow him to login
+
+### Using Passport for Authentication and Authorization
+
+## Data validation using Joi
+
+- Using Joi
+  - Installation : `npm i @hapi/joi`
+  - Documentation : `https://hapi.dev/family/joi/?v=16.1.8`
+
+```js
+// server.js
+const Joi = require("@hapi/joi");
+
+let data = {
+  name: "Sn",
+  email: "abc@gmail.com",
+};
+
+const schema = Joi.object({
+  name: Joi.string().min(3).max(12).required(),
+  email: Joi.string()
+    .email({
+      minDomainSegments: 2,
+      tlds: { allow: ["com", "net"] },
+    })
+    .required(),
+});
+
+let { value, error } = schema.validate(data);
+
+console.log(value);
+console.log(error);
+```
+
+## File Upload Using Multer
+
+```js
+// npm i multer
+// make a folder before uploading the images
+// server.js
+const express = require("express");
+const multer = require("multer");
+const path = require("path");
+const app = express();
+
+app.get("/", express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+
+let storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "./uploads");
+  },
+  filename: (req, file, cb) => {
+    cb(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    );
+  },
+});
+
+let upload = multer({ storage: storage });
+// let upload = multer({ dest: 'uploads/' });
+
+app.post("/upload", upload.single("profile"), (req, res) => {
+  console.log(req.body);
+  console.log(req.file);
+  console.log(req.files);
+  res.send("Uploaded");
+});
+
+app.listen(3000, () => console.log("Serving on 3000"));
+
+//  Saving the upload file path to the Data base
+```
 
 ## Sending Mail using Nodemailer
 
@@ -1317,292 +1559,6 @@ app.use((req, res, next) => {
 });
 ```
 
-## Authentication and Authorization
-
-- Cookes, Sessions
-- Flash Messages
-- Password Excryption
-- JWT Token
-- Using Passport
-
-### Cookies
-
-- Cookies are client side storage used to identify the identity of the user sending the request
-- Options in cookies
-
-  - name, value, path, maxAge, httpOnly, etc
-
-- Working With Cookies
-
-```js
-const cookieParser = require("cookie-parser"); // required for reading the cookies comming from the browser
-app.use(cookieParser());
-console.log(req.cookies);
-
-// Accessing the cookies at the client side
-console.log(document.cookie);
-
-// Setting the Cookies at server side
-// - this does not require the `cookie-parser` modeule
-res.cookie("appname", "Express App");
-res.cookie("appname", "Express App", {
-  maxAge: 30000, // time in milliseconds
-});
-
-res.clearCookie("appname");
-```
-
-### Session
-
-- **Session**
-  - Sessions are Server Side storage.
-  - In storing the Session data the cookies are stored
-  - Module Used `express-session`
-    - `express-session` defaultly uses the MemoryStore to store the Session data
-    - Installation : `npm i express-session`
-
-```js
-const session = require("express-session");
-// setting up
-app.use(
-  session({
-    secret: "MySite",
-    resave: false,
-    saveUninitialized: false,
-  })
-);
-
-// Creating a session
-req.session.name = "MyDataIn Session";
-console.log(req.sessionID); // session ID
-console.log(req.session.name);
-delete req.session.name;
-
-req.session.cookie;
-req.session.destroy(); // delete the session for the current request
-```
-
-```js
-// Calculate the Visitor Count
-let count = 0;
-app.get("/", (req, res) => {
-  console.log(req.session);
-  if (!req.session.count) {
-    req.session.count = "visited";
-    count++;
-  }
-  res.render("index", { count: count });
-});
-```
-
-### Flash Messages
-
-- Sending flash messages using `express-flash`
-- `express-flash` uses `express-session` for storing the messages
-
-```js
-// npm i express-flash
-const session = require("express-session");
-const flash = require("express-flash");
-
-app.set("view engine", "pug");
-app.use(
-  session({
-    saveUninitialized: false,
-    resave: false,
-    secret: "My App",
-  })
-);
-app.use(flash());
-
-app.get("/", (req, res) => {
-  req.flash("info", "Login Success");
-  res.render("index");
-});
-```
-
-```html
-<%- messages.info %>
-```
-
-- `express-flash` is the extended version of the `connect-flash` in which we are not required to pass the message explicitly it will implicitly pass the message automatically
-
-```js
-const session = require("express-session");
-const flash = require("connect-flash");
-
-app.set("view engine", "pug");
-app.use(
-  session({
-    saveUninitialized: false,
-    resave: false,
-    secret: "My App",
-  })
-);
-app.use(flash());
-
-app.get("/", (req, res) => {
-  req.flash("info", "Login Success");
-  res.render("index", { messages: req.flash() });
-});
-```
-
-### Authentication using Session
-
-- Authentication - the process of verifying the identity of a user. or It is controlling if an incomming request can proceed or not.
-- Authorization - the process of giving permission of Usage or It is controlling if an authentication request has the correct permission to access a resource
-- identification - is determining who the requester is.
-
-- Using session to authenticate the user
-
-  - Registration
-  - Login
-  - Logout
-  - Saving Data for a Particular user
-  - mongoose populate
-
-- [NodeJS Handling Authentication using Passport and JWT FreeCOdeCamp](https://www.freecodecamp.org/news/learn-how-to-handle-authentication-with-node-using-passport-js-4a56ed18e81e/)
-
-### Password Encryption(Hashing)
-
-- For doing password encryption we can use any one of the following module
-  - crypto(builtin nodejs)
-  - bcrypt
-  - bcryptjs
-- Process of Password Encryption
-  - During Registration
-    - we get the password from the user, we generate the hash of the password(by password and the salt)
-    - now we have the hash so we will save this hash to the database not the password
-  - During login
-    - we will get the password from the user, we will now create hash again using the password
-    - after the hash has been created now we will compare this new hash with the old hash that we have saved to the database
-    - if both the hashes matches that means that the password user has given is same as he give during the registration
-    - so not we will allow him to login
-
-### Using Passport for Authentication and Authorization
-
-- See in Examples
-
-## Data validation using Joi
-
-- Using Joi
-  - Installation : `npm i @hapi/joi`
-  - Documentation : `https://hapi.dev/family/joi/?v=16.1.8`
-
-```js
-// server.js
-const Joi = require("@hapi/joi");
-
-let data = {
-  name: "Sn",
-  email: "abc@gmail.com",
-};
-
-const schema = Joi.object({
-  name: Joi.string().min(3).max(12).required(),
-  email: Joi.string()
-    .email({
-      minDomainSegments: 2,
-      tlds: { allow: ["com", "net"] },
-    })
-    .required(),
-});
-
-let { value, error } = schema.validate(data);
-
-console.log(value);
-console.log(error);
-```
-
-## ExpressJS Getting Data from Client
-
-- Using GET Method
-- Using POST Method
-- Parameterised URL
-- Same interface for both GET and POST request
-
-```js
-// submitting form data using get Method
-app.get("/", (req, res) => {
-  console.log(req.query);
-  res.render("index");
-});
-
-// same interface for both GET and POST request
-app.use("/same", (req, res) => {
-  if (req.method === "GET") {
-    res.send("Same GET Request");
-  } else if (req.method === "POST") {
-    res.send("Same POST request");
-  }
-});
-
-// Parameterised URL
-app.get("/std/:id", (req, res) => {
-  console.log(req.params);
-
-  res.render("index");
-});
-
-// rendering the signup form
-app.get("/signup", (req, res) => {
-  res.render("signup");
-});
-
-// app.use(express.json()); // used if we are getting of contentType - json
-app.use(express.urlencoded({ extended: true }));
-
-// getting the post data
-app.post("/signup", (req, res) => {
-  console.log(req.method);
-  console.log(req.body);
-  res.send("POST signup form Submitted");
-});
-
-app.listen(3000, console.log(`Server on 3000`));
-```
-
-## File Upload Using Multer
-
-```js
-// npm i multer
-// make a folder before uploading the images
-// server.js
-const express = require("express");
-const multer = require("multer");
-const path = require("path");
-const app = express();
-
-app.get("/", express.static("public"));
-app.use(express.urlencoded({ extended: true }));
-
-let storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "./uploads");
-  },
-  filename: (req, file, cb) => {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
-  },
-});
-
-let upload = multer({ storage: storage });
-// let upload = multer({ dest: 'uploads/' });
-
-app.post("/upload", upload.single("profile"), (req, res) => {
-  console.log(req.body);
-  console.log(req.file);
-  console.log(req.files);
-  res.send("Uploaded");
-});
-
-app.listen(3000, () => console.log("Serving on 3000"));
-
-//  Saving the upload file path to the Data base
-```
-
 ## Other Tasks
 
 - NodeJS app deployment - Heroku
@@ -1612,9 +1568,6 @@ app.listen(3000, () => console.log("Serving on 3000"));
 - Testing(Unit & Integration Testing)
 - NodeJS Swagger
 - NodeJS logging module
-
-## NodeJS Packages
-
 - [NodeScheduler](https://www.npmjs.com/package/node-schedule)
 - bad-words
 - express-rate-limit
