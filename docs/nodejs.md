@@ -7,7 +7,8 @@ title: NodeJS
 - NodeJS Introduction
 - NodeJS Module System
 - NodeJS Builtin Modules
-- NodeJS with MongoDB
+- NodeJS MongoDB
+- NodeJS MySQL
 - NPM Guide
 - ExpressJS Introduction
 - ExpressJS Template Engine { EJS, PUG }
@@ -771,6 +772,60 @@ MongoClient.connect(dbURL, {
     console.log("Error Occured During Connection", err.name);
   });
 ```
+
+---
+
+## NodeJS MySQL
+
+- Requirement
+  - MySQL
+  - NodeJS
+  - MySQL NodeJS Connector
+- Resources
+  - [https://www.npmjs.com/package/mysql](https://www.npmjs.com/package/mysql)
+  - [https://www.w3schools.com/nodejs/nodejs_mysql.asp](https://www.w3schools.com/nodejs/nodejs_mysql.asp)
+
+### Example
+
+- MySQL Code
+
+```sql
+CREATE DATABASE test;
+
+USE test;
+
+CREATE TABLE student (
+  name VARCHAR(20),
+  rollno INT
+);
+```
+
+- NodeJS Code
+
+```js
+// npm i mysql
+const mysql = require("mysql");
+
+let conn = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "root",
+  database: "test",
+});
+
+conn.connect();
+
+const QUERY = `show tables;`;
+
+conn.query(QUERY, (err, result) => {
+  if (err) throw err;
+  console.log(result);
+});
+
+conn.end();
+```
+
+---
 
 ## NPM Guide
 
