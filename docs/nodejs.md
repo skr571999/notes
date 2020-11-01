@@ -75,13 +75,15 @@ title: NodeJS
 - Basic Concepts of JavaScript
 
   - Variables, Identifers
-  - Datatypes(Array, Object, JSON)
+  - Data types(Array, Object, JSON)
   - Control flow statements(conditional, looping)
   - functions(arrow functions, higher order function)
 
 - NodeJS Module System
-- NodeJS Builtin modules(url, path, http, fs, os, process)
-- NPM Usage(initilizing the project, working with third party modules)
+  - Built in Modules - os, fs, path, http
+  - User Defined Modules
+  - Third Party modules
+- NPM Usage(initializing the project, working with third party modules)
 
 ### Features of NodeJS
 
@@ -847,6 +849,21 @@ npm outdated -g <package_name>
 - `npm i loadash@^4.0.0` - to install the latest 4.x.x version
 
 ## ExpressJS Introduction
+
+- About, Installation
+- Usage
+  - Simple Server
+  - Static file Server
+  - Connection with Template engine(ejs)
+  - Reading data from form
+  - Saving Data to the DB using Mongoose
+- RESTful API
+- MVC Architecture
+- Authentication(JWT, OAuth 2.0), Authorizations
+- OAuth
+- SSR, CSR
+
+### Examples
 
 - Send a Message to the Client
 
