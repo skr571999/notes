@@ -54,3 +54,12 @@ Simple notes about the Software and software development.
     - Web Applications
     - Desktop Applications
     - Android Application
+
+## Software Development Cycle
+
+- Requirement Phase
+- Designing Phase
+- Development Phase
+- Testing Phase
+- Deployment Phase
+- Maintenance Phase
