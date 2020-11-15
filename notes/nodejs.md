@@ -775,6 +775,86 @@ MongoClient.connect(dbURL, {
 
 ---
 
+## NodeJS Mongoose
+
+### Multiple Type Property
+
+```js
+const pendingMenuSchema = new mongoose.Schema({
+  category: {
+    // type: {},
+    // OR
+    type: mongoose.Schema.Types.Mixed,
+  },
+});
+
+const PendingMenu = mongoose.model("pendingmenu", pendingMenuSchema);
+
+const pm1 = new PendingMenu({
+  category: "Apple",
+});
+
+const pm2 = new PendingMenu({
+  category: mongoose.Types.ObjectId(),
+});
+```
+
+### Aggregation Example
+
+```js
+const mongoose = require("mongoose");
+
+// Database Connection
+mongoose
+  .connect("mongodb://localhost:27017/test1", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("DB Connected");
+  });
+
+const userSchema = mongoose.Schema({
+  name: String,
+  review: [{ course: String, rating: Number }],
+});
+// console.log(userSchema.path("name"))
+
+const User = mongoose.model("User", userSchema);
+
+let u1 = new User({
+  name: "User 4",
+  review: [
+    { course: "Course 1", rating: 6 },
+    { course: "Course 2", rating: 7 },
+    { course: "Course 3", rating: 6 },
+  ],
+});
+
+// u1.save().then(result => {
+//   console.log(result);
+// });
+
+// User.countDocuments().then(result=>{
+//     console.log(result)
+// })
+
+// User.distinct('review.course').then(result=>{
+//     console.log(result)
+// })
+
+User.aggregate([
+  { $match: { name: "User 1" } },
+  { $group: { _id: "$_id", total: { $sum: "$rewiew.0.rating" } } },
+])
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+```
+
 ## NodeJS MySQL
 
 - Requirement
