@@ -1,6 +1,6 @@
 module.exports = {
   title: "SKR Web Notes",
-  tagline: "Web Development Learning Notes",
+  tagline: "Notes",
   url: "https://skrnotes.netlify.app",
   baseUrl: "/",
   favicon: "img/favicon.ico",
@@ -15,8 +15,8 @@ module.exports = {
       },
       links: [
         {
-          to: "docs/",
-          label: "Docs",
+          to: "notes/",
+          label: "Notes",
           position: "left",
         },
         { to: "blog", label: "Blog", position: "left" },
@@ -75,8 +75,8 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          path: "../docs/",
-          // routeBasePath: "",
+          path: "../notes/",
+          routeBasePath: "notes",
           // homePageId: "",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
