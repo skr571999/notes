@@ -471,7 +471,7 @@ df.plot()
 - It is the art and science of giving computer the ability to learn to make decision from data not explicitly programmed or Set of technique used to extract knowledge from available data and use that knowledge to make decisions.
 - Example:
   - Web Search Engine
-  - Youtube Recommendation
+  - YouTube Recommendation
   - Virtual Personal Assistants - Siri, Alexa, Google Assistant
   - Filtering the Spam mails
   - Self driving Cars
@@ -492,6 +492,10 @@ df.plot()
   - Clustering
     - K - means Clustering
     - Hierarchical Clustering
+    - Association
+      - Apriori
+      - ECLAT Algorithm
+- **Reinforcement Learning**
 
 ### Supervised
 
@@ -719,9 +723,17 @@ Semi-supervised learning is a class of machine learning tasks and techniques tha
   - dumb the model into a file
   - then load the file to a variable and use it
 
+---
+
 ## Deep Learning
 
 Deep learning is a particular kind of machine that is inspired by our brains cells called neurons which lead to the concept of artificial neural network.
+
+- DL Techniques
+
+  - ANN - Artificial Neural Networks
+  - CNN - Convolutional Neural Networks
+  - RNN - Recurrent Neural Networks
 
 - **Applications -**
   - Image recognition
@@ -826,7 +838,7 @@ In neural network we process information in the same way as the human brain work
 - in the activation function we give input the sum of the input multiplied with the weights and adding the bias to that
 
 - **Feed Forward**
-- **Backpropagation algorithms** are a family of methods used to efficiently train artificial neural networks (ANNs) following a gradient descent approach that exploits the chain rule. The main feature of backpropagation is its iterative, recursive and efficient method for calculating the weights updates to improve the network until it is able to perform the task for which it is being trained.
+- **Back-propagation algorithms** are a family of methods used to efficiently train artificial neural networks (ANNs) following a gradient descent approach that exploits the chain rule. The main feature of back-propagation is its iterative, recursive and efficient method for calculating the weights updates to improve the network until it is able to perform the task for which it is being trained.
   - **Error Optimization**
   - Gradient Descent
     - W0 + Δ W0
@@ -840,3 +852,75 @@ In neural network we process information in the same way as the human brain work
 - How to decide the number of the layers required in the model
   - linearly Separable problems
   - Multilayer Perceptron
+
+## Natural Language Processing
+
+- SOURCE: https://youtu.be/5ctbvkAMQO4
+- Text Mining/ Text Analysis - is the process of deriving meaningful information form the natural language text
+- NLP is the part of the CS and AI which deals with the human Languages
+- Applications
+  - Sentimental Analysis(Facebook, Twitter Sentimental Analysis)
+  - Chatbots()
+  - Speech Recognition(Siri)
+  - Machine Transition(Google Translate)
+  - Spell Checking
+  - keyword Searching
+  - Information Extraction
+  - Advertisement Matching
+- Components of NLP
+  - Natural language Understanding
+  - Natural Language Generation
+- STEPS of NLP
+  - Tokenization
+  - Stemming
+  - Lemmatization
+  - POS Tags
+  - Named Entity Recognition
+  - Chunking
+- Python Library for NLP
+  - NLTK
+  - TextBlob
+
+## Sentimental Analysis
+
+is the process computationally identify and categorizing opinions form piece of text and determine whether the writer attitude towards a particular topic or the product is positive , negative or neutral
+Steps
+
+I - Tokenization
+is dividing the paragraph into different set of statements and the statements are further divided into words
+II - Cleaning the data
+is removing the data that does not add contribute to the analysis like special characters (!, @, # etc)
+III - Removing the stop words
+Words that does not contribute for the analysis like the , was ,he, she, etc
+IV - Classification
+Doing the classification using the Supervised learning algorithm
+Training the model using bag of words
+Classify as positive, negative, neutral
+Module used - textblob
+
+## Computer Vision
+
+- It is the field that deal with how the computer can be made to know what is in the image, videos and perform some tasks on that.
+- SOURCE:
+  - Siraj Raval (6 week Curriculum) - https://youtu.be/FSe_02FpJas
+  - https://en.wikipedia.org/wiki/Computer_vision
+- Application of Computer Vision(Tasks)
+  - Image Segmentation
+  - Object Detection
+  - Image Classification
+  - Object Tracking
+  - Image Generation
+  - Face Detection
+  - Optical Character Recognition
+- Python Library for Computer Vision
+  - OpenCV
+  - SimpleCV
+
+## Recommendation System
+
+- Content Based
+- Collaborative Filtering
+  - Memory Based
+  - Model Based
+- User based collaborative filtering
+- Item Based Collaborative Filtering

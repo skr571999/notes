@@ -49,14 +49,14 @@ title: Tools
   - Revert Back to the Old Version
 - Configuring git
 
-```cmd
-// globally
+```sh
+# // globally
 git config --global user.email "email@example.com"
 git config --global user.email
-// locally
+# // locally
 git config user.email "email@example.com"
 git config user.email
-// to see the list of configuration
+# // to see the list of configuration
 git config --list
 ```
 
@@ -155,7 +155,9 @@ git branch -d BRANCH_NAME ==> to delete a branch
 git branch -r ==> to list the remote branches
 ```
 
-<!--
+### Other Unorganized
+
+```sh
 git branch -a ==> to see the remote branches after the cloning a remote repo
 git clone <url>
 git add <file_name>
@@ -174,15 +176,70 @@ git merge <branch_name>
 git fetch
 git merge origin/master
 
-- TODO
-  - how to merge two repositories
-- Pluralsight Git course: https://app.pluralsight.com/library/courses/code-school-git-real/table-of-contents
--->
+# - TODO
+  # - how to merge two repositories
+# - Pluralsight Git course: https://app.pluralsight.com/library/courses/code-school-git-real/table-of-contents
+```
 
 ### Others
 
 - Monorepos
 - [Git large File Storage](https://git-lfs.github.com)
+
+### Git Rebase with Github
+
+```sh
+# current branch feature
+- git rebase origin/master
+	# - Accept the current change only
+- git add .
+- git commit -a
+- git rebase --continue
+
+- git log --oneline --graph
+- git push origin feature --force
+
+# Git Stashing
+
+git stash save Name
+git stash apply stash@{STASH_ID}
+git stash pop stash@{STASH_ID}
+git stash list
+# - also after applying or popping  a stash we need to first commit only after that we can apply another one
+```
+
+### Resolving conflict on Git and GitHub
+
+```sh
+# I - when having only one commit
+- git stash
+- git pull
+- git stash pop // git stash apply
+- create a new branch and commit your changes
+# II -
+- git branch -a # to see the list of all the branches
+- git fetch --all
+- // go to your branch
+- git pull origin master
+# - // then resolve the conflict and commit the changes your changes will not be having the conflict
+
+# // To show log message in one line
+- git log --pretty=oneline --abrev-commit
+
+# To get the changes from the Master branch to the another branch
+git checkout BRANCH_NAME
+git rebase master
+
+# Pull code from parent of forked Repo
+
+git pull upstream master
+git pull master
+
+# Add the Upstream branch in a forked repo
+
+git remote add upstream <repo_URL>
+git remote -v
+```
 
 ### GitHub Code Hosting
 

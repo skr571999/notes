@@ -27,6 +27,7 @@ title: Angular
 - Angular Material
 - RxJS
 - NgRx
+- Content Projection(with Slots)
 
 <!--
 // RxJS link for JavaScript
@@ -38,7 +39,7 @@ title: Angular
 - JWTAuthRefreshTokenDemo
 - NgrxTutorialStoreDemo
 - SocketConnectionDemo
-- Stackbiz Demo- https://stackblitz.com/@skr571999
+- StackBiz Demo- https://stackblitz.com/@skr571999
 
 ## Projects
 
@@ -98,20 +99,16 @@ ng serve --host 0.0.0.0 // ==> to run local server for the network
 ```
 
 - to find the ip address run `ipconfig` in cmd
-
 - Architecture - Module and Component Based
-
-![Angular Architecture](./files/angular_architecture.png)
-
 - [Folder Structure](https://angular.io/guide/file-structure)
-- Termonology
+- Terminology
   - Modules - container for the Components and Services
   - Components - Container for template, data and logic
   - Controller(component) - `*.component.ts` file
   - Template(view) - `*.component.html` file
 - Generate Commands
 
-```cmd
+```sh
 ng g module MODULE_NAME
 
 ng g c COMPONENT_NAME
