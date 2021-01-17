@@ -14,6 +14,17 @@ title: Website Development
 - [https://www.w3schools.com/html/default.asp](https://www.w3schools.com/html/default.asp)
 - [Freecode camp (YouTube) - CSS3 30 Days](https://www.youtube.com/playlist?list=PLWKjhJtqVAbl1AfjiGyYxwpdAPi5v-1OU)
 - [Namaste 🙏 JavaScript - Akshay Saini](https://www.youtube.com/watch?v=pN6jk0uUrD8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP)
+- [https://roadmap.sh](https://roadmap.sh)
+- [https://levelup.gitconnected.com/the-2020-web-developer-roadmap-76503ddfb327#f309](https://levelup.gitconnected.com/the-2020-web-developer-roadmap-76503ddfb327#f309)
+- [https://www.theodinproject.com/](https://www.theodinproject.com/)
+- [https://www.freecodecamp.org/](https://www.freecodecamp.org/)
+- [https://www.khanacademy.org/computing/computer-programming](https://www.khanacademy.org/computing/computer-programming)
+- [https://cs50.harvard.edu/college/2021/spring/](https://cs50.harvard.edu/college/2021/spring/)
+
+### Popular YouTube Channels
+
+- [https://www.youtube.com/c/TheCodingTrain/videos](https://www.youtube.com/c/TheCodingTrain/videos)
+- [https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFAs)
 
 ### Tools
 

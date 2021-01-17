@@ -33,6 +33,7 @@ title: Tools
   - how to merge two repositories
   - [PluralSight Git course](https://app.pluralsight.com/library/courses/code-school-git-real/table-of-contents)
   - Monorepos
+    - where code for many projects are stored in same repository
   - [Git large File Storage](https://git-lfs.github.com)
 - Use of Git
   - Keep track of the Changes in the code

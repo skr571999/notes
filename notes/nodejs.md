@@ -25,35 +25,25 @@ title: NodeJS
 ## NodeJS Introduction
 
 - About NodeJS
-  - NodeJS is created by Ryan Dahl in 2009. It is a JavaScript runtime that uses the V8 engine inside to run the javascript code.
+  - NodeJS is created by Ryan Dahl in 2009.
+  - It is a JavaScript runtime that uses the V8 engine inside to run the javascript code.
   - Basically it is a c++ program that run the V8 engine.
-  - Website : [https://nodejs.org/en/](https://nodejs.org/en/)
+  - [https://nodejs.org/en/](https://nodejs.org/en/)
   - What is the use of NodeJS
   - Why should we use NodeJS
 - Installation and Introduction
 - Basic Concepts of JavaScript
-
   - Variables, Identifers
   - Data types(Array, Object, JSON)
   - Control flow statements(conditional, looping)
   - functions(arrow functions, higher order function)
-
-- NodeJS Module System
-  - Built in Modules - os, fs, path, http
-  - User Defined Modules
-  - Third Party modules
-- NPM Usage(initializing the project, working with third party modules)
-
-### Features of NodeJS
-
-- Free and Open Source
-- Cross Platforms - Windows, Linux, Mac OS, etc
-- Asynchronous Event Driven IO
-- Event Queue Loop - node monitor this event queue to know which tasks to do
-- Handle Concurrent Request on a single thread
-- Both front and backed using JavaScript so Faster development
-
-<!--
+- Features of NodeJS
+  - Free and Open Source
+  - Cross Platforms - Windows, Linux, Mac OS, etc
+  - Asynchronous Event Driven IO
+  - Event Queue Loop - node monitor this event queue to know which tasks to do
+  - Handle Concurrent Request on a single thread
+  - Both front and backed using JavaScript so Faster development
 - When to Use NodeJS
   - Chat Application
   - Game Servers
@@ -61,22 +51,9 @@ title: NodeJS
   - Streaming Servers
 - When not to Use NodeJS
   - When we require long processing time, because it uses single thread to process if a request need more time in background then it would not be able to serve other requests.
--->
-
-### Running First Program
-
-- Software Required
-  - NodeJS
-  - Visual Studio Code
-- REPL
+- REPL - Read Evaluate Print Loop
 
 ```js
-// hello.js
-console.log("Hello World");
-
-// Run
-// node hello.js
-
 // /////////// Global Objects
 global;
 setTimeout();
@@ -95,12 +72,9 @@ console.log(__dirname);
 // Command Line Arguments
 // index.js
 console.log(process.argv);
-
 // Run
 // node index.js 1 2 3 4
-```
 
-<!--
 // ---------------- Example of Blocking code in NodeJS
 const app = require("express")();
 
@@ -117,11 +91,8 @@ app.use((req, res) => {
 });
 
 app.listen(3000, () => console.log("Serving on 3000"));
--->
 
-### Debugging
-
-```js
+// ### Debugging
 // Using the Debugger Statement
 // Adding the debugger statement to inspect
 // Use `node inspect FILE_NAME` to to start debugging
@@ -136,33 +107,30 @@ a = 13;
 
 - **Why use Module System** - a member defined inside a module is not available inside another module but we can do that explicitly
 - NodeJS Uses the **commonjs** module system
-- What is a module. Example
-
 - Types of Modules
-
   - Built In Modules(core modules)
     - are the modules that are provided by the NodeJS
   - User Defined Modules
   - Third Party modules(npm Modules)
 
-<!--
-- Packages
-  - a folder containing a index.js file can be imported as follows
+```js
+// - Packages
+//   - a folder containing a index.js file can be imported as follows
 
-- sum
-  - index.js
-- app.js
+// - sum
+//   - index.js
+// - app.js
 
 // index.js
 module.exports = (a, b) => {
   return a + b;
 };
 // app.js
-const sum = require('./sum')
-console.log(sum(12,2))
+const sum = require("./sum");
+console.log(sum(12, 2));
 
-RUN: node app
--->
+// RUN: node app
+```
 
 ### User Defined Modules
 
@@ -202,18 +170,17 @@ module.exports = {
 ### Third Party Modules
 
 - NPM - Node Package Manager
-  - npm commands
+- NPM Usage(initializing the project, working with third party modules)
+- Local and Global Modules
 
-```cmd
+```sh
+# npm commands
 npm install MODULE_NAME
 npm uninstall MODULE_NAME
 npm list -g --depth=0
 ```
 
-- Local and Global Modules
-
 ```js
-// Example
 // npm i request
 const request = require("request");
 const URL = "http://localhost:3000";
@@ -245,18 +212,15 @@ http
     console.log(`Server Runnig on ${PORT}`);
   });
 
-// ///////////// Exmaple 2
+// ///////////// Example 2
 const http = require("http");
 
 http
   .createServer((req, res) => {
     if (req.url === "/") {
-      // writeHead() is used to specify the HTTP Header Information
-      // Here, status code of the response and the type of the content to be delivered is specified
       res.writeHead(200, { "Content-Type": "text/html" });
       res.write("HTML Response");
     } else if (req.url === "/json") {
-      // Sending the JSON data when the /json is navigated
       res.writeHead(200, { "Content-Type": "application/json" });
       res.write(
         JSON.stringify({
@@ -265,16 +229,14 @@ http
         })
       );
     } else {
-      // Sending a message of Invalid for all other requests
       res.write("Invalid Request");
     }
     res.end();
   })
   .listen(4200, console.log("Server is Running on Port: 4200"));
 
-// Now, We can see server is running by two methods
-// 1. Navigating to the http://localhost:4200
-// 2. Type this command in the cmd : > curl -i http://localhost:4200
+// - http://localhost:4200
+// ->curl -i http://localhost:4200
 ```
 
 ### FS
@@ -347,10 +309,10 @@ readFile("data.json", "utf8", (err, data) => {
 //  Working with dir
 // - mkdir
 // - rmdir
-// creating file inside filder
+// creating file inside folder
 
 // working with streams
-// compressing and uncompressing using fs and zlib
+// compressing and un-compressing using fs and zlib
 ```
 
 ### OS
@@ -493,7 +455,7 @@ logger.log("Hello world of test");
 
 -->
 
-### Readline
+### ReadLine
 
 <!--
 // test1.js
@@ -598,53 +560,45 @@ const dbURL2 = "mongodb://localhost:27017/test";
 // MongoClient.connect(dbURL1, { useNewUrlParser: true }, (err, client) => {
 //   if (err) throw err;
 
-//   console.log("Succesfully connected to Client");
+//   console.log("Successfully connected to Client");
 //   client.close();
 // });
 
 // NOTES:
-// - If the db is dpecified in the url then no need to use the client.db('DB_NAME)
+// - If the db is specified in the url then no need to use the client.db('DB_NAME)
 // then we can directly access db using the passed parameter in the callback
-```
 
-### Creating Collection
-
-```js
+// ### Creating Collection
 let db = client.db(dbNAME);
 
 db.createCollection("students", () => {
   console.log("Collection created!");
 });
+
 // it will not show in DB because it is empty
-```
+client
+  .db()
+  .collections()
+  .then((result) => {
+    console.log(result.length);
+    // console.log(result[0].namespace)
+    client.close();
+  });
 
-<!--
- client.db().collections().then(result=>{
-      console.log(result.length)
-      // console.log(result[0].namespace)
-      client.close()
-    })
- -->
-
-### Droping the Collection
-
-```js
+// ### Dropping the Collection
 let db = client.db(dbNAME);
 
 // Method - 1
-//   db.collection("students").drop(() => {
-//     console.log("Collection Droped");
-//   });
+db.collection("students").drop(() => {
+  console.log("Collection Dropped");
+});
 
 // Method - 2
 db.dropCollection("students", () => {
   console.log("Collection Dropped");
 });
-```
 
-### Inserting into the Database
-
-```js
+// ### Inserting into the Database
 let collection = client.db(dbNAME).collection("students");
 
 // Method - 1
@@ -663,11 +617,8 @@ collection.insertMany(documents, (err, res) => {
   if (err) throw err;
   console.log(res.ops);
 });
-```
 
-### Reading the data from the Database
-
-```js
+// ### Reading the data from the Database
 let collection = client.db(dbNAME).collection("students");
 
 collection.find({}).toArray((err, res) => {
@@ -687,99 +638,102 @@ collection.find(query).toArray((err, res) => {
   console.log(res);
   console.log(res.length);
 });
-```
 
-### Example
-
-```js
+// ### Example
 const MongoClient = require("mongodb").MongoClient;
 const dbURL = "mongodb://localhost:27017/sunday";
 
-// MongoClient.connect(dbURL, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// }, (err, client)=>{
-
-// console.log(client.isConnected())
-// })
+MongoClient.connect(
+  dbURL,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err, client) => {
+    console.log(client.isConnected());
+  }
+);
 
 MongoClient.connect(dbURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
   .then((client) => {
-    // console.dir(client, { depth: 0 });
+    console.dir(client, { depth: 0 });
 
-    // let collection = client.db().collection("student");
+    let collection = client.db().collection("student");
 
     // INSERT
-    // collection.insertOne({ name: "Jishant", course: "Python" }).then(res => {
-    //   console.dir(res, {depth: 0});
-    // });
+    collection.insertOne({ name: "Jishant", course: "Python" }).then((res) => {
+      console.dir(res, { depth: 0 });
+    });
 
     // READ
-    // collection.find().toArray().then(res=>{
-    //   console.log(res)
-    // })
+    collection
+      .find()
+      .toArray()
+      .then((res) => {
+        console.log(res);
+      });
 
     // UPDATE
-    // collection
-    //   .updateOne(
-    //     { name: "Jishant" },
-    //     {
-    //       $set: {
-    //         name: "Jishant Tyagi"
-    //       }
-    //     }
-    //   )
-    //   .then(res => {
-    //     console.dir(res, { depth: 0 });
-    //   })
-    //   .catch(err => {
-    //     console.log("Erro Occured in Update", err.name);
-    //   });
+    collection
+      .updateOne(
+        { name: "Jishant" },
+        {
+          $set: {
+            name: "Jishant Tyagi",
+          },
+        }
+      )
+      .then((res) => {
+        console.dir(res, { depth: 0 });
+      })
+      .catch((err) => {
+        console.log("Erro Occured in Update", err.name);
+      });
 
     // DELETE
-    // collection
-    //   .deleteOne({ name: "Jishant" })
-    //   .then(res => {
-    //     console.dir(res, { depth: 0 });
-    //   })
-    //   .catch(err => {
-    //     console.log("Error Occured During Deletion ", err.name);
-    //   });
+    collection
+      .deleteOne({ name: "Jishant" })
+      .then((res) => {
+        console.dir(res, { depth: 0 });
+      })
+      .catch((err) => {
+        console.log("Error Occured During Deletion ", err.name);
+      });
 
-    // collection
-    //   .countDocuments((err, res) => {
-    //     console.log(res);
-    //   })
-    //   .then(res => {
-    //     console.log(res);
-    //   });
+    collection
+      .countDocuments((err, res) => {
+        console.log(res);
+      })
+      .then((res) => {
+        console.log(res);
+      });
 
-    // console.log(client.db().databaseName)
-    // console.log(collection.collectionName)
+    console.log(client.db().databaseName);
+    console.log(collection.collectionName);
 
-    // client.db().collections().then(res=>{
-    //   for(let i of res){
-    //     console.log(i.collectionName)
-    //   }
-    // })
+    client
+      .db()
+      .collections()
+      .then((res) => {
+        for (let i of res) {
+          console.log(i.collectionName);
+        }
+      });
 
     client.close();
   })
   .catch((err) => {
-    console.log("Error Occured During Connection", err.name);
+    console.log("Error Occurred During Connection", err.name);
   });
 ```
 
----
-
 ## NodeJS Mongoose
 
-### Multiple Type Property
-
 ```js
+// ### Multiple Type Property
 const pendingMenuSchema = new mongoose.Schema({
   category: {
     // type: {},
@@ -797,11 +751,8 @@ const pm1 = new PendingMenu({
 const pm2 = new PendingMenu({
   category: mongoose.Types.ObjectId(),
 });
-```
 
-### Aggregation Example
-
-```js
+// ### Aggregation Example
 const mongoose = require("mongoose");
 
 // Database Connection
@@ -831,17 +782,17 @@ let u1 = new User({
   ],
 });
 
-// u1.save().then(result => {
-//   console.log(result);
-// });
+u1.save().then((result) => {
+  console.log(result);
+});
 
-// User.countDocuments().then(result=>{
-//     console.log(result)
-// })
+User.countDocuments().then((result) => {
+  console.log(result);
+});
 
-// User.distinct('review.course').then(result=>{
-//     console.log(result)
-// })
+User.distinct("review.course").then((result) => {
+  console.log(result);
+});
 
 User.aggregate([
   { $match: { name: "User 1" } },
@@ -1157,10 +1108,9 @@ h1 Data : #{data}
 ```
 
 - PUG Advanced
-
-- if
-- for
-- Template Inheritance
+  - if
+  - for
+  - Template Inheritance
 
 ## ExpressJS Getting Data from Client
 
@@ -1464,15 +1414,12 @@ app.get("/", (req, res) => {
 - Authentication - the process of verifying the identity of a user. or It is controlling if an incoming request can proceed or not.
 - Authorization - the process of giving permission of Usage or It is controlling if an authentication request has the correct permission to access a resource
 - identification - is determining who the requester is.
-
 - Using session to authenticate the user
-
   - Registration
   - Login
   - Logout
   - Saving Data for a Particular user
   - mongoose populate
-
 - [NodeJS Handling Authentication using Passport and JWT FreeCOdeCamp](https://www.freecodecamp.org/news/learn-how-to-handle-authentication-with-node-using-passport-js-4a56ed18e81e/)
 
 ### Password Encryption(Hashing)
@@ -1621,7 +1568,7 @@ process.env.VERIABLE_NAME;
   - For the link which we have sended to the user we need to make a route for handle that mail click
   - When the user click to the link we have sended in the mail our route will handle it
   - In handling the route
-    - we will recieve the string through the url parameter and will match that string with the string we have stored in the database for that user
+    - we will receive the string through the url parameter and will match that string with the string we have stored in the database for that user
     - if both matches then we will set status verified for that user
 - Process of User(user's email) Verification using Email OTP
 
@@ -1630,7 +1577,7 @@ process.env.VERIABLE_NAME;
 - API - Application Programming Interface
 - REST - Representational state transfer
 - API is a interface through which one application talk to another application.
-- Web Services - are the type of APIs which are accessed through a newtwork Connection
+- Web Services - are the type of APIs which are accessed through a network Connection
 - REST is a software architectural style(or API design Pattern) that defines a set of constraints to be used for creating Web services.
 - Web services that conform to the REST architectural style, called RESTful Web Services.
 
@@ -1667,7 +1614,7 @@ process.env.VERIABLE_NAME;
 - HTTP Status Codes
 
   - Tell the Status of the Response to the client
-  - Common Status Termonology
+  - Common Status Terminology
     - 200+ - means the request is Success
     - 300+ - means the request is redirected to another URL
     - 400+ - an error is generated due to Client
