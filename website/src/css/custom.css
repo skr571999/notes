@@ -42,9 +42,9 @@
 
 .tableOfContentContainer a:hover {
   text-decoration: none;
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: var(--ifm-color-primary-darkest);
   background-color: var(--ifm-color-primary-lightest);
-  font-weight: bold;
+  /* font-weight: bold; */
   box-shadow: 0 0 0.1px 0.1rem var(--ifm-color-primary);
 }

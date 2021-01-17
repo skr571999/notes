@@ -16,6 +16,10 @@ export default function TableOfContent() {
       link: "django",
     },
     {
+      name: "Docker",
+      link: "docker",
+    },
+    {
       name: "JavaScript",
       link: "javascript",
     },
