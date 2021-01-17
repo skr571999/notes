@@ -29,27 +29,40 @@ title: Tools
 ## Git and GitHub
 
 - Git - Distributed Version Control System
-
-- Content
-  - Introduction
-  - Staging and Remote
-  - Cloning and Branching
-  - Collaboration
-  - Branching
-  - Rebase Belong to Us
-  - History and Configuration
-
-### Introduction
-
-- Checking Git is Installed or not `git --version`
+- TODO
+  - how to merge two repositories
+  - [PluralSight Git course](https://app.pluralsight.com/library/courses/code-school-git-real/table-of-contents)
+  - Monorepos
+  - [Git large File Storage](https://git-lfs.github.com)
 - Use of Git
   - Keep track of the Changes in the code
   - Synchronize the code between different People
   - Test changes to code without losing the Original code using branches
   - Revert Back to the Old Version
-- Configuring git
+- Different Areas of Snapshot
+  - Working Area - tracked and Un-tracked files
+  - Staging Area
+  - Committed Area
+- Commands that does changes in the Commits should not be used after pushing the changes
+- HEAD - it refers to the last commit on the current branch
+- GitHub Code Hosting
+  - GitHub Account
+  - About - Feature
+    - Branches
+  - Usage
+    - Creating a repo
+    - adding it to local repo
+    - cloning the repo
+    - pushing the changes
+    - Working in VSCode
+- Fast-Forward - when we doesn't do any changes in master branch and try to merge it with other branch the it is called fast-forward
+- [Git Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 
 ```sh
+# - Checking Git is Installed or not
+git --version
+
+### - Configuring git
 # // globally
 git config --global user.email "email@example.com"
 git config --global user.email
@@ -58,21 +71,15 @@ git config user.email "email@example.com"
 git config user.email
 # // to see the list of configuration
 git config --list
-```
 
-- Basic Usage
-
-```cmd
+### - Basic Usage
 git init
 git add hello.txt
 git commit -m  "Initial commit"
 git status
 git log
-```
 
 ### Different ways to add files to stage Area
-
-```cmd
 git add <list of files> - Add the list of Files
 git add -all - add all files
 git add . - add all files
@@ -80,115 +87,92 @@ git add *.txt - add all txt files in current directory
 git add docs/*.txt - add all txt files in docs directory
 git add docs/ - add all files in docs directory
 git add "*.txt" - add all files in the whole project
-```
-
-### Different Areas of Snapshot
-
-- Working Area - tracked and Un-tracked files
-- Staging Area
-- Committed Area
 
 ### Staging and Remote
+# - show unstaged differences since last commit
+git diff
+# - view staged differences
+git diff --staged
+# - to unstage
+git reset HEAD <FILE>
+# - below awy the changes since last commit
+git checkout -- <FILE>
+# - add and commit tracked file but not the untracked files
+git commit -a -m "MESSAGE"
+# - Undoing a commit, --soft(reset into staging area)
+git reset --soft HEAD
 
-```cmd
-git diff - show unstaged differences since last commit
-git diff --staged - view staged differences
-git reset HEAD <FILE> - to unstage
-git checkout -- <FILE> - below awy the chenages since last commit
-git commit -a -m "MESSAGE" - add and commit tracked file but not the untracked files
-git reset --soft HEAD - Undoing a commit, --soft(reset into staging area)
-```
+# - Adding staged files to the last commit
+git commit --amend -m "NEW MESSAGE"
 
-- Adding staged files to the last commit `git commit --amend -m "NEW MESSAGE"`
-  - `--amend` - add to last commit
-  - `-m "MESSAGE"` - optional
-  - Whatever is staged will be added to last commit
-- Undoing last commit `git reset --hard HEAD^`
-- Undoing last 2 commit `git reset --hard HEAD^^`
-- Commands that does changes in the Commits should not be used after pushing the chenages
-- HEAD - it refers to the last commit on the current branch
-- Adding a remote `git remote add REMOTE_NAME REMOTE_URL`
-  - REMOTE_NAME like - origin
-- To see remotes `git remote -v`
-- To change the remote URL `git remote set-url REMOTE_NAME REMOTE_NEW_URL`
-- To push to remote `git push -u origin master`
-  - -`u` - to set the upstream `--set-upstream`
-- to pull the chanegs from remote `git pull`
-- To remove a remote `git remote rm REMOTE_NAME`
+# - Undoing last commit
+git reset --hard HEAD^
+# - Undoing last 2 commit
+git reset --hard HEAD^^
 
-### Cloning and Branching
+# - Adding a remote
+git remote add REMOTE_NAME REMOTE_URL
+# - To see remotes
+git remote -v
 
-- Cloning a repo
-  - `git clone REMOTE_URL`
-  - `git clone REMOTE_URL LOCAL_FOLDER_NAME`
-- Creating a new Branch `git branch BRANCH_NAME`
-- Listing out all the branches `git branch`
-- Switching to a branch `git checkout BRANCH_NAME`
-- Creacting and checkout branch `git checkout -b BRANCH_NAME`
-- Merging two branches
-  - I - `git checkout master`
-  - II - `git merge BRNAHC_NAME`
-- Deleting a branch when all things are commited `git branch -d BRANCH_NAME`
-- Deleting a branch `git branch -D BRANCH_NAME` will delete the branch nomatter if there are something not commited
-- Fast-Forward - when we doesn't do any changes in master branch and try to merge it with other branch the it is called fast-forward
+# - To change the remote URL
+git remote set-url REMOTE_NAME REMOTE_NEW_URL
+# - To push to remote : `-u` to set the upstream `--set-upstream`
+git push -u origin master
+# - to pull the changes from remote
+git pull
+# - To remove a remote
+git remote rm REMOTE_NAME
 
-### Collaboration Basics
+# - Cloning a repo
+git clone REMOTE_URL
+git clone REMOTE_URL LOCAL_FOLDER_NAME
 
-- Pulling the changes from remote `git pull`
-  - `git pull` is combination of two commands
-    - I - git fetch
-    - II - git merge origin/master
+# - Creating a new Branch
+git branch BRANCH_NAME
+# - Listing out all the branches
+git branch
+# - Switching to a branch
+git checkout BRANCH_NAME
+# - Creating and checkout branch
+git checkout -b BRANCH_NAME
+# - Merging two branches
+git checkout master
+git merge BRANCH_NAME
+# - Deleting branch when all things are committed
+git branch -d BRANCH_NAME
+# - Deleting branch no matter if there is something not committed
+git branch -D BRANCH_NAME
+# - Pulling the changes from remote
+git pull
+# - git pull is combination of two commands
+# 1. `git fetch`
+# 2. `git merge origin/master`
 
-### Remote Branching and Tagging
+### - Pruning Local Branches
+# ==> will list the branches to be pruned
+git remote prune origin --dry-run
+# ==> will prune the local branches
+git remote prune origin
 
-- Listing all the remote branches `git branch -r`
-
-- [Git Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
-
-### Pruning Local Branches
-
-```cmd
-git remote prune origin --dry-run ==> will list the branches to be pruned
-git remote prune origin ==> will prune the local branches
-git branch -a ==> to list all the branches
-git branch -d BRANCH_NAME ==> to delete a branch
-git branch -r ==> to list the remote branches
-```
+###  Displaying Branches with Filters
+# ==> to list all the branches
+git branch -a
+# ==> to delete a branch
+git branch -d BRANCH_NAME
+# ==> to list the remote branches
+git branch -r
 
 ### Other Unorganized
-
-```sh
-git branch -a ==> to see the remote branches after the cloning a remote repo
-git clone <url>
-git add <file_name>
-git commit -m "message"
 git status
-git push
-git pull
-git log
 git reset
 git reflog
-git branch <branch_name>
-git branch
-git checkout <branch_name>
 git commit -am "message"
 git merge <branch_name>
 git fetch
 git merge origin/master
 
-# - TODO
-  # - how to merge two repositories
-# - Pluralsight Git course: https://app.pluralsight.com/library/courses/code-school-git-real/table-of-contents
-```
-
-### Others
-
-- Monorepos
-- [Git large File Storage](https://git-lfs.github.com)
-
 ### Git Rebase with Github
-
-```sh
 # current branch feature
 - git rebase origin/master
 	# - Accept the current change only
@@ -199,31 +183,26 @@ git merge origin/master
 - git log --oneline --graph
 - git push origin feature --force
 
-# Git Stashing
-
+### Git Stashing
 git stash save Name
 git stash apply stash@{STASH_ID}
 git stash pop stash@{STASH_ID}
 git stash list
-# - also after applying or popping  a stash we need to first commit only after that we can apply another one
-```
+# Also after applying or popping  a stash we need to first commit only after that we can apply another one
 
 ### Resolving conflict on Git and GitHub
-
-```sh
 # I - when having only one commit
 - git stash
 - git pull
 - git stash pop // git stash apply
 - create a new branch and commit your changes
 # II -
-- git branch -a # to see the list of all the branches
 - git fetch --all
-- // go to your branch
+# - go to your branch
 - git pull origin master
-# - // then resolve the conflict and commit the changes your changes will not be having the conflict
+# - Then resolve the conflict and commit the changes your changes will not be having the conflict
 
-# // To show log message in one line
+# To show log message in one line
 - git log --pretty=oneline --abrev-commit
 
 # To get the changes from the Master branch to the another branch
@@ -231,61 +210,43 @@ git checkout BRANCH_NAME
 git rebase master
 
 # Pull code from parent of forked Repo
-
 git pull upstream master
 git pull master
 
 # Add the Upstream branch in a forked repo
-
 git remote add upstream <repo_URL>
 git remote -v
 ```
 
-### GitHub Code Hosting
-
-- GitHub Account
-- About - Feature
-  - Branches
-- Usage
-  - Creating a repo
-  - adding it to local repo
-  - cloning the repo
-  - pushing the changes
-  - Working in VSCode
-
-## Postman
+## Postman Usage
 
 - [Postman Collection Sharing Docs](https://learning.postman.com/docs/postman/collections/sharing-collections/)
-- Software similar to POSTMAN[(Insomnia)](https://support.insomnia.rest)
-
-### Setup Environment Variable in a Collection
-
-- Code to be pasted in Tests Tab of a Request
+- [Software similar to POSTMAN(Insomnia)](https://support.insomnia.rest)
 
 ```js
+// Setup Environment Variable in a Collection
+// - Code to be pasted in Tests Tab of a Request
+
 var jsonData = JSON.parse(responseBody);
 pm.environment.set("ACCESS_TOKEN", jsonData["access"]);
+
+// - Using the Set variable : `{{ACCESS_TOKEN}}`
 ```
 
-- Using the Set variable : `{{ACCESS_TOKEN}}`
-
-## VSCode
+## VSCode Usage
 
 - Installation
 - About - Feature
 - Usage
-
   - Opening Folder
   - Extensions
   - Changing the Theme, Coloring
   - Shortcuts
   - Integration With Git, GitHub
   - Integrated Terminal
-
 - [Configure recommended Extensions for sharing extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
 - [VSCode in Browser](https://enterprise.coder.com/docs)
-
-### VSCode Shortcuts
+- **VSCode Shortcuts**
 
 |        Key Binding         |                 Detail                  |
 | :------------------------: | :-------------------------------------: |
@@ -299,69 +260,60 @@ pm.environment.set("ACCESS_TOKEN", jsonData["access"]);
 |     `ctrl + shift + ]`     |        to open the code folding         |
 |       `ctrl + space`       | for the suggestions of the code members |
 
-## Heroku Introduction
+## Heroku Usage
 
 - Requirements
+
   - Git
   - Heroku CLI
 
-### Introduction
+- Basics Commands
 
-- Login to heroku `heroku login`
-- Creating an heroku app(repo) `heroku create`
-- Pushing the changes `git push heroku master`
-- Running the Heroku bash in local system `heroku run bash`
-- Logging logs `heroku logs --tail`
-- To Opent the App `heroku open`
-- To see the login ID `heroku auth:whoami`
+  - Login to heroku `heroku login`
+  - Creating an heroku app(repo) `heroku create`
+  - Pushing the changes `git push heroku master`
+  - Running the Heroku bash in local system `heroku run bash`
+  - Logging logs `heroku logs --tail`
+  - To Open the App `heroku open`
+  - To see the login ID `heroku auth:whoami`
 
-### Renaming the app
-
-- Method I - after changing from the dashboard
-
-- I - rename the app from the heroku dashboard
-- II - to update the remote name in systme now
-
-  - I - go to the folder
-  - II - remove the old remote `git remote rm heroku`
-  - III - add the new remote `heroku git:remote -a NEW_NAME`
-
-- Method - II - not changing from dashboard
-
-- If we are in same folder then `heroku apps:rename NEW_NAME`
-- If we are on a different location `heroku apps:rename NEW_NAME --app OLD_NAME`
+- Renaming the app
+  - **Method-I** - after changing from the dashboard
+    - I - rename the app from the heroku dashboard
+    - II - to update the remote name in system now
+      - I - go to the folder
+      - II - remove the old remote `git remote rm heroku`
+      - III - add the new remote `heroku git:remote -a NEW_NAME`
+  - **Method-II** - not changing from dashboard
+    - If we are in same folder then `heroku apps:rename NEW_NAME`
+    - If we are on a different location `heroku apps:rename NEW_NAME --app OLD_NAME`
 
 ## Screen Commands in Linux
 
-By using Screen command in Linux we can start multiple shell session at the same time and use them.
+- By using Screen command in Linux we can start multiple shell session at the same time and use them.
+- [https://www.geeksforgeeks.org/screen-command-in-linux-with-examples/](https://www.geeksforgeeks.org/screen-command-in-linux-with-examples/)
 
-### Resource
-
-- https://www.geeksforgeeks.org/screen-command-in-linux-with-examples/
-
-### Usage
-
-```cmd
-- Installing Screen
+```sh
+# - Installing Screen
 	- sudo apt install screen
-- Start a Screen Session
+# - Start a Screen Session
 	- sudo screen
 	- sudo screen -S SESSION_NAME
-- See the List of the Screens
+# - See the List of the Screens
 	- sudo screen -ls
-- To detach a Screen
+# - To detach a Screen
 	- screen -d SESSION_ID
-- To attach to a detached Screen
+# - To attach to a detached Screen
 	- screen -r SESSION_ID
-- To Close a Screen
-	- I - Go to that screen
-	- II - type exit
-- To attach to a not detached Screen
+# - To Close a Screen
+	# - I - Go to that screen
+	# - II - type exit
+# - To attach to a not detached Screen
 	- screen -x SESSION_ID
-- To rename a session
+# - To rename a session
 	- I - Go to that Session Screen
 	- II - (CTRL + A) + type :sessionname NEW_SESSION_NAME
-- To see the current Session name
+# - To see the current Session name
 	- I - Go to that Session
 	- II - echo $STY
 ```
@@ -448,47 +400,41 @@ D:
 - start opera "https://google.com" # to open opera
 ```
 
-## VIM Introduction
+## VIM Usage
 
 - Modes
 
-- Insert Mode (i)
-- to change a mode press ESC
+  - Insert Mode (i)
+  - to change a mode press ESC
 
-### Working with Files
+- Working with Files
 
-```cmd
-- Opening a file in vim
- 	- vim hello.txt
-
-- Saving a file in Vim
-
-i) Saving a file and switching back to normal mode without closing vim
-	- ESC + :w + ENTER
-ii) Saving a file with another name
-	- ESC + :w NEW_FILE_NAME + ENTER
-iii) To save a file and Quit Vim
-	- ESC + :wq + ENTER
-	- ESC + :x + ENTER
-	- Difference b/w :wq and :x
-		- :wq - always write buffer to file so modify its time
-		- :x - only write to file when there are unsaved changes
+  - Opening a file in vim `vim hello.txt`
+  - Saving a file in Vim
+  - Saving a file and switching back to normal mode without closing vim
+    - `ESC + :w + ENTER`
+  - Saving a file with another name
+    - `ESC + :w NEW_FILE_NAME + ENTER`
+  - To save a file and Quit Vim
+    - `ESC + :wq + ENTER`
+    - `ESC + :x + ENTER`
+    - Difference b/w `:wq` and `:x`
+      - `:wq` - always write buffer to file so modify its time
+      - `:x` - only write to file when there are unsaved changes
 
 - Moving the Cursor
-	- j - down
-	- k - up
-	- h - left
-	- l - right
-```
+  - j - down
+  - k - up
+  - h - left
+  - l - right
 
-## Markdown Introduction
-
-### Basics
+## Markdown Syntax
 
 - Extensions -- .md, .markdown
 - Text Styling
+- [GitHub Markdown Guide](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-```md
+````md
 **Blod Text**
 _Italic Text_
 `Inline Code`
@@ -497,14 +443,12 @@ _Italic Text_
 > Quoted text
 > [Linked Text](Link)
 
-# Headinng Level 1
+# Heading Level 1
 
 ## Heading Level 2
-```
 
-- Lists
+<!-- Lists -->
 
-```md
 1. Item 1
 2. Item 2
 
@@ -513,79 +457,47 @@ _Italic Text_
 
 * Item 1
 * Item 2
-```
 
-- Task List
+<!-- - Task List -->
 
-```md
 [x] Task 1
 [x] Task 2
-```
 
-- Tables
+<!-- - Tables -->
 
-```md
 | Column 1 | Column 2 |
 | -------- | -------- |
 | Row 1    | Row 1    |
 | Row 2    | Row 2    |
-```
 
-- Images
+<!-- Images -->
 
-```md
 ![Alert Text](image link)
-```
 
-- Code block
+<!-- - Code block -->
 
 ```EXTENSION -- {js, html, java, py}
 <!-- here code will be there -->
 ```
+````
 
-- [GitHub Markdown Guide](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+## Sublime Shortcuts
 
-## Sublime3
-
-- Installation
-- About - Feature
-- Usage
-  - Opening Folder
-  - Changing the Theme, Coloring
-  - Shortcuts
-
-### Sublime Shortcuts
-
-```cmd
-- ctrl + alt + down_arrow : to make multiple cursor
-- alt + f3 : to select all the same text on which currently cursor is
-- ctrl + click : to add cursor to the position where we click
-- ctrl + d : make multiple cursor at the next text under the cursor
-- if we have copied using the multiple cursor then we can paste the data too
-- ctrl + tab : to go to next tab
-- ctrl + shift + tab : to go to previous tab
-- ctrl + w : to close a tab
-- ctrl + shit + t : to reopen the recently closed tab
-- alt + shift+ (1,2,3,4): to open multiple layout
-- alt + shift + (8,9) : to open to row layout
-- alt + shift+ 5: to open 4 layout grid
-- ctrl + shift + (up,down): to move a line up or down
-- esc : to close the down bar
-- ctrl + k + ctrl + b : to toggle the side bar
-- ctrl + b : to run the build system
-- ctrl + shift + b : to choose the build system
-- ctrl + / : to do comment
-- .someClassul>ul>li>a*8
-```
-
-## Browser Usage
-
-- Installation
-- About - Feature
-- Usage
-  - Looking the Source Code(Ctrl + u)
-- Shortcuts
-- Make as default Browser
-- Browser Developer Tools
-  - Console
-- G-Mail Account
+- `ctrl + alt + down_arrow` : to make multiple cursor
+- `alt + f3` : to select all the same text on which currently cursor is
+- `ctrl + click` : to add cursor to the position where we click
+- `ctrl + d` : make multiple cursor at the next text under the cursor
+- `ctrl + tab` : to go to next tab
+- `ctrl + shift + tab` : to go to previous tab
+- `ctrl + w` : to close a tab
+- `ctrl + shit + t` : to reopen the recently closed tab
+- `alt + shift + (1,2,3,4)`: to open multiple layout
+- `alt + shift + (8,9)` : to open to row layout
+- `alt + shift + 5` : to open 4 layout grid
+- `ctrl + shift + (up,down)` : to move a line up or down
+- `esc` : to close the down bar
+- `ctrl + k + ctrl + b` : to toggle the side bar
+- `ctrl + b` : to run the build system
+- `ctrl + shift + b` : to choose the build system
+- `ctrl + /` : to do comment
+- `.someClass>ul>li>a*8`
