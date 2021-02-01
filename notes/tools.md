@@ -263,20 +263,16 @@ pm.environment.set("ACCESS_TOKEN", jsonData["access"]);
 
 ## Heroku Usage
 
-- Requirements
-
-  - Git
-  - Heroku CLI
-
-- Basics Commands
-
-  - Login to heroku `heroku login`
-  - Creating an heroku app(repo) `heroku create`
-  - Pushing the changes `git push heroku master`
-  - Running the Heroku bash in local system `heroku run bash`
-  - Logging logs `heroku logs --tail`
-  - To Open the App `heroku open`
-  - To see the login ID `heroku auth:whoami`
+```sh
+heroku login # Login to heroku `
+heroku create # Creating an heroku app(repo)
+git push heroku master # Pushing the changes
+heroku run bash # Running the Heroku bash in local system
+heroku logs --tail # Logging logs
+heroku open # To Open the App
+heroku auth:whoami # To see the login ID
+heroku git:clone -a APP_NAME # to clone a heroku app
+```
 
 - Renaming the app
   - **Method-I** - after changing from the dashboard
