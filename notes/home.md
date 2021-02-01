@@ -1,9 +1,8 @@
 ---
 id: _index
-title: Home Page
+title: Home
 hide_title: true
 hide_table_of_contents: true
-sidebar_label: Home Page
 ---
 
 import TableOfContent from "./TableOfContent";
@@ -12,19 +11,15 @@ import TableOfContent from "./TableOfContent";
 
 <TableOfContent></TableOfContent>
 
-## New Technologies
+## TODO Add
 
 - Firebase
-  - Hosting
-  - Cloud Messaging
-  - Firestore
 - NextJS
 - GraphQL
 - Redux
 - Web Components
 - TypeScript
 - Web Assembly
-- Flutter (Fuchsia)
+- Flutter
 - Server Less
 - Decentralized Apps
-- ML

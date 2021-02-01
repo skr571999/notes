@@ -1,27 +1,22 @@
 module.exports = {
-  title: "SKR Web Notes",
+  title: "Notes",
   tagline: "Notes",
   url: "https://skrnotes.netlify.app",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "skr571999", // Usually your GitHub org/user name.
-  projectName: "skrwebnotes", // Usually your repo name.
+  projectName: "notes", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "SKR WebNotes",
+      title: "Notes",
       logo: {
         alt: "Logo",
         src: "img/logo.svg",
       },
       links: [
-        {
-          to: "notes/",
-          label: "Notes",
-          position: "left",
-        },
         { to: "blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/skr571999/skrwebnotes",
+          href: "https://github.com/skr571999/notes",
           label: "GitHub",
           position: "right",
         },
@@ -35,11 +30,11 @@ module.exports = {
           items: [
             {
               label: "Angular",
-              to: "docs/angular/overview",
+              to: "angular",
             },
             {
               label: "NodeJS",
-              to: "docs/nodejs/overview",
+              to: "nodejs",
             },
           ],
         },
@@ -76,7 +71,7 @@ module.exports = {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
           path: "../notes/",
-          routeBasePath: "notes",
+          routeBasePath: "/",
           // homePageId: "",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.

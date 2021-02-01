@@ -24,7 +24,7 @@ export default function TableOfContent() {
       link: "javascript",
     },
     {
-      name: "ML_DL",
+      name: "ML DL",
       link: "ml_dl",
     },
     {
@@ -44,7 +44,7 @@ export default function TableOfContent() {
       link: "tools",
     },
     {
-      name: "Website Development",
+      name: "Web Dev",
       link: "website_development",
     },
   ];
