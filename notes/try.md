@@ -1,8 +1,15 @@
 ---
-title: Batch Programming
+title: Try
 ---
 
-## FIRST Lesson
+## Batch Programming
+
+- References
+
+  - https://ss64.com/
+  - https://www.youtube.com/playlist?list=PL35B3EFC3D6CD1DF7
+
+- FIRST Lesson
 
 ```bat
 @echo off
@@ -19,7 +26,7 @@ pause
 rem .bat Extension
 ```
 
-## SECOND Lesson
+- SECOND Lesson
 
 ```bat
 @echo off
@@ -53,7 +60,7 @@ rem F = Bright White
 rem ======================
 ```
 
-## THIRD Lesson
+- THIRD Lesson
 
 ```bat
 @echo off
@@ -65,7 +72,7 @@ pause
 goto :a
 ```
 
-## Forth Lesson : User Input
+- Forth Lesson : User Input
 
 ```bat
 @echo off
@@ -88,7 +95,7 @@ pause
 goto main
 ```
 
-## Fifth Lesson : Variables
+- Fifth Lesson : Variables
 
 ```bat
 rem it is case insensitive language
@@ -102,7 +109,7 @@ echo Your name is %name%!
 pause
 ```
 
-## Sixth Lesson : Directors, Delete Command, Rename Command
+- Sixth Lesson : Directors, Delete Command, Rename Command
 
 ```bat
 rem Directors
@@ -122,7 +129,7 @@ rename OLD_NAME NEW_NAME
 ren OLD_NAME NEW_NAME
 ```
 
-## Seventh Lesson : File Maker
+- Seventh Lesson : File Maker
 
 ```bat
 @echo off
@@ -133,7 +140,7 @@ set /p extension=Enter Extension :
 echo. > %name%.%extension%
 ```
 
-## Eight Lesson : If not
+- Eight Lesson : If not
 
 ```bat
 @echo off
@@ -157,7 +164,7 @@ pause
 exit
 ```
 
-## Ninth Lesson : Custom Pause
+- Ninth Lesson : Custom Pause
 
 ```bat
 @echo off
@@ -180,7 +187,7 @@ echo DONE
 pause
 ```
 
-## Tenth Lesson : Types of Variable - Predefined Variables
+- Tenth Lesson : Types of Variable - Predefined Variables
 
 ```bat
 rem 1- Static Variables: HOMEDRIVE, PATH
@@ -191,7 +198,7 @@ echo %date%
 echo %time%
 ```
 
-## Eleven Lesson : Encrypted Lesson
+- Eleven Lesson : Encrypted Lesson
 
 ```bat
 @echo off
@@ -201,9 +208,9 @@ set b=i
 echo %a%%b%
 ```
 
-## Twelve Lesson : Downloading Notepad++
+- Twelve Lesson : Downloading Notepad++
 
-## Thirteen Lesson : Blank Lines and Comments
+- Thirteen Lesson : Blank Lines and Comments
 
 ```bat
 rem This is a Comment
@@ -215,7 +222,7 @@ echo Hello World
 pause
 ```
 
-## Program to add two Numbers
+- Program to add two Numbers
 
 ```bat
 @echo off
@@ -226,4 +233,32 @@ exit /B %ERRORLEVEL%
 set /a "sum=%~1+%~2"
 echo Sum of %~1 and %~2 = %sum%
 exit /b 0
+```
+
+## Java
+
+### Streams in Java
+
+```java
+import java.util.stream.IntStream;
+public class Program {
+  public static int[] arrayOfMultiples(int num, int length) {
+    return IntStream.rangeClosed(1,length)
+      .map(i -> num * i )
+      .toArray();
+  }
+}
+```
+
+### Buffer Reader in Java
+
+```java
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+int n = Integer.parseInt(br.readLine());
+```
+
+## TypeScript
+
+```ts
+let _interval: null | ReturnType<typeof setTimeout> = null;
 ```

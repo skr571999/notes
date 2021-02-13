@@ -5153,3 +5153,13 @@ Introduction
 - Joins
 
 -->
+
+## References
+
+- https://docs.python-guide.org/
+- https://github.com/TheAlgorithms/Python
+- https://automatetheboringstuff.com/
+- https://www.py4e.com/lessons
+- https://www.python-course.eu/python3_course.php
+- https://www.thepythoncode.com/
+- Python String Formatting - https://pyformat.info/

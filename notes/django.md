@@ -672,3 +672,7 @@ from django.core import serializers
 
 json_data = serializers.serialize('json', data)
 ```
+
+## References
+
+- https://www.webforefront.com/django/

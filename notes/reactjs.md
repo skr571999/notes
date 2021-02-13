@@ -1407,3 +1407,26 @@ import styles from "./login.module.scss";
   className={`${styles["form-check"]} ${styles["my-check"]}`}
 ></div>
 ```
+
+### Some Popular React Projects
+
+- Libraries
+  - Material UI
+  - React Bootstrap
+  - React Select - https://github.com/JedWatson/react-select
+  - React Spring
+  - https://ant.design/
+  - https://storybook.js.org/
+  - https://react-hook-form.com/
+  - CSS in JS - https://github.com/emotion-js/emotion
+  - Similar to Axios - https://swr.vercel.app/
+- Apps
+  - Spectrum- https://github.com/withspectrum/spectrum
+- Other
+  - React MapGL- https://github.com/visgl/react-map-gl
+  - React Router
+  - Formik
+  - To Add/Change the content of the header form a react component - https://github.com/nfl/react-helmet
+- Starter Kits
+  - Create React App
+  - Gatsby.js - https://github.com/gatsbyjs/gatsby

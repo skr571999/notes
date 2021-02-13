@@ -3,7 +3,6 @@ module.exports = {
     "c_language",
     "website_development",
     "tools",
-    "java",
     "javascript",
     "nodejs",
     "angular",
@@ -12,5 +11,6 @@ module.exports = {
     "django",
     "docker",
     "ml_dl",
+    "try",
   ],
 };
