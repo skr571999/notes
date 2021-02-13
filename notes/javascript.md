@@ -53,6 +53,13 @@ title: JavaScript
   - External(extension- .js)
 - Prompt Boxes(alert, confirm, prompt)
 - Comments
+- JavaScript Design Pattern
+  - https://addyosmani.com/resources/essentialjsdesignpatterns/book/#designpatternsjavascript
+  - https://github.com/kamranahmedse/design-patterns-for-humans
+- https://exploringjs.com/es6/index.html
+- https://github.com/dipakkr/ES6-Guide
+- ES6 Overview
+  - https://ponyfoo.com/articles/es6
 
 ```js
 // Single Line Comment
@@ -104,14 +111,14 @@ console.dir(document.body) // will log body as JS object
     - `const` variable can not be reassign a value
 
 ```js
-let  a = 12
-a = 13
-const b = 12
-b = 14 // error
+let a = 12;
+a = 13;
+const b = 12;
+b = 14; // error
 const c; // error
-const d = [1,2,3]
-d.push(4) // possible becaue we are not reassigning the value
-d = [4,5,6,7] // error because reassigning the value
+const d = [1, 2, 3];
+d.push(4); // possible becaue we are not reassigning the value
+d = [4, 5, 6, 7]; // error because reassigning the value
 ```
 
 ## Identifiers
@@ -2296,7 +2303,7 @@ are used to perform the case insentive and global match
 are used to find a range of the character
 
 |          |     |                                               |
-| -------- | :-: | --------------------------------------------- |
+| -------- | :-: | --------------------------------------------- | ----------------------------- |
 | `[abc]`  |  :  | find any character in the bracket             |
 | `[^abc]` |  :  | find any character not in the bracket         |
 | `[0-9]`  |  :  | find any digit here, any digit between 0 to 9 |
@@ -2392,27 +2399,19 @@ Math.floor(Math.random() * (maxNo - minNo + 1)) + minNo;
 JavaScript Object Notation
 
 ```js
-let a, b, c;
-a = {
+const a = {
   id: 11,
   name: "Abc",
   branch: "CSE",
 };
 
-console.log(a);
 // Javascript Value to the JSON string
-b = JSON.stringify(a);
-console.log(b);
+const b = JSON.stringify(a);
+// String to the JavaScript object
+JSON.parse(b);
 
-// Json String to the JavaScript object
-c = JSON.parse(b);
-console.log(c);
-
-a = [1, 2, 3, 4];
-console.log(JSON.stringify(a));
-
-a = "hello JavaScript";
-console.log(JSON.stringify(a));
+JSON.stringify(a, null, "-");
+JSON.stringify(a, null, 4");
 ```
 
 ## Object Demos
@@ -2684,4 +2683,61 @@ a.name = "Ram";
 console.log(a);
 console.log(b);
 console.log(d);
+```
+
+## Other Notes
+
+### Having a Submit Button Outside of the Form
+
+```html
+<form id="entityForm" onSubmit="{handleSubmit}">
+  <!-- Form Elements -->
+</form>
+<button type="submit" form="entityForm">Next</button>
+```
+
+### Getting the Key using Value of a Object
+
+```js
+function getKeyByValue(object, value) {
+  return Object.keys(object).find((key) => object[key] === value);
+}
+```
+
+### Code for Checking Audio Permissions are Given Or Not
+
+```js
+let stream;
+navigator.mediaDevices
+  .getUserMedia({ audio: true })
+  .then((e) => {
+    stream = e;
+  })
+  .catch((error) => console.log(error));
+
+stream.getAudioTracks()[0].stop();
+```
+
+### Async and Defer
+
+```html
+<script async defer scr="main.js"></script>
+<!-- async - script will be downloaded in parallel with page -->
+<!-- defer - script will run after page load  -->
+```
+
+### Blur and focus
+
+```js
+window.addEventListener("blur", () => console.log("Blur"));
+window.addEventListener("focus", () => console.log("Focus"));
+```
+
+### Using Object Destructuring and Property Shorthand
+
+```js
+const object = { a: 5, b: 6, c: 7 };
+const picked = (({ a, c }) => ({ a, c }))(object);
+
+console.log(picked); // { a: 5, c: 7 }
 ```

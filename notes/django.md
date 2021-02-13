@@ -579,3 +579,96 @@ class B:
 - `limit_choices_to`
 
 ### ManyToManyField
+
+## Other Notes
+
+### Setup Django In Virtual Environment
+
+```bash
+cd LocalDirectory
+
+python -m venv venv
+
+venv\Scripts\activate # to activate the Virtual Environment
+
+pip install django
+pip install djangorestframework
+
+pip freeze > requirements.txt
+
+md src
+
+django-admin startproject server src
+
+cd src
+
+python manage.py startapp user
+```
+
+### Django Fixture
+
+```python
+## To get the data
+python manage.py dumpdata product.Commodity
+## to save the data
+python manage.py loaddata product_options.json
+```
+
+### Aggregation in Django
+
+```python
+
+from django.db.models import Sum
+
+ItemPrice.objects.aggregate(Sum('price'))
+# returns {'price__sum': 1000} for example
+```
+
+### Connect two router in Django
+
+```python
+
+from user.urls import router as user_router
+from product.urls import router as product_router
+
+class DefaultRouter(routers.DefaultRouter):
+    def extend(self, router):
+        self.registry.extend(router.registry)
+
+router = DefaultRouter()
+router.extend(user_router)
+router.extend(product_router)
+```
+
+### Python Build Create with Update in already there
+
+```py
+bi_markets = []
+for item in dbMarkets:
+  rows = Market.objects.filter(exchange=item.exchange, market=item.market).update(ask=item.ask, bid=item.bid)
+  if rows == 0:
+    bi_markets.append(item)
+
+Market.objects.bulk_create(bi_markets)
+```
+
+### Django PostgreSQL Configuration
+
+```py
+'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': "admin1234",
+    'USER': 'admin',
+    'PASSWORD': '123456765432',
+    'HOST': '123456admin.compute-1.amazonaws.com',
+    'PORT': '5432',
+}
+```
+
+### Serializing Data in Django
+
+```python
+from django.core import serializers
+
+json_data = serializers.serialize('json', data)
+```

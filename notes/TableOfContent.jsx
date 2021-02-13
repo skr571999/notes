@@ -24,6 +24,10 @@ export default function TableOfContent() {
       link: "javascript",
     },
     {
+      name: "Java",
+      link: "java",
+    },
+    {
       name: "ML DL",
       link: "ml_dl",
     },

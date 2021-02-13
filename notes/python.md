@@ -1712,6 +1712,16 @@ print("This is after the imp.reload()")
 # pip list
 # pip install -r requirements.txt # to install the modules of the requirements.txt file
 # pip freeze > requirements.txt # to save the modules into the requirements.txt file
+
+# remove packages one by one
+pip uninstall -r requirements.txt
+
+# remove all packages at once
+pip uninstall -r requirements.txt -y
+
+## To update the path in the venv we will re run the command to recreate the venv
+python -m venv venv
+python -m pip list
 ```
 
 ---

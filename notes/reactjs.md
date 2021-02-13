@@ -2,21 +2,11 @@
 title: ReactJS
 ---
 
-<!--
-- To Study
-  - React
-  - Redux
-  - Material UI
-  - React Browser Tools
--->
+## About
 
-## Basics About ReactJS
+- It is a JavaScript Library for Building user Interfaces.
 
-- What is ReactJS?
-  - It is a JavaScript Library for Building user Interfaces.
-- why it is used?
-
-## Installation
+## Setup
 
 - Requirements
   - NodeJS
@@ -26,19 +16,19 @@ title: ReactJS
   - Prettier
   - ES7 React/Redux/GraphQL/React-Native snippets)
 
-### Setting up using Create React App
+### Installing using Create React App
 
-- Installing Create React App globally
-  - `npm i -g create-react-app`
-- Creating the React App
-  - `create-react-app APP_NAME`
-  - `npm create-react-app APP_NAME --use-npm`
-- Creating app without installing **create-react-app**
-  - `npx create-react-app APP_NAME`
-- Running the React App
-  - `npm start`
-- Building the App
-  - `npm run build`
+```sh
+npm i -g create-react-app # Installing Create React App globally
+create-react-app APP_NAME # Creating the React App
+create-react-app APP_NAME --use-npm # to use npm package manager
+npx create-react-app APP_NAME # Creating app without installing create-react-app
+
+npx create-react-app . --use-npm --template typescript
+
+npm start
+npm run build
+```
 
 ## How to add Bootstrap
 
@@ -59,14 +49,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
 import ReactDOM from "react-dom";
 
-const elemt = <h1>Hello World</h1>;
+const elem = <h1>Hello World</h1>;
+console.log(elem);
 
-console.log(elemt);
-
-ReactDOM.render(elemt, document.getElementById("root"));
+ReactDOM.render(elem, document.getElementById("root"));
 ```
 
-### First Component
+### Class Based Component
 
 ```js
 // counter.jsx
@@ -85,20 +74,17 @@ class Counter extends Component {
 }
 
 export default Counter;
-```
 
-```js
 // index.js
 import Counter from "./components/counter";
-
 // ...
-
 ReactDOM.render(<Counter />, document.getElementById("root"));
 ```
 
 ## React Fragment
 
 ```js
+// Fragments let us group a list of children without adding extra nodes to the DOM
 render() {
     return (
       <React.Fragment>
@@ -113,20 +99,15 @@ render() {
 
 - React
 - Hooks
+- Material UI
+- React Browser Tools
+- Redux
 - Create React App
   - [How to create react app using templates](https://create-react-app.dev/docs/getting-started/#selecting-a-template)
 - [Project File Structure](https://reactjs.org/docs/faq-structure.html)
 
-## Examples
-
-- Stackbiz Examples - https://stackblitz.com/@skr571999
-- Codesandbox Example - https://codesandbox.io/s/simple-materialui-website-nl20w
-
 ## Projects
 
-- TodoApp
-- Counter App - Mosh Tutorial
-- MERN Exercise Trancker - Freecodecamp MERN YouTube Tutorial
 - React Shop App
   - YouTube - https://www.youtube.com/watch?v=zaWtIkJgah4
   - GitHub - https://github.com/jaewonhimnae/react-shop-app
@@ -1409,3 +1390,20 @@ export default Hello;
 
 - It provide a way to pass data through the component level without having to pass props down manually to every level.
 - VIDEO - 38, 39, 40
+
+## Other Notes
+
+### Module CSS in react
+
+```tsx
+// importing the css module
+import styles from "./login.module.scss";
+
+// for adding single class
+<div className={styles["login-top-spacer"]}></div>
+
+// for adding multiple classes
+<div
+  className={`${styles["form-check"]} ${styles["my-check"]}`}
+></div>
+```

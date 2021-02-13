@@ -45,10 +45,10 @@ module.exports = {
               label: "GitHub",
               href: "https://github.com/skr571999",
             },
-            {
-              label: "LinkedIn",
-              href: "https://www.linkedin.com/in/skr571999/",
-            },
+            // {
+            //   label: "LinkedIn",
+            //   href: "https://www.linkedin.com/in/skr571999/",
+            // },
           ],
         },
         {

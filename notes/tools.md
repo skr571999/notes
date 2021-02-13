@@ -2,39 +2,48 @@
 title: Tools
 ---
 
-## Deploy
+## Tools
 
-- Using GitHub Pages
-- Firebase Hosting
+### Deploy Tools
+
 - Netlify
 - Heroku
+- Using GitHub Pages
+- Firebase Hosting
 
-## Online IDEs
+### Online IDEs
 
-- GitPod
-- Repl.it
+- https://www.gitpod.io/
+- https://repl.it/
+- https://stackblitz.com/
+- https://codesandbox.io/
 
-## Tools for Website Testing
+### Website Testing Tools
 
-- [Can I Use](https://caniuse.com/)
-- [Cross Browser Testing](http://browsershots.org/)
-- [Lambda Test](https://accounts.lambdatest.com/dashboard)
-- Browser Load Speed Test
-  - [http://www.webpagetest.org/](http://www.webpagetest.org/)
-  - [https://testmysite.thinkwithgoogle.com](https://testmysite.thinkwithgoogle.com)
-  - [https://developers.google.com/speed/](https://developers.google.com/speed/)
-  - [https://developers.google.com/speed/pagespeed/insights/](https://developers.google.com/speed/pagespeed/insights/)
-  - [https://webhint.io/](https://webhint.io/)
+- https://caniuse.com/
+- http://browsershots.org/
+- https://www.lambdatest.com/
+- http://www.webpagetest.org/
+- https://testmysite.thinkwithgoogle.com
+- https://developers.google.com/speed/
+- https://developers.google.com/speed/pagespeed/insights/
+- https://webhint.io/
+
+### Other
+
+- https://sqliteonline.com/
+  For Creating Table
+- https://stevecat.net/table-magic/
 
 ## Git and GitHub
 
 - Git - Distributed Version Control System
-- TODO
-  - how to merge two repositories
-  - [PluralSight Git course](https://app.pluralsight.com/library/courses/code-school-git-real/table-of-contents)
-  - Monorepos
-    - where code for many projects are stored in same repository
-  - [Git large File Storage](https://git-lfs.github.com)
+- References
+  - https://app.pluralsight.com/library/courses/code-school-git-real/table-of-contents
+  - https://www.atlassian.com/git/tutorials
+- Monorepos
+  - where code for many projects are stored in same repository
+- [Git large File Storage](https://git-lfs.github.com)
 - Use of Git
   - Keep track of the Changes in the code
   - Synchronize the code between different People
@@ -217,15 +226,25 @@ git pull master
 # Add the Upstream branch in a forked repo
 git remote add upstream <repo_URL>
 git remote -v
+
+# To merge BRANCH to main with only one final commit
+git merge --squash BRANCH_NAME
 ```
 
-## Postman Usage
+## APIs Development
 
-- [Postman Collection Sharing Docs](https://learning.postman.com/docs/postman/collections/sharing-collections/)
-- [Software similar to POSTMAN(Insomnia)](https://support.insomnia.rest)
+- Tools
+  - Postman
+  - Insomnia
+- https://learning.postman.com/docs/postman/collections/sharing-collections/
+- https://support.insomnia.rest
+- https://github.com/Kong/insomnia/tree/develop/packages/insomnia-inso
+
+  - similar to POSTMAN(Insomnia)
+
+- Setup Environment Variable in a Collection
 
 ```js
-// Setup Environment Variable in a Collection
 // - Code to be pasted in Tests Tab of a Request
 
 var jsonData = JSON.parse(responseBody);
@@ -234,7 +253,7 @@ pm.environment.set("ACCESS_TOKEN", jsonData["access"]);
 // - Using the Set variable : `{{ACCESS_TOKEN}}`
 ```
 
-## VSCode Usage
+## VSCode
 
 - Installation
 - About - Feature
@@ -242,10 +261,8 @@ pm.environment.set("ACCESS_TOKEN", jsonData["access"]);
   - Opening Folder
   - Extensions
   - Changing the Theme, Coloring
-  - Shortcuts
   - Integration With Git, GitHub
   - Integrated Terminal
-- [Configure recommended Extensions for sharing extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
 - [VSCode in Browser](https://enterprise.coder.com/docs)
 - **VSCode Shortcuts**
 
@@ -261,7 +278,7 @@ pm.environment.set("ACCESS_TOKEN", jsonData["access"]);
 |     `ctrl + shift + ]`     |        to open the code folding         |
 |       `ctrl + space`       | for the suggestions of the code members |
 
-## Heroku Usage
+## Heroku
 
 ```sh
 heroku login # Login to heroku `
@@ -274,16 +291,7 @@ heroku auth:whoami # To see the login ID
 heroku git:clone -a APP_NAME # to clone a heroku app
 ```
 
-- Renaming the app
-  - **Method-I** - after changing from the dashboard
-    - I - rename the app from the heroku dashboard
-    - II - to update the remote name in system now
-      - I - go to the folder
-      - II - remove the old remote `git remote rm heroku`
-      - III - add the new remote `heroku git:remote -a NEW_NAME`
-  - **Method-II** - not changing from dashboard
-    - If we are in same folder then `heroku apps:rename NEW_NAME`
-    - If we are on a different location `heroku apps:rename NEW_NAME --app OLD_NAME`
+- [Renaming the app](https://devcenter.heroku.com/articles/renaming-apps)
 
 ## Screen Commands in Linux
 
@@ -395,6 +403,8 @@ D:
 
 - explorer "https://google.com" # to open default browser
 - start opera "https://google.com" # to open opera
+
+# whereis(bash) --> where(cmd)
 ```
 
 ## VIM Usage
@@ -425,58 +435,11 @@ D:
   - h - left
   - l - right
 
-## Markdown Syntax
+## Markdown
 
-- Extensions -- .md, .markdown
-- Text Styling
-- [GitHub Markdown Guide](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
-
-````md
-**Blod Text**
-_Italic Text_
-`Inline Code`
-~~Strike through~~
-
-> Quoted text
-> [Linked Text](Link)
-
-# Heading Level 1
-
-## Heading Level 2
-
-<!-- Lists -->
-
-1. Item 1
-2. Item 2
-
-- Item 1
-- Item 2
-
-* Item 1
-* Item 2
-
-<!-- - Task List -->
-
-[x] Task 1
-[x] Task 2
-
-<!-- - Tables -->
-
-| Column 1 | Column 2 |
-| -------- | -------- |
-| Row 1    | Row 1    |
-| Row 2    | Row 2    |
-
-<!-- Images -->
-
-![Alert Text](image link)
-
-<!-- - Code block -->
-
-```EXTENSION -- {js, html, java, py}
-<!-- here code will be there -->
-```
-````
+- Extensions: `.md`, `.markdown`
+- https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
+- https://guides.github.com/features/mastering-markdown/
 
 ## Sublime Shortcuts
 
@@ -498,3 +461,56 @@ _Italic Text_
 - `ctrl + shift + b` : to choose the build system
 - `ctrl + /` : to do comment
 - `.someClass>ul>li>a*8`
+
+## Other Notes
+
+### Redirect in Netlify for ReactJS
+
+Place a `_redirects` file in `public` folder with following content
+
+```
+/*  /index.html  200
+```
+
+### Setting Up Husky
+
+```bash
+cd FOLDER_NAME
+git init
+npm init -y
+yarn add -D husky lint-staged prettier
+```
+
+- Add following code to `package.json` file
+
+```json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/*.{js,jsx,ts,tsx}": ["npx prettier --write"]
+  },
+  "dependencies": {}
+}
+```
+
+- Create some `.js` file in `src` folder
+
+```jsx
+// src/sum.js
+function sum(a, b) {
+  console.log("Hello world");
+  return a + b;
+}
+
+module.exports = sum;
+```
+
+- Now, when we are going to commit it will **format the code** before committing
+
+```bash
+git commit -m "COMMIT MESSAGE"
+```

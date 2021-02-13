@@ -438,3 +438,24 @@ $("div").text("<p>Hello World</p>");
   });
 </script>
 ```
+
+## Other Notes
+
+### Alert Message Style Using CSS
+
+```css
+p {
+  color: #bf1650;
+}
+
+p::before {
+  display: inline;
+  content: "⚠ ";
+}
+```
+
+### Firing a Event
+
+```js
+window.dispatchEvent(new Event("resize"));
+```

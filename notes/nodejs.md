@@ -1653,3 +1653,29 @@ app.use((req, res, next) => {
 - [NodeScheduler](https://www.npmjs.com/package/node-schedule)
 - bad-words
 - express-rate-limit
+- https://auth0.com/blog/use-typescript-to-create-a-secure-api-with-nodejs-and-express-getting-started/
+
+## Other Notes
+
+### Starting the node express typescript app
+
+```sh
+cd LOCAL_DIRECTORY
+cd server
+npm init -y
+git init
+
+npm i express
+npm i -D typescript ts-node
+npm i -D @types/node @types/express
+npm i -D nodemon
+
+npm start
+npm run build
+```
+
+### Nvm Installation Ubuntu
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```

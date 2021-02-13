@@ -12,7 +12,8 @@
 git clone REPO_URL
 
 # switching to website main folder
-cd LOCAL_FOLDER\website
+cd LOCAL_FOLDER
+cd website
 
 # installing dependencies
 yarn i
