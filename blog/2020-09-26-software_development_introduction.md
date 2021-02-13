@@ -50,7 +50,7 @@ Simple notes about the Software and software development.
 - Applications Software
   - General Purpose
     - Word, Excel
-  - Customised Software
+  - Customized Software
     - Web Applications
     - Desktop Applications
     - Android Application
@@ -63,3 +63,10 @@ Simple notes about the Software and software development.
 - Testing Phase
 - Deployment Phase
 - Maintenance Phase
+
+## Software Development Phases
+
+- Design
+- Develop
+- Test
+- Deploy
