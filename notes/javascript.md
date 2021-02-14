@@ -2741,3 +2741,30 @@ const picked = (({ a, c }) => ({ a, c }))(object);
 
 console.log(picked); // { a: 5, c: 7 }
 ```
+
+### Random
+
+```js
+"3".padEnd(3, "1") ==> 311
+"3".padStart(3, "1") ==> 113
+// data:text/plain,Hello, world!
+
+//  Adding image using blob JavaScript
+data = [some elements]
+b = new Blob([new Uint8Array(data).buffer], {type : 'image/png'});
+imgElm.src = URL.createObjectURL(b)
+
+[-2, 2, 5, -7].sort()
+
+// JavaScript Buffer
+console.log(Buffer.from("Hello World").toString('base64'));
+// SGVsbG8gV29ybGQ=
+console.log(Buffer.from("SGVsbG8gV29ybGQ=", 'base64').toString('ascii'))
+// Hello World
+```
+
+## References
+
+- http://eloquentjavascript.net/
+- http://exploringjs.com/
+- https://regex101.com/

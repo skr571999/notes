@@ -15,6 +15,7 @@ title: Tools
 
 - https://www.gitpod.io/
 - https://repl.it/
+- https://runkit.com
 - https://stackblitz.com/
 - https://codesandbox.io/
 
@@ -229,6 +230,22 @@ git remote -v
 
 # To merge BRANCH to main with only one final commit
 git merge --squash BRANCH_NAME
+
+# to do a empty commit
+git commit --allow-empty -m "Empty Commit"
+
+# to rollback pull
+git reset --hard
+
+# git branch description
+git config.branch.dev.description
+
+# Adding tag to a particular commit and Pushing Tags to Remote
+git tag -a TAG_NAME COMMIT_HASH -m "Message here"
+# Ex. git tag -a v1.2 9fceb02 -m "Message here"
+
+# Pushing tags to remote
+git push origin --tags
 ```
 
 ## APIs Development

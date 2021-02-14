@@ -5163,3 +5163,18 @@ Introduction
 - https://www.python-course.eu/python3_course.php
 - https://www.thepythoncode.com/
 - Python String Formatting - https://pyformat.info/
+
+## Random
+
+```py
+a, *b, c = 1,2,3,4,5
+b  # 2,3,4
+
+# 2 power -2  == .25
+# -3 power 3 == -27
+
+
+# Operator chaining
+# 2 > x > 5
+# is equivalent to 2 > x and x > 5
+```
