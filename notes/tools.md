@@ -33,8 +33,25 @@ title: Tools
 ### Other
 
 - https://sqliteonline.com/
-  For Creating Table
-- https://stevecat.net/table-magic/
+- For Creating Table - https://stevecat.net/table-magic/
+- Monitoring Up Time of Website - https://uptimerobot.com/
+- For Looking the Size of NPM Packages - https://bundlephobia.com/
+- For Testing UI - https://github.com/GoogleChromeLabs/ProjectVisBug
+- For making Cloud Architecture - https://cloudcraft.co/
+- Tool to Create Animations in Web - https://rive.app/
+- Screen-shots device Mock-ups- https://mockuphone.com/
+- NodeJS Virtual Environment - https://ekalinin.github.io/nodeenv/
+- Explore GitHub API - https://api.github.com/repos/vercel/swr
+- OpenSource Illustrations Images - https://undraw.co/illustrations
+- Text Formatting - https://yaytext.com/script/
+- Linux Container - https://linuxcontainers.org/lxd/try-it
+- CSS Clip Path - https://bennettfeely.com/clippy/
+- VScode Extension for Problem Solving - https://marketplace.visualstudio.com/items?itemName=DivyanshuAgrawal.competitive-programming-helper
+- Website to Know about Startup Funding - https://www.crunchbase.com/organization/milkbasket
+- Text Difference Checker - https://www.diffchecker.com/diff
+- New Browser - https://vivaldi.com/
+- For Coding Practice - https://edabit.com/challenges
+- For Resume Building - https://standardresume.co/tech
 
 ## Git and GitHub
 

@@ -148,3 +148,5 @@ import TableOfContent from "./TableOfContent";
 135. [Microsoft Developer](https://docs.microsoft.com/en-us/learn/)
 136. [Deep Learning Book | GitHub](https://github.com/d2l-ai/d2l-en)
 137. [Awesome Projects](https://github.com/sindresorhus/awesome)
+138. [Firebase with React Hooks](https://github.com/briandesousa/firebase-with-react-hooks)
+139. [Todo Application using Firebase and react | FreeCodeCamp](https://www.freecodecamp.org/news/how-to-build-a-todo-application-using-reactjs-and-firebase/)
