@@ -1,11 +1,10 @@
 # Notes
 
-## Requirements
+## Locally Installation
 
-- `NodeJS`
-- `Yarn`
-
-## Usage
+- Requirements
+  - `NodeJS`
+  - `Yarn`
 
 ```sh
 # cloning the Repo
@@ -20,4 +19,7 @@ yarn i
 
 # starting the development server
 yarn start
+
+# Building the app
+yarn build
 ```

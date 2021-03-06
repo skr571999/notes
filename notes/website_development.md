@@ -2,13 +2,54 @@
 title: Website Development
 ---
 
-- HTML --> For defining the Structure
-- CSS --> For Styling
-- JS --> For adding the Interactivity
+## Terminology
+
+- Website - Collection of Webpages
+- Webpages - a hypertext document(generally contain information) on the World Wide Web
+- Hypertext is text which contains links to other texts
+- WWW - ?
+- Web Development - It is the work involved in developing a website.
+- What is the URL
+  - http://localhost:3000/login
+  - http → Protocol
+  - localhost → server address
+  - 3000 → Port Number
+  - /login → path
+
+## Technologies and Tools
+
+- Frontend Technologies
+  - HTML (define structure)
+  - CSS (add style)
+  - JS (add behavior)
+- Tools
+  - Browser(Chrome)
+  - Text Editor(VSCode)
+- Backend Technologies
+  - Programming Language (Python, JavaScript)
+  - Server (software that handle the Request and Response)
+  - DBMS (software to manage data)
+
+## Web development Procedures
+
+- Phase - I - Understanding
+  - Taking Requirements
+    - Purpose, Goal, Target Audience
+  - Analysis, Planning
+  - Sitemap, Structure
+  - Design
+- Phase - II - Development Environment SetUp
+  - Setting up Tasks like
+    - Transpiling
+    - Bundling
+    - Minifing
+    - Packaging
+  - Development
+  - Test
+  - Deployment
+- Phase - III - Maintenance
 
 ## Important Links
-
-### For Learning
 
 - [https://developer.mozilla.org/en-US/](https://developer.mozilla.org/en-US/)
 - [https://www.w3schools.com/html/default.asp](https://www.w3schools.com/html/default.asp)
@@ -20,13 +61,10 @@ title: Website Development
 - [https://www.freecodecamp.org/](https://www.freecodecamp.org/)
 - [https://www.khanacademy.org/computing/computer-programming](https://www.khanacademy.org/computing/computer-programming)
 - [https://cs50.harvard.edu/college/2021/spring/](https://cs50.harvard.edu/college/2021/spring/)
-
-### Popular YouTube Channels
-
 - [https://www.youtube.com/c/TheCodingTrain/videos](https://www.youtube.com/c/TheCodingTrain/videos)
 - [https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFAs)
 
-### Tools
+## Tools
 
 - [https://getbootstrap.com/](https://getbootstrap.com/)
 - [CSS clip-path maker](https://bennettfeely.com/clippy/)

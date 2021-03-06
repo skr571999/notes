@@ -1,6 +1,6 @@
 module.exports = {
   docs: [
-    "c_language",
+    "software_development",
     "website_development",
     "tools",
     "javascript",

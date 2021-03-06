@@ -1,16 +1,7 @@
 ---
-id: software_development_introduction
-title: Software Development Introduction
-author: Sachin Kumar Rajput
-author_title: Student
-author_url: https://github.com/skr571999
-author_image_url: https://avatars0.githubusercontent.com/u/31756244?s=460&u=0710d9191ec50054e523f08a477df8b6b97f442c&v=4
-tags: [Software Development Introduction]
+id: software_development
+title: Software Development
 ---
-
-Simple notes about the Software and software development.
-
-<!--truncate-->
 
 - **Software** - is the set of instructions or programs that tell a computer what to do.
 
@@ -54,19 +45,3 @@ Simple notes about the Software and software development.
     - Web Applications
     - Desktop Applications
     - Android Application
-
-## Software Development Cycle
-
-- Requirement Phase
-- Designing Phase
-- Development Phase
-- Testing Phase
-- Deployment Phase
-- Maintenance Phase
-
-## Software Development Phases
-
-- Design
-- Develop
-- Test
-- Deploy

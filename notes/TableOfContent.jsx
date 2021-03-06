@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 export default function TableOfContent() {
   const pages = [
     {
-      name: "Angular",
-      link: "angular",
+      name: "Software Dev",
+      link: "software_development",
     },
     {
-      name: "C_Language",
-      link: "c_language",
+      name: "Web Dev",
+      link: "website_development",
+    },
+    {
+      name: "Angular",
+      link: "angular",
     },
     {
       name: "Django",
@@ -43,10 +47,7 @@ export default function TableOfContent() {
       name: "Tools",
       link: "tools",
     },
-    {
-      name: "Web Dev",
-      link: "website_development",
-    },
+
     {
       name: "Try",
       link: "try",

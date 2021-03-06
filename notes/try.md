@@ -262,3 +262,13 @@ int n = Integer.parseInt(br.readLine());
 ```ts
 let _interval: null | ReturnType<typeof setTimeout> = null;
 ```
+
+## C Language References
+
+- https://en.wikipedia.org/wiki/C_(programming_language)
+- https://www.programiz.com/c-programming
+- CodeWithHarry- https://www.youtube.com/watch?v=ZSPZob_1TOk
+
+## SQL References
+
+- https://en.wikipedia.org/wiki/SQL
