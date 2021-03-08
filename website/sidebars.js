@@ -9,7 +9,6 @@ module.exports = {
     "reactjs",
     "python",
     "django",
-    "docker",
     "ml_dl",
     "try",
   ],

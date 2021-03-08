@@ -1,10 +1,8 @@
 # Notes
 
-## Locally Installation
+## Local Setup
 
-- Requirements
-  - `NodeJS`
-  - `Yarn`
+- Requirements - `NodeJS`, `Yarn`
 
 ```sh
 # cloning the Repo
@@ -15,7 +13,7 @@ cd LOCAL_FOLDER
 cd website
 
 # installing dependencies
-yarn i
+yarn install
 
 # starting the development server
 yarn start

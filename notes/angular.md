@@ -2478,3 +2478,12 @@ export class AppComponent {
   }
 }
 ```
+
+## Angular Firebase Hosting
+
+- Angular App hosting on GitHub - Using the angular-cli-ghpages
+
+```
+https://github.com/angular-schule/angular-cli-ghpages#-quick-start-local-development
+ng deploy --base-href=/repositoryname/
+```

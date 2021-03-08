@@ -150,3 +150,18 @@ import TableOfContent from "./TableOfContent";
 137. [Awesome Projects](https://github.com/sindresorhus/awesome)
 138. [Firebase with React Hooks](https://github.com/briandesousa/firebase-with-react-hooks)
 139. [Todo Application using Firebase and react | FreeCodeCamp](https://www.freecodecamp.org/news/how-to-build-a-todo-application-using-reactjs-and-firebase/)
+140. https://roadmap.sh
+141. https://developer.mozilla.org
+142. https://www.w3schools.com
+143. [Namaste 🙏 JavaScript - Akshay Saini](https://www.youtube.com/watch?v=pN6jk0uUrD8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP)
+144. [Web Developer Road map - Medium Article](https://levelup.gitconnected.com/the-2020-web-developer-roadmap-76503ddfb327#f309)
+145. [https://www.theodinproject.com/](https://www.theodinproject.com/)
+146. [https://www.freecodecamp.org/](https://www.freecodecamp.org/)
+147. [https://www.khanacademy.org/computing/computer-programming](https://www.khanacademy.org/computing/computer-programming)
+148. [https://cs50.harvard.edu/college/2021/spring/](https://cs50.harvard.edu/college/2021/spring/)
+149. [https://www.youtube.com/c/TheCodingTrain/videos](https://www.youtube.com/c/TheCodingTrain/videos)
+150. [https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFAs)
+151. https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
+152. https://guides.github.com/features/mastering-markdown/
+153. https://github.com/jaewonhimnae/react-shop-app
+154. https://www.youtube.com/watch?v=CVpUuw9XSjY

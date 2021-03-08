@@ -2,16 +2,12 @@
 title: Tools
 ---
 
-## Tools
-
-### Deploy Tools
+## Deployment Tool
 
 - Netlify
 - Heroku
-- Using GitHub Pages
-- Firebase Hosting
 
-### Online IDEs
+## Online IDEs
 
 - https://www.gitpod.io/
 - https://repl.it/
@@ -19,19 +15,9 @@ title: Tools
 - https://stackblitz.com/
 - https://codesandbox.io/
 
-### Website Testing Tools
+## Other
 
 - https://caniuse.com/
-- http://browsershots.org/
-- https://www.lambdatest.com/
-- http://www.webpagetest.org/
-- https://testmysite.thinkwithgoogle.com
-- https://developers.google.com/speed/
-- https://developers.google.com/speed/pagespeed/insights/
-- https://webhint.io/
-
-### Other
-
 - https://sqliteonline.com/
 - For Creating Table - https://stevecat.net/table-magic/
 - Monitoring Up Time of Website - https://uptimerobot.com/
@@ -73,16 +59,6 @@ title: Tools
   - Committed Area
 - Commands that does changes in the Commits should not be used after pushing the changes
 - HEAD - it refers to the last commit on the current branch
-- GitHub Code Hosting
-  - GitHub Account
-  - About - Feature
-    - Branches
-  - Usage
-    - Creating a repo
-    - adding it to local repo
-    - cloning the repo
-    - pushing the changes
-    - Working in VSCode
 - Fast-Forward - when we doesn't do any changes in master branch and try to merge it with other branch the it is called fast-forward
 - [Git Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 
@@ -265,16 +241,7 @@ git tag -a TAG_NAME COMMIT_HASH -m "Message here"
 git push origin --tags
 ```
 
-## APIs Development
-
-- Tools
-  - Postman
-  - Insomnia
-- https://learning.postman.com/docs/postman/collections/sharing-collections/
-- https://support.insomnia.rest
-- https://github.com/Kong/insomnia/tree/develop/packages/insomnia-inso
-
-  - similar to POSTMAN(Insomnia)
+## Postman / Insomnia
 
 - Setup Environment Variable in a Collection
 
@@ -286,31 +253,6 @@ pm.environment.set("ACCESS_TOKEN", jsonData["access"]);
 
 // - Using the Set variable : `{{ACCESS_TOKEN}}`
 ```
-
-## VSCode
-
-- Installation
-- About - Feature
-- Usage
-  - Opening Folder
-  - Extensions
-  - Changing the Theme, Coloring
-  - Integration With Git, GitHub
-  - Integrated Terminal
-- [VSCode in Browser](https://enterprise.coder.com/docs)
-- **VSCode Shortcuts**
-
-|        Key Binding         |                 Detail                  |
-| :------------------------: | :-------------------------------------: |
-|       `shift + alt`        |            column selection             |
-|       `alt + scroll`       |       to scroll with the 5x speed       |
-|        `ctrl + k z`        |             toggle zen mode             |
-|       `ctrl + click`       |         to add multiple cursors         |
-| `shift + alt + left/right` |            to select blocks             |
-|     `ctrl + shift + o`     |             to goto symbols             |
-|     `ctrl + shift + [`     |        to close the code folding        |
-|     `ctrl + shift + ]`     |        to open the code folding         |
-|       `ctrl + space`       | for the suggestions of the code members |
 
 ## Heroku
 
@@ -360,14 +302,6 @@ heroku git:clone -a APP_NAME # to clone a heroku app
 ## CMD Usage
 
 ```sh
-cd
-cls
-cd ..
-dir
-exit
-md
-D:
-
 - rd/rmdir # to delete an empty directory
 - rmdir /s DIRECTORY_NAME # to delete an directory containing file
 - copy # to move files to another location
@@ -444,12 +378,9 @@ D:
 ## VIM Usage
 
 - Modes
-
   - Insert Mode (i)
   - to change a mode press ESC
-
 - Working with Files
-
   - Opening a file in vim `vim hello.txt`
   - Saving a file in Vim
   - Saving a file and switching back to normal mode without closing vim
@@ -462,18 +393,11 @@ D:
     - Difference b/w `:wq` and `:x`
       - `:wq` - always write buffer to file so modify its time
       - `:x` - only write to file when there are unsaved changes
-
 - Moving the Cursor
   - j - down
   - k - up
   - h - left
   - l - right
-
-## Markdown
-
-- Extensions: `.md`, `.markdown`
-- https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
-- https://guides.github.com/features/mastering-markdown/
 
 ## Sublime Shortcuts
 
@@ -496,9 +420,7 @@ D:
 - `ctrl + /` : to do comment
 - `.someClass>ul>li>a*8`
 
-## Other Notes
-
-### Redirect in Netlify for ReactJS
+## Redirect in Netlify for ReactJS
 
 Place a `_redirects` file in `public` folder with following content
 
@@ -506,7 +428,7 @@ Place a `_redirects` file in `public` folder with following content
 /*  /index.html  200
 ```
 
-### Setting Up Husky
+## Setting Up Husky
 
 ```bash
 cd FOLDER_NAME

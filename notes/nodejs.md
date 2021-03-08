@@ -1574,6 +1574,17 @@ process.env.VERIABLE_NAME;
 
 ## Making REST API
 
+- API
+  - Method of the communication between software components
+  - an API specifies how software components should interact with each other. It is a set of protocols and routines, and it’s responses are generally returned as JSON or XML data. APIs can use any type of communication protocol, and are not limited in the same way a web service is.
+  - Interoperability : the ability of computer systems or software to exchange and make use of information.
+  - What is REST - Architecture that define guidelines to make web API easily
+  - WSDL - Web service description language
+- Types of web services
+  - REST - representational state transfer each URL is a object Architectural style
+  - SOAP - simple object access protocol
+- XML based message protocol
+
 - API - Application Programming Interface
 - REST - Representational state transfer
 - API is a interface through which one application talk to another application.

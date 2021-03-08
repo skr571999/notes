@@ -2,27 +2,29 @@
 title: ReactJS
 ---
 
-## About
+<!--
+- React
+- Hooks
+- React Router Dom
+- Material UI
+- React Browser Tools
+- Redux
+-->
 
-- It is a JavaScript Library for Building user Interfaces.
-
-## Setup
-
-- Requirements
-  - NodeJS
-  - VSCode
-  - Browser
-- VSCode Extensions
-  - Prettier
-  - ES7 React/Redux/GraphQL/React-Native snippets)
-
-### Installing using Create React App
+## Installing using Create React App
 
 ```sh
-npm i -g create-react-app # Installing Create React App globally
-create-react-app APP_NAME # Creating the React App
-create-react-app APP_NAME --use-npm # to use npm package manager
-npx create-react-app APP_NAME # Creating app without installing create-react-app
+# Installing Create React App globally
+npm i -g create-react-app
+
+# Creating the React App
+create-react-app APP_NAME
+
+# to use npm package manager
+create-react-app APP_NAME --use-npm
+
+# Creating app without installing create-react-app
+npx create-react-app APP_NAME
 
 npx create-react-app . --use-npm --template typescript
 
@@ -30,19 +32,7 @@ npm start
 npm run build
 ```
 
-## How to add Bootstrap
-
-- I Step: `npm i bootstrap`
-- II Step:
-
-```js
-// index.js
-import "bootstrap/dist/css/bootstrap.css";
-```
-
-## Simple Examples
-
-### Hello World Example
+## Hello World Example
 
 ```js
 // index.js
@@ -50,12 +40,20 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const elem = <h1>Hello World</h1>;
-console.log(elem);
 
 ReactDOM.render(elem, document.getElementById("root"));
 ```
 
-### Class Based Component
+## How to add Bootstrap
+
+```js
+// npm i bootstrap
+
+// index.js
+import "bootstrap/dist/css/bootstrap.css";
+```
+
+## Class Based Component
 
 ```js
 // counter.jsx
@@ -85,81 +83,39 @@ ReactDOM.render(<Counter />, document.getElementById("root"));
 
 ```js
 // Fragments let us group a list of children without adding extra nodes to the DOM
-render() {
-    return (
-      <React.Fragment>
-        <h1>Hello World 1</h1>
-        <button>+</button>
-      </React.Fragment>
-    );
-  }
+<React.Fragment>
+  <h1>Hello World 1</h1>
+  <button>+</button>
+</React.Fragment>
+
+<>
+  <h1>Hello World</h1>
+  <p>This is a Paragraph.</p>
+</>
 ```
 
-## Learning Topics(docs)
-
-- React
-- Hooks
-- Material UI
-- React Browser Tools
-- Redux
-- Create React App
-  - [How to create react app using templates](https://create-react-app.dev/docs/getting-started/#selecting-a-template)
-- [Project File Structure](https://reactjs.org/docs/faq-structure.html)
-
-## Projects
-
-- React Shop App
-  - YouTube - https://www.youtube.com/watch?v=zaWtIkJgah4
-  - GitHub - https://github.com/jaewonhimnae/react-shop-app
-
-## Resources
-
-- YouTube
-  - React - Redux - https://youtube/CVpUuw9XSjY
-
-## Mosh Course
-
-### Adding Style to JSX element, Attributes
+## Mosh Course - Class Based Component
 
 ```js
-render() {
-    return (
-      <div>
-        <span style={{ fontSize: 50 }} className="badge badge-primary m-2">
-          {this.formatCount()}
-        </span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
-      </div>
-    );
-  }
-```
+// - Adding Style to JSX element, Attributes
 
-### Conditional Rendering
+<span style={{ fontSize: 50 }}></span>;
 
-```js
+// - Conditional Rendering
 {
   this.state.tags.length === 0 && "Please new tag";
 }
-```
 
-### Rendering a List
-
-```js
+// - Rendering a List
 class Counter extends Component {
   state = {
-    count: 0,
-    imageUrl: "https://picsum.photos/200",
     tags: ["Tag1", "Tag2", "Tag3"],
   };
   render() {
     return (
-      <div>
-        <ul>
-          {this.state.tags.map((val, index) => {
-            return <li key={index}>{val}</li>;
-          })}
-        </ul>
-      </div>
+      <ul>
+        {this.state.tags.map((val, index) => <li key={index}>{val}</li>)}
+      </ul>
     );
 }
 ```
@@ -180,17 +136,12 @@ class Counter extends Component {
 
   render() {
     return (
-      <div>
-        <span className={this.getBadgeClasses()}>
-          {this.formatCount()}
-        </span>
-        <button
-          onClick={this.handleIncrement}
-          className="btn btn-secondary btn-sm"
-        >
-          Increment
-        </button>
-      </div>
+      <button
+        onClick={this.handleIncrement}
+        className="btn btn-secondary btn-sm"
+      >
+        Increment
+      </button>
     );
   }
 ```
@@ -198,21 +149,18 @@ class Counter extends Component {
 - Method 2
 
 ```js
-handleIncrement = () => {
+  handleIncrement = () => {
     console.log("Increment Clicked", this);
   };
 
   render() {
     return (
-      <div>
-        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button
-          onClick={() => this.handleIncrement({ course: "React" })}
-          className="btn btn-secondary btn-sm"
-        >
-          Increment
-        </button>
-      </div>
+      <button
+        onClick={() => this.handleIncrement({ course: "React" })}
+        className="btn btn-secondary btn-sm"
+      >
+        Increment
+      </button>
     );
   }
 ```
@@ -220,38 +168,34 @@ handleIncrement = () => {
 ### Update the State
 
 ```js
- handleIncrement() {
-    this.setState({ count: this.state.count + 1 });
-  }
+handleIncrement() {
+  this.setState({ count: this.state.count + 1 });
+}
 ```
 
 ### Passing Argument to the Function
 
 ```js
- handleIncrement(data) {
-    console.log("Data", data);
-    this.setState({ count: this.state.count + 1 });
-  }
+handleIncrement(data) {
+  console.log("Data", data);
+  this.setState({ count: this.state.count + 1 });
+}
 
-  render() {
-    return (
-      <div>
-        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button
-          onClick={() => this.handleIncrement({ course: "React" })}
-          className="btn btn-secondary btn-sm"
-        >
-          Increment
-        </button>
-      </div>
-    );
-  }
+render() {
+  return (
+    <button
+      onClick={() => this.handleIncrement({ course: "React" })}
+      className="btn btn-secondary btn-sm"
+    >
+      Increment
+    </button>
+  );
+}
 ```
 
 ### Passing Data from one component to Another
 
 ```js
-// counters.jsx
 class Counters extends Component {
   state = {
     Counters: [
@@ -271,17 +215,15 @@ class Counters extends Component {
     );
   }
 }
-```
 
-```js
-// counters.jsx
-state = {
+class Counter extends Component {
+  state = {
     value: this.props.value,
   };
   constructor(props) {
     super(props);
-    this.handleIncrement = this.handleIncrement.bind(this);
   }
+}
 ```
 
 ### Passing Children
@@ -306,14 +248,14 @@ state = {
 
 ### Debugging React Apps
 
-- React Developer Tools(Exension)
+- React Developer Tools(Extension)
 - Using \$r - for selecting a component
-- Using \$0 - for selectiog a Element
+- Using \$0 - for selecting a Element
 
 ### Props vs State
 
 - State is local to the Component
-- Prpos is the data that we give to a component
+- Props is the data that we give to a component
   - props are read only
 
 ### Raise and Handling Event
@@ -385,8 +327,8 @@ handleDelete = (counterId) => {
 
 ### Removing the Local state (for single source of truth)
 
-- here child component will be controlled by the parent conponent
-- here we need to remove all the local state refrence from the child component and also the handlers function
+- here child component will be controlled by the parent component
+- here we need to remove all the local state reference from the child component and also the handlers function
 - and need to make the handler function in the parent component and pass then as a prop
 
 ### Multiple Components in Sync
@@ -404,7 +346,7 @@ const NavBar = (props) => {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <a className="navbar-brand" href="https://google.com">
-        Navbar{" "}
+        Navbar
         <span className="badge badge-pill badge-secondary">
           {props.totalCounters}
         </span>
@@ -419,12 +361,12 @@ const NavBar = (props) => {
 - Mount
   - Constructor - for setting state value from props
   - Render
-  - componentDidMount - for AJAX call
+  - `componentDidMount` - for AJAX call
 - Update
   - render
-  - componentDidUpdate - this can be used for AJAX call only if there is a change in old value
-- Unmount
-  - componentWillUnmount - can be used for cleaning the timers and listeners
+  - `componentDidUpdate` - this can be used for AJAX call only if there is a change in old value
+- Un-mount
+  - `componentWillUnmount` - can be used for cleaning the timers and listeners
 
 ### Building the App
 
@@ -441,58 +383,17 @@ const NavBar = (props) => {
 - `netlify deploy`
 - `netlify deploy --prod`
 
-### JSX
-
-- JSX expressions, Attributes with JSX
-
 ## Code Evolution Course
-
-### ReactJS
-
-It is a JavaSript Library for Building UI.
-
-### Prerequisites
-
-- HTML, CSS, JS fundamentals
-- ES6{ name, email, course }
-- JS - this keyword, filter, map, reduce
-- ES6 - let, const, arrow functions, template literals, default paramters, rest and spread operators, destructing assignment.
-
-### Content
-
-- Fundamentals
-- HTTP
-- Routing
-- Redux
-- Utilities
-
-### Requirements
-
-- VScode
-- create-react-app
-- Browser
-
-### Hello World
-
-```cmd
-npx create-react-app hello-world
-
-cd hello-workd
-
-npm start
-```
-
-### Folder Structure
 
 ### Components based Architecture
 
 - Components are reusable and can be nested
 - types of components
   - Stateless Functional Component(JS functions)
-  - Statefull Class Component
+  - State-full Class Component
 
 ```js
-const elemt = <h1>Hello WOrld</h1>;
+const elem = <h1>Hello WOrld</h1>;
 
 function Hello(props) {
   return <h1>Hello World of React</h1>;
@@ -511,7 +412,7 @@ const Hello = () => <h1>Hello World in Arrow Functions</h1>;
 
 - Functional
   - Simple Function
-  - Absencs of this Keyword
+  - Absence of this Keyword
   - Not have State
   - Mainly responsible for the UI
   - Stateless
@@ -520,7 +421,7 @@ const Hello = () => <h1>Hello World in Arrow Functions</h1>;
   - Maintain their own private data - state
   - complex UI - logic
   - Provide lifecycle hooks
-  - Statefull
+  - Stateful
 
 ### JSX
 
@@ -1187,32 +1088,6 @@ class ComponentA extends Component {
   - When there is an error during the rendering, in a lifecycle method or in the constructor of any child component
   - MEHTOD: getDerivedStateFromError and componentDidCatch
 
-### React Fragment
-
-```js
-class ComponentA extends Component {
-  render() {
-    return (
-      <React.Fragment>
-        <h1>Hello World</h1>
-        <p>This is a Paragraph.</p>
-      </React.Fragment>
-    );
-  }
-}
-
-class ComponentA extends Component {
-  render() {
-    return (
-      <>
-        <h1>Hello World</h1>
-        <p>This is a Paragraph.</p>
-      </>
-    );
-  }
-}
-```
-
 ### Pure Components
 
 - VIDEO : 26
@@ -1391,9 +1266,7 @@ export default Hello;
 - It provide a way to pass data through the component level without having to pass props down manually to every level.
 - VIDEO - 38, 39, 40
 
-## Other Notes
-
-### Module CSS in react
+## Module CSS in react
 
 ```tsx
 // importing the css module
@@ -1408,7 +1281,7 @@ import styles from "./login.module.scss";
 ></div>
 ```
 
-### Some Popular React Projects
+## Some Popular React Projects
 
 - Libraries
   - Material UI

@@ -4,17 +4,27 @@ title: Website Development
 
 ## Terminology
 
-- Website - Collection of Webpages
+- Website - collection of Webpages
 - Webpages - a hypertext document(generally contain information) on the World Wide Web
 - Hypertext is text which contains links to other texts
 - WWW - ?
-- Web Development - It is the work involved in developing a website.
+- Web Development - work involved in developing a website
 - What is the URL
   - http://localhost:3000/login
   - http → Protocol
   - localhost → server address
   - 3000 → Port Number
   - /login → path
+- Response Code
+  - 200 - Ok
+  - 400 - Bad Request
+  - 401 - Un authorized
+  - 404 - Not Found
+  - 500 - Internal Server Error
+- Cloud Computing
+  - SAAS - Software as a Service - Example - Gmail
+  - PASS - Platform as a Service - Ex - Heroku
+  - IASS - Infrastructure as a Service - Ex - GCP, AWS, Azure
 
 ## Technologies and Tools
 
@@ -32,39 +42,32 @@ title: Website Development
 
 ## Web development Procedures
 
-- Phase - I - Understanding
+- **Phase - I** - Design
   - Taking Requirements
     - Purpose, Goal, Target Audience
   - Analysis, Planning
   - Sitemap, Structure
   - Design
-- Phase - II - Development Environment SetUp
+- **Phase - II** - Development
   - Setting up Tasks like
     - Transpiling
     - Bundling
     - Minifing
     - Packaging
+    - Setting Up Prettier
+    - Setting Up Git Pre Commit hook
+    - Splitting Small Components and Reuse them
+    - Maintain Good Folder Structure
   - Development
+    - Website Responsiveness Tasks
+      - Start from Mobile
+      - Setting up bootstrap breakpoints
+    - Not to Defining Global Styles, and overriding library styles
   - Test
   - Deployment
-- Phase - III - Maintenance
+- **Phase - III** - Maintenance
 
-## Important Links
-
-- [https://developer.mozilla.org/en-US/](https://developer.mozilla.org/en-US/)
-- [https://www.w3schools.com/html/default.asp](https://www.w3schools.com/html/default.asp)
-- [Freecode camp (YouTube) - CSS3 30 Days](https://www.youtube.com/playlist?list=PLWKjhJtqVAbl1AfjiGyYxwpdAPi5v-1OU)
-- [Namaste 🙏 JavaScript - Akshay Saini](https://www.youtube.com/watch?v=pN6jk0uUrD8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP)
-- [https://roadmap.sh](https://roadmap.sh)
-- [https://levelup.gitconnected.com/the-2020-web-developer-roadmap-76503ddfb327#f309](https://levelup.gitconnected.com/the-2020-web-developer-roadmap-76503ddfb327#f309)
-- [https://www.theodinproject.com/](https://www.theodinproject.com/)
-- [https://www.freecodecamp.org/](https://www.freecodecamp.org/)
-- [https://www.khanacademy.org/computing/computer-programming](https://www.khanacademy.org/computing/computer-programming)
-- [https://cs50.harvard.edu/college/2021/spring/](https://cs50.harvard.edu/college/2021/spring/)
-- [https://www.youtube.com/c/TheCodingTrain/videos](https://www.youtube.com/c/TheCodingTrain/videos)
-- [https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFAs)
-
-## Tools
+## Other Tools
 
 - [https://getbootstrap.com/](https://getbootstrap.com/)
 - [CSS clip-path maker](https://bennettfeely.com/clippy/)
@@ -75,11 +78,7 @@ title: Website Development
   - Webpack
   - Gulp
 
----
-
-## Notes
-
-### CSS Media Queries
+## CSS Media Queries
 
 - Media Types - `all, print, screen, speech`
 
@@ -101,7 +100,7 @@ title: Website Development
 />
 ```
 
-### CSS Variables
+## CSS Variables
 
 ```css
 :root {
@@ -113,7 +112,7 @@ body {
 }
 ```
 
-### Using JavaScript in Browser
+## Using JavaScript in Browser
 
 - Adding, Removing, Modifying the Element
 - Modify the Style
@@ -135,7 +134,7 @@ API Endpoints
     - what we send it return the same
 ```
 
-### Using AJAX
+## Using AJAX
 
 ```js
 // 1- Using Fetch
@@ -169,7 +168,7 @@ xhttp.send();
 })();
 ```
 
-### Using Json Web Server
+## Using Json Web Server
 
 - [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
 - `npm install -g json-server`
@@ -177,7 +176,7 @@ xhttp.send();
 - Start the Json Server
   - `json-server --watch db.json`
 
-### POST Data using Fetch
+## POST Data using Fetch
 
 ```js
 const BASE_URL = "http://localhost:3000/api/users";
@@ -201,7 +200,7 @@ fetch(BASE_URL, {
   });
 ```
 
-### JS console methods
+## JS console methods
 
 ```js
 console.clear(); // clear the console
@@ -245,7 +244,7 @@ console.log(difference(a1, b1));
 console.log(difference(b1, a1));
 -->
 
-### Handling Multiple Key Press in JS
+## Handling Multiple Key Press in JS
 
 ```js
 // A, S, D
@@ -265,7 +264,7 @@ document.onkeyup = (e) => {
 };
 ```
 
-### Pug Usage
+## Pug Usage
 
 - [https://pugjs.org/api/getting-started.html](https://pugjs.org/api/getting-started.html)
 
@@ -306,7 +305,7 @@ input(type='text' name='name')
 - var a = 13;
 ```
 
-### SASS Usage
+## SASS Usage
 
 - [https://sass-lang.com/guide](https://sass-lang.com/guide)
 
@@ -365,7 +364,7 @@ h1 {
 }
 ```
 
-### jQuery Usage
+## jQuery Usage
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -477,9 +476,7 @@ $("div").text("<p>Hello World</p>");
 </script>
 ```
 
-## Other Notes
-
-### Alert Message Style Using CSS
+## Alert Message Style Using CSS
 
 ```css
 p {
@@ -492,7 +489,7 @@ p::before {
 }
 ```
 
-### Firing a Event
+## Firing a Event
 
 ```js
 window.dispatchEvent(new Event("resize"));
