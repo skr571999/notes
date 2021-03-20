@@ -890,8 +890,6 @@ register2(){
 
   - CSS classes for form
 
-    ![Form Validation Classes](files/form_validation_classes.png)
-
 ```css
 /* app.component.css */
 input.ng-invalid.ng-touched {

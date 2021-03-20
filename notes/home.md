@@ -1,8 +1,8 @@
 ---
-id: _index
+slug: /
 title: Home
 hide_title: true
-hide_table_of_contents: true
+# hide_table_of_contents: true
 ---
 
 import TableOfContent from "./TableOfContent";

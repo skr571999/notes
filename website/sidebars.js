@@ -1,5 +1,6 @@
 module.exports = {
   docs: [
+    "home",
     "software_development",
     "website_development",
     "tools",

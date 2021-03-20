@@ -13,7 +13,7 @@ module.exports = {
         alt: "Logo",
         src: "img/logo.svg",
       },
-      links: [
+      items: [
         {
           href: "https://github.com/skr571999/notes",
           label: "GitHub",
@@ -25,6 +25,7 @@ module.exports = {
       style: "dark",
       copyright: `Built using <a target="_blank" href="https://v2.docusaurus.io/">Docusaurus</a>.`,
     },
+    hideableSidebar: true,
   },
   presets: [
     [
