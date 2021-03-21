@@ -2,11 +2,6 @@
 title: Tools
 ---
 
-## Deployment Tool
-
-- Netlify
-- Heroku
-
 ## Online IDEs
 
 - https://www.gitpod.io/
@@ -41,13 +36,11 @@ title: Tools
 
 ## Git and GitHub
 
-- Git - Distributed Version Control System
 - References
+  - https://git-scm.com/doc
   - https://app.pluralsight.com/library/courses/code-school-git-real/table-of-contents
   - https://www.atlassian.com/git/tutorials
-- Monorepos
-  - where code for many projects are stored in same repository
-- [Git large File Storage](https://git-lfs.github.com)
+  - https://git-lfs.github.com - Git large File Storage
 - Use of Git
   - Keep track of the Changes in the code
   - Synchronize the code between different People
@@ -419,14 +412,6 @@ heroku git:clone -a APP_NAME # to clone a heroku app
 - `ctrl + shift + b` : to choose the build system
 - `ctrl + /` : to do comment
 - `.someClass>ul>li>a*8`
-
-## Redirect in Netlify for ReactJS
-
-Place a `_redirects` file in `public` folder with following content
-
-```
-/*  /index.html  200
-```
 
 ## Setting Up Husky
 

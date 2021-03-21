@@ -1,13 +1,13 @@
 module.exports = {
   docs: [
     "home",
-    "software_development",
-    "website_development",
+    "introduction",
+    "web",
     "tools",
     "javascript",
     "nodejs",
-    "angular",
     "reactjs",
+    "angular",
     "python",
     "django",
     "ml_dl",

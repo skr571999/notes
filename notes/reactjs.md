@@ -1303,3 +1303,11 @@ import styles from "./login.module.scss";
 - Starter Kits
   - Create React App
   - Gatsby.js - https://github.com/gatsbyjs/gatsby
+
+## Redirect in Netlify for ReactJS
+
+Place a `_redirects` file in `public` folder with following content
+
+```
+/*  /index.html  200
+```

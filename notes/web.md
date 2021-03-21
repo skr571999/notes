@@ -1,82 +1,6 @@
 ---
-title: Website Development
+title: Web
 ---
-
-## Terminology
-
-- Website - collection of Webpages
-- Webpages - a hypertext document(generally contain information) on the World Wide Web
-- Hypertext is text which contains links to other texts
-- WWW - ?
-- Web Development - work involved in developing a website
-- What is the URL
-  - http://localhost:3000/login
-  - http → Protocol
-  - localhost → server address
-  - 3000 → Port Number
-  - /login → path
-- Response Code
-  - 200 - Ok
-  - 400 - Bad Request
-  - 401 - Un authorized
-  - 404 - Not Found
-  - 500 - Internal Server Error
-- Cloud Computing
-  - SAAS - Software as a Service - Example - Gmail
-  - PASS - Platform as a Service - Ex - Heroku
-  - IASS - Infrastructure as a Service - Ex - GCP, AWS, Azure
-
-## Technologies and Tools
-
-- Frontend Technologies
-  - HTML (define structure)
-  - CSS (add style)
-  - JS (add behavior)
-- Tools
-  - Browser(Chrome)
-  - Text Editor(VSCode)
-- Backend Technologies
-  - Programming Language (Python, JavaScript)
-  - Server (software that handle the Request and Response)
-  - DBMS (software to manage data)
-
-## Web development Procedures
-
-- **Phase - I** - Design
-  - Taking Requirements
-    - Purpose, Goal, Target Audience
-  - Analysis, Planning
-  - Sitemap, Structure
-  - Design
-- **Phase - II** - Development
-  - Setting up Tasks like
-    - Transpiling
-    - Bundling
-    - Minifing
-    - Packaging
-    - Setting Up Prettier
-    - Setting Up Git Pre Commit hook
-    - Splitting Small Components and Reuse them
-    - Maintain Good Folder Structure
-  - Development
-    - Website Responsiveness Tasks
-      - Start from Mobile
-      - Setting up bootstrap breakpoints
-    - Not to Defining Global Styles, and overriding library styles
-  - Test
-  - Deployment
-- **Phase - III** - Maintenance
-
-## Other Tools
-
-- [https://getbootstrap.com/](https://getbootstrap.com/)
-- [CSS clip-path maker](https://bennettfeely.com/clippy/)
-- [https://canvasjs.com](https://canvasjs.com)
-- [https://www.chartjs.org](https://www.chartjs.org)
-- [Cash - Similar to jQuery](https://kenwheeler.github.io/cash/)
-- Build Tools
-  - Webpack
-  - Gulp
 
 ## CSS Media Queries
 
@@ -124,17 +48,18 @@ body {
 - Browser Storage
 - AJAX
 
-```txt
-API Endpoints
-  - https://jsonplaceholder.typicode.com
-  - https://api.github.com
-  - https://reqres.in
-  - https://www.openbrewerydb.org/dataset
-  - https://httpbin.org/#/Anything/get_anything__anything_
-    - what we send it return the same
-```
-
 ## Using AJAX
+
+### API Endpoints
+
+- https://jsonplaceholder.typicode.com
+- https://api.github.com
+- https://reqres.in
+- https://www.openbrewerydb.org/dataset
+- https://httpbin.org/#/Anything/get_anything__anything_
+  - what we send it return the same
+
+### Example
 
 ```js
 // 1- Using Fetch
@@ -168,15 +93,7 @@ xhttp.send();
 })();
 ```
 
-## Using Json Web Server
-
-- [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
-- `npm install -g json-server`
-- Create `db.json`
-- Start the Json Server
-  - `json-server --watch db.json`
-
-## POST Data using Fetch
+### POST Data using Fetch
 
 ```js
 const BASE_URL = "http://localhost:3000/api/users";
@@ -199,6 +116,14 @@ fetch(BASE_URL, {
     console.log(result);
   });
 ```
+
+## Using Json Web Server
+
+- [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
+- `npm install -g json-server`
+- Create `db.json`
+- Start the Json Server
+  - `json-server --watch db.json`
 
 ## JS console methods
 
@@ -226,23 +151,26 @@ console.assert(12 == 13, "Both are not Equal", "HELLO");
 console.dir({ a: 122 });
 ```
 
-<!--
-// JavaScript how to find intersection, union of two array
-function intersection(a, b) {
-  return a.filter(val => b.includes(val));
-}
+## Intersection, Union of two array
 
-let a1 = [1, 2, 3];
-let b1 = [2, 3, 4, 5];
+```js
+const a1 = [1, 2, 3];
+const b1 = [2, 3, 4, 5];
+
+function intersection(a, b) {
+  return a.filter((val) => b.includes(val));
+}
 
 console.log(intersection(a1, b1));
 console.log(intersection(b1, a1));
+
 function difference(a, b) {
-  return a.filter(val => !b.includes(val));
+  return a.filter((val) => !b.includes(val));
 }
+
 console.log(difference(a1, b1));
 console.log(difference(b1, a1));
--->
+```
 
 ## Handling Multiple Key Press in JS
 
@@ -365,6 +293,8 @@ h1 {
 ```
 
 ## jQuery Usage
+
+- https://jquery.com/download/#using-jquery-with-a-cdn
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -494,3 +424,7 @@ p::before {
 ```js
 window.dispatchEvent(new Event("resize"));
 ```
+
+## Deployment tool
+
+- https://docs.netlify.com/

@@ -1,6 +1,5 @@
 ---
-id: software_development
-title: Software Development
+title: Introduction
 ---
 
 ## Terminology
@@ -54,8 +53,73 @@ title: Software Development
   - MINOR version when you add functionality in a backwards-compatible manner, and
   - PATCH version when you make backwards-compatible bug fixes.
 
-## What is the difference b/w Synchronous and Asynchronous
+## Synchronous vs Asynchronous
 
 - Synchronous - occurring at the same time.
 - Asynchronous - not occurring at the same time.
 - Synchronization - the action of causing a set of data or files to remain identical in more than one location.
+
+## Web Terminology
+
+- Website - collection of Webpages
+- Webpages - a hypertext document(generally contain information) on the World Wide Web
+- Hypertext is text which contains links to other texts
+- WWW - ?
+- Web Development - work involved in developing a website
+- What is the URL
+  - http://localhost:3000/login
+  - http → Protocol
+  - localhost → server address
+  - 3000 → Port Number
+  - /login → path
+- Response Code
+  - 200 - Ok
+  - 400 - Bad Request
+  - 401 - Un authorized
+  - 404 - Not Found
+  - 500 - Internal Server Error
+- Cloud Computing
+  - SAAS - Software as a Service - Example - Gmail
+  - PASS - Platform as a Service - Ex - Heroku
+  - IASS - Infrastructure as a Service - Ex - GCP, AWS, Azure
+
+## Web Technologies and Tools
+
+- Frontend Technologies
+  - HTML (define structure)
+  - CSS (add style)
+  - JS (add behavior)
+- Tools
+  - Browser(Chrome)
+  - Text Editor(VSCode)
+- Backend Technologies
+  - Programming Language (Python, JavaScript)
+  - Server (software that handle the Request and Response)
+  - DBMS (software to manage data)
+
+## Web development Procedures
+
+- **Phase - I** - Design
+  - Taking Requirements
+    - Purpose, Goal, Target Audience
+  - Analysis, Planning
+  - Sitemap, Structure
+  - Design
+- **Phase - II** - Development
+  - Setting up Tasks like
+    - Transpiling
+    - Bundling
+    - Minifing
+    - Packaging
+    - Setting Up Prettier
+    - Setting Up Git Pre Commit hook
+    - Splitting Small Components and Reuse them
+    - Maintain Good Folder Structure
+  - Development
+    - Website Responsiveness Tasks
+      - Start from Mobile
+      - Setting up bootstrap breakpoints
+    - Not to Defining Global Styles, and overriding library styles
+  - Test
+  - Deployment
+- **Phase - III** - Maintenance

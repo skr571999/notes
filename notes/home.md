@@ -2,12 +2,24 @@
 slug: /
 title: Home
 hide_title: true
-# hide_table_of_contents: true
 ---
 
-import TableOfContent from "./TableOfContent";
+## Division of Notes
 
-<TableOfContent></TableOfContent>
+| Section      | Content                          |
+| ------------ | -------------------------------- |
+| Home         | Important Information            |
+| Introduction | Terminology, Overview            |
+| Web          | HTML, CSS, Browser JS, Bootstrap |
+| Tools        | GitHub, VSCode                   |
+| JavaScript   | JavaScript                       |
+| NodeJS       | NodeJS, ExpressJS                |
+| ReactJS      | ReactJS, Material UI             |
+| Angular      | Angular, RXjs, Angular material  |
+| Python       | Python                           |
+| Django       | Django, DRF                      |
+| ML_DL        | Machine Learning, Deep Learning  |
+| Try          | New Stuff                        |
 
 ## Important Links
 
