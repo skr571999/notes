@@ -419,10 +419,30 @@ p::before {
 }
 ```
 
+## Adding style to the Placeholder
+
+```css
+.input::placeholder {
+  color: #909090;
+}
+```
+
 ## Firing a Event
 
 ```js
 window.dispatchEvent(new Event("resize"));
+```
+
+## Opening a New page by Button Click
+
+```js
+window.open("http://google.com", "_blank");
+```
+
+## Getting list of Events on a Element in Browser tool
+
+```js
+getEventListeners($0);
 ```
 
 ## Deployment tool

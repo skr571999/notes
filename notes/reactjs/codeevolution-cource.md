@@ -1,391 +1,8 @@
 ---
-title: ReactJS
+title: Code Evolution Course
 ---
 
-<!--
-- React
-- Hooks
-- React Router Dom
-- Material UI
-- React Browser Tools
-- Redux
--->
-
-## Installing using Create React App
-
-```sh
-# Installing Create React App globally
-npm i -g create-react-app
-
-# Creating the React App
-create-react-app APP_NAME
-
-# to use npm package manager
-create-react-app APP_NAME --use-npm
-
-# Creating app without installing create-react-app
-npx create-react-app APP_NAME
-
-npx create-react-app . --use-npm --template typescript
-
-npm start
-npm run build
-```
-
-## Hello World Example
-
-```js
-// index.js
-import React from "react";
-import ReactDOM from "react-dom";
-
-const elem = <h1>Hello World</h1>;
-
-ReactDOM.render(elem, document.getElementById("root"));
-```
-
-## How to add Bootstrap
-
-```js
-// npm i bootstrap
-
-// index.js
-import "bootstrap/dist/css/bootstrap.css";
-```
-
-## Class Based Component
-
-```js
-// counter.jsx
-import React, { Component } from "react";
-
-class Counter extends Component {
-  state = {};
-  render() {
-    return (
-      <div>
-        <h1>Hello World 1</h1>
-        <button>+</button>
-      </div>
-    );
-  }
-}
-
-export default Counter;
-
-// index.js
-import Counter from "./components/counter";
-// ...
-ReactDOM.render(<Counter />, document.getElementById("root"));
-```
-
-## React Fragment
-
-```js
-// Fragments let us group a list of children without adding extra nodes to the DOM
-<React.Fragment>
-  <h1>Hello World 1</h1>
-  <button>+</button>
-</React.Fragment>
-
-<>
-  <h1>Hello World</h1>
-  <p>This is a Paragraph.</p>
-</>
-```
-
-## Mosh Course - Class Based Component
-
-```js
-// - Adding Style to JSX element, Attributes
-
-<span style={{ fontSize: 50 }}></span>;
-
-// - Conditional Rendering
-{
-  this.state.tags.length === 0 && "Please new tag";
-}
-
-// - Rendering a List
-class Counter extends Component {
-  state = {
-    tags: ["Tag1", "Tag2", "Tag3"],
-  };
-  render() {
-    return (
-      <ul>
-        {this.state.tags.map((val, index) => <li key={index}>{val}</li>)}
-      </ul>
-    );
-}
-```
-
-### Event Handling
-
-- Method One
-
-```js
-  constructor() {
-    super();
-    this.handleIncrement = this.handleIncrement.bind(this);
-  }
-
-  handleIncrement() {
-    console.log("Increment", this);
-  }
-
-  render() {
-    return (
-      <button
-        onClick={this.handleIncrement}
-        className="btn btn-secondary btn-sm"
-      >
-        Increment
-      </button>
-    );
-  }
-```
-
-- Method 2
-
-```js
-  handleIncrement = () => {
-    console.log("Increment Clicked", this);
-  };
-
-  render() {
-    return (
-      <button
-        onClick={() => this.handleIncrement({ course: "React" })}
-        className="btn btn-secondary btn-sm"
-      >
-        Increment
-      </button>
-    );
-  }
-```
-
-### Update the State
-
-```js
-handleIncrement() {
-  this.setState({ count: this.state.count + 1 });
-}
-```
-
-### Passing Argument to the Function
-
-```js
-handleIncrement(data) {
-  console.log("Data", data);
-  this.setState({ count: this.state.count + 1 });
-}
-
-render() {
-  return (
-    <button
-      onClick={() => this.handleIncrement({ course: "React" })}
-      className="btn btn-secondary btn-sm"
-    >
-      Increment
-    </button>
-  );
-}
-```
-
-### Passing Data from one component to Another
-
-```js
-class Counters extends Component {
-  state = {
-    Counters: [
-      { id: 1, value: 4 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
-      { id: 4, value: 0 },
-    ],
-  };
-  render() {
-    return (
-      <div>
-        {this.state.Counters.map((counter) => (
-          <Counter key={counter.id} value={counter.value} />
-        ))}
-      </div>
-    );
-  }
-}
-
-class Counter extends Component {
-  state = {
-    value: this.props.value,
-  };
-  constructor(props) {
-    super(props);
-  }
-}
-```
-
-### Passing Children
-
-```js
-// counters.jsx
-<Counter key={counter.id} value={counter.value}>
-  <h4>Counter {counter.id}</h4>
-</Counter>
-```
-
-```js
-// counter.jsx
-<div>
-  {this.props.children}
-  <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-  <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">
-    Increment
-  </button>
-</div>
-```
-
-### Debugging React Apps
-
-- React Developer Tools(Extension)
-- Using \$r - for selecting a component
-- Using \$0 - for selecting a Element
-
-### Props vs State
-
-- State is local to the Component
-- Props is the data that we give to a component
-  - props are read only
-
-### Raise and Handling Event
-
-```js
-// counters.jsx
-  handleDelete = () => {
-    console.log("Delete clicked");
-  };
-
-  render() {
-    return (
-      <div>
-        {this.state.Counters.map((counter) => (
-          <Counter
-            key={counter.id}
-            onDelete={this.handleDelete}
-            value={counter.value}
-          />
-        ))}
-      </div>
-    );
-  }
-```
-
-```js
-// counter.jsx
-<button className="btn btn-danger btn-sm m-2" onClick={this.props.onDelete}>
-  Delete
-</button>
-```
-
-### Updating the State of parent component from child component
-
-```js
-// counters.jsx
-handleDelete = (counterId) => {
-    let counters = this.state.counters.filter(
-      (counter) => counter.id !== counterId
-    );
-    this.setState({ counters });
-  };
-
-  render() {
-    return (
-      <div>
-        {this.state.counters.map((counter) => (
-          <Counter
-            key={counter.id}
-            onDelete={this.handleDelete}
-            value={counter.value}
-            id={counter.id}
-          />
-        ))}
-      </div>
-    );
-  }
-```
-
-```js
-// counter.jsx
-<button
-  className="btn btn-danger btn-sm m-2"
-  onClick={() => this.props.onDelete(this.props.id)}
->
-  Delete
-</button>
-```
-
-### Removing the Local state (for single source of truth)
-
-- here child component will be controlled by the parent component
-- here we need to remove all the local state reference from the child component and also the handlers function
-- and need to make the handler function in the parent component and pass then as a prop
-
-### Multiple Components in Sync
-
-- Lifting the State Up
-  - we here need to move all the handlers and state to the parent component and then pass then to child component as props
-
-### Functional components
-
-```js
-import React from "react";
-
-// Stateless functional components
-const NavBar = (props) => {
-  return (
-    <nav className="navbar navbar-dark bg-dark">
-      <a className="navbar-brand" href="https://google.com">
-        Navbar
-        <span className="badge badge-pill badge-secondary">
-          {props.totalCounters}
-        </span>
-      </a>
-    </nav>
-  );
-};
-```
-
-### Lifecycle hooks
-
-- Mount
-  - Constructor - for setting state value from props
-  - Render
-  - `componentDidMount` - for AJAX call
-- Update
-  - render
-  - `componentDidUpdate` - this can be used for AJAX call only if there is a change in old value
-- Un-mount
-  - `componentWillUnmount` - can be used for cleaning the timers and listeners
-
-### Building the App
-
-- `yarn build`
-
-### Serving the Build App
-
-- `yarn global add serve`
-- `serve -s build`
-
-### Deploying the App to Netlify
-
-- `npm i -g netlify-cli`
-- `netlify deploy`
-- `netlify deploy --prod`
-
-## Code Evolution Course
-
-### Components based Architecture
+## Components based Architecture
 
 - Components are reusable and can be nested
 - types of components
@@ -408,7 +25,7 @@ class Hello2 extends Component {
 const Hello = () => <h1>Hello World in Arrow Functions</h1>;
 ```
 
-### Functions vs Class Component
+## Functions vs Class Component
 
 - Functional
   - Simple Function
@@ -423,7 +40,7 @@ const Hello = () => <h1>Hello World in Arrow Functions</h1>;
   - Provide lifecycle hooks
   - Stateful
 
-### JSX
+## JSX
 
 - JavaScript XML - Extension to the JS language Syntax
 - JSX tags havea tag name, Attributes, children
@@ -455,7 +72,7 @@ const Hello = () => {
     - onclick ==> onClick
     - tabindex ==> tabIndex
 
-### Props and Children
+## Props and Children
 
 - props are only readable
 
@@ -498,7 +115,7 @@ const Hello = (props) => (
 export default Hello;
 ```
 
-### Props vs State
+## Props vs State
 
 - Props
   - Props get passed to the component
@@ -513,7 +130,7 @@ export default Hello;
   - useState Hook - functional components
   - this.state - class Component
 
-### State
+## State
 
 ```js
 import React, { Component } from "react";
@@ -549,7 +166,7 @@ const Hello = (props) => (
 export default Hello;
 ```
 
-### Set State
+## Set State
 
 - Use setState to modify the state value
 - If code has to be executed after state update place the code in the callback function passed as the second argument to setState
@@ -618,7 +235,7 @@ const Hello = () => (
 export default Hello;
 ```
 
-### Destructing Props in Function based Component
+## Destructing Props in Function based Component
 
 ```js
 import React from "react";
@@ -642,7 +259,7 @@ const Hello = () => (
 export default Hello;
 ```
 
-### Destructing Props in Function Class Component
+## Destructing Props in Function Class Component
 
 ```js
 import React, { Component } from "react";
@@ -664,7 +281,7 @@ const Hello = () => (
 export default Hello;
 ```
 
-### Event handling in class and function based Components
+## Event handling in class and function based Components
 
 ```js
 import React, { Component } from "react";
@@ -696,11 +313,11 @@ const Hello = () => (
 export default Hello;
 ```
 
-### Event Binding
+## Event Binding
 
 - Video -14
 
-### Passing Method to the child as props and passing arguments
+## Passing Method to the child as props and passing arguments
 
 ```js
 import React, { Component } from "react";
@@ -739,7 +356,7 @@ const Hello = () => (
 export default Hello;
 ```
 
-### Conditional Rendering
+## Conditional Rendering
 
 - If/else
 - Elements Variables
@@ -768,7 +385,7 @@ class Course extends Component {
 }
 ```
 
-### List Rendering
+## List Rendering
 
 ```js
 class Course extends Component {
@@ -844,7 +461,7 @@ class Course extends Component {
   - the list is a static and will not change
   - the list will be never reordered or filtered
 
-### Styling the React Component
+## Styling the React Component
 
 - CSS Stylesheets
 - Inline Styling
@@ -915,7 +532,7 @@ const Course = () => {
 }
 ```
 
-### Form Handling
+## Form Handling
 
 ```js
 class FormComponent extends Component {
@@ -1036,9 +653,9 @@ class FormComponent extends Component {
 }
 ```
 
-### Life cycle Methods
+## Life cycle Methods
 
-#### Four Phases of a Component
+### Four Phases of a Component
 
 - Mounting
 
@@ -1088,15 +705,15 @@ class ComponentA extends Component {
   - When there is an error during the rendering, in a lifecycle method or in the constructor of any child component
   - MEHTOD: getDerivedStateFromError and componentDidCatch
 
-### Pure Components
+## Pure Components
 
 - VIDEO : 26
 
-### Memo Components
+## Memo Components
 
 - VIDEO - 27
 
-### Refs
+## Refs
 
 - First Way
 
@@ -1151,15 +768,15 @@ class ComponentA extends Component {
 }
 ```
 
-### Attaching Ref from parent Component to Child Component
+## Attaching Ref from parent Component to Child Component
 
 - Video - 29
 
-### Forward Referencing from parent component to Child Component
+## Forward Referencing from parent component to Child Component
 
 - Video - 30
 
-### Portals
+## Portals
 
 - Used to show the Popup, Modals
 
@@ -1193,7 +810,7 @@ export default Hello;
 - Event Bubbling
   - VIDEO - 31
 
-### Error Boundary
+## Error Boundary
 
 ```js
 import React, { Component } from "react";
@@ -1250,64 +867,18 @@ export default Hello;
 - componentDidCatch
   - VIDEO - 32
 
-### Higher Order Component
+## Higher Order Component
 
 - VIDEO: 33,34,35
 - Passing Props to child component
 - Passing Second Argument to Higher Order Components
 
-### Render Pops
+## Render Pops
 
 - Sharing the code b/w React components using a prop whose value is a function
 - VIDEO - 36, 37
 
-### React Context
+## React Context
 
 - It provide a way to pass data through the component level without having to pass props down manually to every level.
 - VIDEO - 38, 39, 40
-
-## Module CSS in react
-
-```tsx
-// importing the css module
-import styles from "./login.module.scss";
-
-// for adding single class
-<div className={styles["login-top-spacer"]}></div>
-
-// for adding multiple classes
-<div
-  className={`${styles["form-check"]} ${styles["my-check"]}`}
-></div>
-```
-
-## Some Popular React Projects
-
-- Libraries
-  - Material UI
-  - React Bootstrap
-  - React Select - https://github.com/JedWatson/react-select
-  - React Spring
-  - https://ant.design/
-  - https://storybook.js.org/
-  - https://react-hook-form.com/
-  - CSS in JS - https://github.com/emotion-js/emotion
-  - Similar to Axios - https://swr.vercel.app/
-- Apps
-  - Spectrum- https://github.com/withspectrum/spectrum
-- Other
-  - React MapGL- https://github.com/visgl/react-map-gl
-  - React Router
-  - Formik
-  - To Add/Change the content of the header form a react component - https://github.com/nfl/react-helmet
-- Starter Kits
-  - Create React App
-  - Gatsby.js - https://github.com/gatsbyjs/gatsby
-
-## Redirect in Netlify for ReactJS
-
-Place a `_redirects` file in `public` folder with following content
-
-```
-/*  /index.html  200
-```

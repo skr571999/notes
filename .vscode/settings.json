@@ -1,7 +1,3 @@
 {
-  "editor.formatOnSave": true,
-  "files.associations": {
-    // "*.md": "mdx"
-  }
-  // "mdx-preview.preview.useVscodeMarkdownStyles": true
+  "editor.formatOnSave": true
 }

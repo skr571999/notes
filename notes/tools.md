@@ -144,3 +144,13 @@ module.exports = sum;
 ```bash
 git commit -m "COMMIT MESSAGE"
 ```
+
+## Netlify toml file for custom build folder
+
+- `netlify.toml`
+
+```toml
+[build]
+
+base = "website/"
+```
