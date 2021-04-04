@@ -1,13 +1,7 @@
 ---
 title: Angular
+tags: Angular, Angular Material, RxJS
 ---
-
-<!--
-- To Learn
-  - Angular
-  - Angular Material
-  - RxJS
--->
 
 ## Learning Topics
 

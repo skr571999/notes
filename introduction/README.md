@@ -48,10 +48,10 @@ title: Introduction
 
 ## Software Versioning
 
-- Given a version number MAJOR.MINOR.PATCH, increment the:
-  - MAJOR version when you make incompatible API changes,
-  - MINOR version when you add functionality in a backwards-compatible manner, and
-  - PATCH version when you make backwards-compatible bug fixes.
+- Given a version number `MAJOR.MINOR.PATCH`, increment the:
+  - `MAJOR` version when you make incompatible API changes,
+  - `MINOR` version when you add functionality in a backwards-compatible manner, and
+  - `PATCH` version when you make backwards-compatible bug fixes.
 
 ## Synchronous vs Asynchronous
 
@@ -64,14 +64,14 @@ title: Introduction
 - Website - collection of Webpages
 - Webpages - a hypertext document(generally contain information) on the World Wide Web
 - Hypertext is text which contains links to other texts
-- WWW - ?
+- `WWW` - World Wide Web
 - Web Development - work involved in developing a website
-- What is the URL
+- What is the `URL`
   - http://localhost:3000/login
-  - http → Protocol
-  - localhost → server address
-  - 3000 → Port Number
-  - /login → path
+  - `http` → Protocol
+  - `localhost` → server address
+  - `3000` → Port Number
+  - `/login` → path
 - Response Code
   - 200 - Ok
   - 400 - Bad Request
@@ -79,9 +79,9 @@ title: Introduction
   - 404 - Not Found
   - 500 - Internal Server Error
 - Cloud Computing
-  - SAAS - Software as a Service - Example - Gmail
-  - PASS - Platform as a Service - Ex - Heroku
-  - IASS - Infrastructure as a Service - Ex - GCP, AWS, Azure
+  - `SAAS` - Software as a Service - Example - Gmail
+  - `PASS` - Platform as a Service - Ex - Heroku
+  - `IASS` - Infrastructure as a Service - Ex - GCP, AWS, Azure
 
 ## Web Technologies and Tools
 

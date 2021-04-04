@@ -2,7 +2,8 @@
 title: ReactJS
 ---
 
-Mosh Course - Class Based Component
+- Mosh Course on Class Based Component
+- https://www.youtube.com/watch?v=Ke90Tje7VS0
 
 ## Intro
 

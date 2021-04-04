@@ -1,5 +1,6 @@
 ---
 title: Web
+tags: HTML, CSS, Browser JS, Bootstrap
 ---
 
 ## CSS Media Queries

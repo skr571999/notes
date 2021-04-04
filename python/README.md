@@ -13,37 +13,33 @@ title: Python
 - File Handling
 - Errors and Exceptions
 - OOPs
-- Multithreading
+- Multi-threading
 - Database Connectivity
 - Logging
 - Regular Expression
 - Testing
 - GUI Programming
 
-## Tutorials and Books
+## References
 
-- [https://www.programiz.com/python-programming](https://www.programiz.com/python-programming)
-- Book: [https://automatetheboringstuff.com/#toc](https://automatetheboringstuff.com/#toc)
-- [https://www.python-course.eu/python3_course.php](https://www.python-course.eu/python3_course.php)
-- Blog : [https://realpython.com](https://realpython.com)
-- Youtube Site[https://pythonprogramming.net/python-fundamental-tutorials/](https://pythonprogramming.net/python-fundamental-tutorials/)
+- https://www.programiz.com/python-programming
+- https://automatetheboringstuff.com/#toc
+- https://www.python-course.eu/python3_course.php
+- https://realpython.com
+- https://pythonprogramming.net/python-fundamental-tutorials/
+- https://docs.python-guide.org/
+- https://github.com/TheAlgorithms/Python
+- https://automatetheboringstuff.com/
+- https://www.py4e.com/lessons
+- https://www.python-course.eu/python3_course.php
+- https://www.thepythoncode.com/
+- Python String Formatting - https://pyformat.info/
 
 ## How to setup Python Virtual Environment
 
 - [https://packaging.python.org/tutorials/installing-packages/#id16](https://packaging.python.org/tutorials/installing-packages/#id16)
 
 ## Python Introduction
-
-### Basics Terminology
-
-- Software
-  - Software is set of Instructions that tell the computer what to do.
-- Instruction
-  - Instruction is a order given to a computer
-- Compiler
-  - Compiler is a program that converts instructions into a machine-code or lower-level form so that they can be read and executed by a computer.
-- Interpreter
-  - Interpreter is a program that can analyse and execute a program line by line.
 
 ### About Python
 
@@ -5153,16 +5149,6 @@ Introduction
 - Joins
 
 -->
-
-## References
-
-- https://docs.python-guide.org/
-- https://github.com/TheAlgorithms/Python
-- https://automatetheboringstuff.com/
-- https://www.py4e.com/lessons
-- https://www.python-course.eu/python3_course.php
-- https://www.thepythoncode.com/
-- Python String Formatting - https://pyformat.info/
 
 ## Random
 
