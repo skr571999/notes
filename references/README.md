@@ -131,7 +131,6 @@ hide_title: true
 - [ReactJS Doc](https://reactjs.org/docs/hello-world.html)
 - [React Interview Questions](https://github.com/sudheerj/reactjs-interview-questions)
 - [React Typescript Best Practices](https://www.sitepoint.com/react-with-typescript-best-practices/)
-- [Create-react-app Minimal template](https://github.com/iansu/cra-minimal-templates)
 - [How to add data in array in react state in hooks](https://gist.github.com/djD-REK/2eb6b333157b304c161f649855880726#file-save-to-react-state-using-spread-operator-and-wrapper-function-js)
 - [How To Setup Continuous Integration (CI) With React, CircleCI, and GitHub](https://medium.com/better-programming/how-to-setup-continuous-integration-ci-with-react-circleci-and-github-e0efd5040b03)
 - [Django React Chat APP](https://www.youtube.com/playlist?list=PLLRM7ROnmA9EnQmnfTgUzCfzbbnc-oEbZ)

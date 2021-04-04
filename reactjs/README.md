@@ -3,25 +3,17 @@ title: ReactJS
 tags: ReactJS, React Hooks, React Router Dom, Material UI, Redux
 ---
 
-## Installing using Create React App
+## Creating a new React App
+
+- https://reactjs.org/docs/create-a-new-react-app.html
+- https://create-react-app.dev/docs/getting-started
+- https://github.com/iansu/cra-minimal-templates
 
 ```sh
-# Installing Create React App globally
-npm i -g create-react-app
-
-# Creating the React App
-create-react-app APP_NAME
-
-# to use npm package manager
-create-react-app APP_NAME --use-npm
-
 # Creating app without installing create-react-app
 npx create-react-app APP_NAME
 
 npx create-react-app . --use-npm --template typescript
-
-npm start
-npm run build
 ```
 
 ## Some Popular React Projects
