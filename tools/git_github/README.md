@@ -137,6 +137,13 @@ git commit --allow-empty -m "Empty Commit"
 
 # to rollback pull
 git reset --hard
+
+
+# to add the file to stage area
+git add app.js
+
+# to remove the file from stage area
+git reset HEAD app.js
 ```
 
 ## Configuring git
@@ -207,6 +214,9 @@ git merge --squash BRANCH_NAME
 - git rebase --continue
 - git log --oneline --graph
 - git push origin feature --force
+
+# to see the changes in the files in commits
+git log -p
 ```
 
 ## Pruning Local Branches
@@ -227,4 +237,27 @@ git branch -a
 git branch -d BRANCH_NAME
 # ==> to list the remote branches
 git branch -r
+```
+
+## Merging Two or More GitHub repos without losing History
+
+- https://saintgimp.org/2013/01/22/merging-two-git-repositories-into-one-repository-without-losing-file-history/
+
+```sh
+git remote add -f old_a REPO_URL
+
+git merge old_a/main --allow-unrelated-histories
+
+git remote remove old_a
+```
+
+## Renaming/Deleting the Branch
+
+```sh
+# when on the same brnach
+git branch -m <newname>
+# When on a different Branch
+git branch -m <oldname> <newname>
+# Deleting remote branch
+git push origin --delete feature/login
 ```

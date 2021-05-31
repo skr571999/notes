@@ -551,271 +551,16 @@ let rl = readline.createInterface({
 
 ## NodeJS MongoDB
 
-### Basic Connection
-
-```js
-const MongoClient = require("mongodb").MongoClient;
-const dbURL1 = "mongodb://localhost:27017";
-const dbURL2 = "mongodb://localhost:27017/test";
-
-// MongoClient.connect(dbURL1, { useNewUrlParser: true }, (err, client) => {
-//   if (err) throw err;
-
-//   console.log("Successfully connected to Client");
-//   client.close();
-// });
-
-// NOTES:
-// - If the db is specified in the url then no need to use the client.db('DB_NAME)
-// then we can directly access db using the passed parameter in the callback
-
-// ### Creating Collection
-let db = client.db(dbNAME);
-
-db.createCollection("students", () => {
-  console.log("Collection created!");
-});
-
-// it will not show in DB because it is empty
-client
-  .db()
-  .collections()
-  .then((result) => {
-    console.log(result.length);
-    // console.log(result[0].namespace)
-    client.close();
-  });
-
-// ### Dropping the Collection
-let db = client.db(dbNAME);
-
-// Method - 1
-db.collection("students").drop(() => {
-  console.log("Collection Dropped");
-});
-
-// Method - 2
-db.dropCollection("students", () => {
-  console.log("Collection Dropped");
-});
-
-// ### Inserting into the Database
-let collection = client.db(dbNAME).collection("students");
-
-// Method - 1
-collection.insertOne({ name: "Sachin Kumar", branch: "CSE" }, (err, res) => {
-  if (err) throw err;
-  console.log(res.ops);
-});
-
-// Method - 2
-let documents = [
-  { name: "Mradul Kumar", branch: "ME" },
-  { name: "Rajneesh Kumar", branch: "EC" },
-];
-
-collection.insertMany(documents, (err, res) => {
-  if (err) throw err;
-  console.log(res.ops);
-});
-
-// ### Reading the data from the Database
-let collection = client.db(dbNAME).collection("students");
-
-collection.find({}).toArray((err, res) => {
-  if (err) throw err;
-  console.log(res);
-});
-
-collection.findOne({}, (err, res) => {
-  if (err) throw err;
-  console.log(res);
-});
-
-let query = { name: "Rajput" };
-
-collection.find(query).toArray((err, res) => {
-  if (err) throw err;
-  console.log(res);
-  console.log(res.length);
-});
-
-// ### Example
-const MongoClient = require("mongodb").MongoClient;
-const dbURL = "mongodb://localhost:27017/sunday";
-
-MongoClient.connect(
-  dbURL,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  (err, client) => {
-    console.log(client.isConnected());
-  }
-);
-
-MongoClient.connect(dbURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then((client) => {
-    console.dir(client, { depth: 0 });
-
-    let collection = client.db().collection("student");
-
-    // INSERT
-    collection.insertOne({ name: "Jishant", course: "Python" }).then((res) => {
-      console.dir(res, { depth: 0 });
-    });
-
-    // READ
-    collection
-      .find()
-      .toArray()
-      .then((res) => {
-        console.log(res);
-      });
-
-    // UPDATE
-    collection
-      .updateOne(
-        { name: "Jishant" },
-        {
-          $set: {
-            name: "Jishant Tyagi",
-          },
-        }
-      )
-      .then((res) => {
-        console.dir(res, { depth: 0 });
-      })
-      .catch((err) => {
-        console.log("Erro Occured in Update", err.name);
-      });
-
-    // DELETE
-    collection
-      .deleteOne({ name: "Jishant" })
-      .then((res) => {
-        console.dir(res, { depth: 0 });
-      })
-      .catch((err) => {
-        console.log("Error Occured During Deletion ", err.name);
-      });
-
-    collection
-      .countDocuments((err, res) => {
-        console.log(res);
-      })
-      .then((res) => {
-        console.log(res);
-      });
-
-    console.log(client.db().databaseName);
-    console.log(collection.collectionName);
-
-    client
-      .db()
-      .collections()
-      .then((res) => {
-        for (let i of res) {
-          console.log(i.collectionName);
-        }
-      });
-
-    client.close();
-  })
-  .catch((err) => {
-    console.log("Error Occurred During Connection", err.name);
-  });
-```
-
-## NodeJS Mongoose
-
-```js
-// ### Multiple Type Property
-const pendingMenuSchema = new mongoose.Schema({
-  category: {
-    // type: {},
-    // OR
-    type: mongoose.Schema.Types.Mixed,
-  },
-});
-
-const PendingMenu = mongoose.model("pendingmenu", pendingMenuSchema);
-
-const pm1 = new PendingMenu({
-  category: "Apple",
-});
-
-const pm2 = new PendingMenu({
-  category: mongoose.Types.ObjectId(),
-});
-
-// ### Aggregation Example
-const mongoose = require("mongoose");
-
-// Database Connection
-mongoose
-  .connect("mongodb://localhost:27017/test1", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("DB Connected");
-  });
-
-const userSchema = mongoose.Schema({
-  name: String,
-  review: [{ course: String, rating: Number }],
-});
-// console.log(userSchema.path("name"))
-
-const User = mongoose.model("User", userSchema);
-
-let u1 = new User({
-  name: "User 4",
-  review: [
-    { course: "Course 1", rating: 6 },
-    { course: "Course 2", rating: 7 },
-    { course: "Course 3", rating: 6 },
-  ],
-});
-
-u1.save().then((result) => {
-  console.log(result);
-});
-
-User.countDocuments().then((result) => {
-  console.log(result);
-});
-
-User.distinct("review.course").then((result) => {
-  console.log(result);
-});
-
-User.aggregate([
-  { $match: { name: "User 1" } },
-  { $group: { _id: "$_id", total: { $sum: "$rewiew.0.rating" } } },
-])
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-```
+- https://github.com/skrtry/nodejs_mongodb_samples
+- https://mongoosejs.com/
 
 ## NodeJS MySQL
 
-- Requirement
-  - MySQL
-  - NodeJS
-  - MySQL NodeJS Connector
-- Resources
-  - [https://www.npmjs.com/package/mysql](https://www.npmjs.com/package/mysql)
-  - [https://www.w3schools.com/nodejs/nodejs_mysql.asp](https://www.w3schools.com/nodejs/nodejs_mysql.asp)
+- https://github.com/skrtry/nodejs_sql_samples
+- https://sequelize.org/master/manual/getting-started.html
+- https://www.npmjs.com/package/mysql2
+- https://www.npmjs.com/package/mysql
+- https://www.w3schools.com/nodejs/nodejs_mysql.asp
 
 ### Example
 
@@ -892,6 +637,18 @@ npm outdated -g <package_name>
 - ~ - for most recent minor version
 - `npm i loadash@4.17.4` - to install the specific version
 - `npm i loadash@^4.0.0` - to install the latest 4.x.x version
+
+### To update all the dependencies to the latest version
+
+- https://stackoverflow.com/questions/16073603/how-to-update-each-dependency-in-package-json-to-the-latest-version
+
+```sh
+npm i -g npm-check-updates
+
+ncu -u
+
+npm install
+```
 
 ## ExpressJS Introduction
 

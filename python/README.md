@@ -3229,6 +3229,17 @@ a = 12
 assert a <=1, 'This is not valid'
 ```
 
+### Python Snippet for Debugger
+
+```py
+
+import pdb
+
+pdb.set_trace()
+
+# quit
+```
+
 ### Doc test
 
 - doctest search for the test in doc string written as python interactive session

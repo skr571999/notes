@@ -2761,6 +2761,12 @@ console.log(Buffer.from("Hello World").toString('base64'));
 // SGVsbG8gV29ybGQ=
 console.log(Buffer.from("SGVsbG8gV29ybGQ=", 'base64').toString('ascii'))
 // Hello World
+
+
+// Measuring Performance
+const start = performance.now();
+const finish = performance.now();
+console.log(`Execution time: ${finish - start} milliseconds`);
 ```
 
 ## References
