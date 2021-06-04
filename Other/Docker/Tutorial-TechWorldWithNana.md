@@ -1,6 +1,6 @@
 # Docker Tutorial for Beginners [FULL COURSE in 3 Hours]
 
-- https://youtu.be/3c-iBn73dDE
+- https://www.youtube.com/watch?v=3c-iBn73dDE
 
 
 ## What is Docker?

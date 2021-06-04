@@ -1,5 +1,5 @@
 ---
-title: Try
+title: TypeScript
 ---
 
 ## TypeScript
