@@ -12,6 +12,8 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 ### TypeScript Custom Decorators
 
+- https://blog.logrocket.com/a-practical-guide-to-typescript-decorators/
+
 ```ts
 const authIfRequired = (
   target: any,

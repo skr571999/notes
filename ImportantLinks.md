@@ -1,4 +1,6 @@
-# Important Links
+---
+title: Important Links
+---
 
 ## NodeJS
 
@@ -20,6 +22,12 @@
 - [Realtime Chat With Users & Rooms - Socket.io, Node & Express](https://www.youtube.com/watch?v=jD7FnbI76Hg&list=WL&index=276)
 - [When and when not to use Node.js - Node.js Basics [06] - Java Brains](https://www.youtube.com/watch?v=UCd6LorxpkY&list=WL&index=278)
 - [Build A Node.js API Authentication With JWT Tutorial](https://www.youtube.com/watch?v=2jqok-WgelI&list=WL&index=273)
+- Public and Private Key Encryption
+  - https://www.sohamkamani.com/nodejs/rsa-encryption
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-20-04
+- https://solidgeargroup.com/refresh-token-autenticacion-jwt-implementacion-nodejs/
+- https://codeforgeek.com/refresh-token-jwt-nodejs-authentication/
+- https://github.com/codeforgeek/node-refresh-token/blob/master/app.js
 
 ## Random
 
@@ -57,14 +65,23 @@
 - https://auth0.com/blog/node-js-and-typescript-tutorial-secure-an-express-api/
 - https://www.toptal.com/express-js/nodejs-typescript-rest-api-pt-2
 - https://blog.logrocket.com/node-js-express-js-mysql-rest-api-example/
+- Package to generate readme
+  - https://github.com/kefranabg/readme-md-generator
 
-## Django
+## Python/Django
 
 - [Django Dynamic Models Django Wiki](https://code.djangoproject.com/wiki/DynamicModels)
 - [Django Dynamic Model Guide](https://dynamic-models.readthedocs.io/en/latest/pdfindex.html)
 - [MVP Landing - Launch your project with Django, Python & Bootstrap](https://www.youtube.com/watch?v=bY-zab0JWWk&list=WL&index=154)
 - [Django React Setup - Best Project Structure Practice | 2020](https://www.youtube.com/watch?v=bCalm1Tcz4k&list=WL&index=267)
 - [Idea to Product | Real Django Website | Episode #1](https://www.youtube.com/watch?v=cjzLcG1j3QU&list=WL&index=258)
+- Protecting Python Source Code
+  - https://wiki.python.org/moin/Asking%20for%20Help/How%20do%20you%20protect%20Python%20source%20code%3F
+  - http://www.pyinstaller.org/
+  - https://github.com/pyinstaller/pyinstaller/wiki/Recipe-Executable-From-Django
+- Python(Django APIs) Testing References
+  - https://www.youtube.com/watch?v=17KdirMbmHY&ab_channel=CryceTruly
+  - https://www.youtube.com/watch?v=5E_xLmQXOZg&ab_channel=CodingEntrepreneurs
 
 ## ElectronJS
 
@@ -72,6 +89,10 @@
 - [CrossPlatform Desktop APPs](https://livebook.manning.com/book/cross-platform-desktop-applications/part-1/)
 - [Cross Platform ElectronApp](https://shapeshed.com/writing-cross-platform-node/)
 - [Storing Data in ElectronJS APPs](https://medium.com/cameron-nokes/how-to-store-user-data-in-electron-3ba6bf66bc1e)
+- https://www.freecodecamp.org/news/lessons-learned-from-electronjs/
+- https://www.electronjs.org/docs
+- https://github.com/electron-react-boilerplate/electron-react-boilerplate
+- Electron App to Look : https://github.com/RocketChat/Rocket.Chat.Electron
 
 ## Git/GitHub
 
@@ -83,6 +104,8 @@
 - [Impressive Github Readme Profile Tutorial | Must have for developers](https://www.youtube.com/watch?v=dkE4mVhwMB4&list=WL&index=176)
 - [How To Create A GitHub Profile README (NEW) // Github Tutorial: Add A New Profile! Get A Job!](https://www.youtube.com/watch?v=Y1z7_GfEPiE&list=WL&index=180)
 - [Creating a default community health file Github](https://docs.github.com/en/github/building-a-strong-community/creating-a-default-community-health-file)
+- Git Branching Guide
+  - https://nvie.com/posts/a-successful-git-branching-model/
 
 ## Web
 
@@ -128,6 +151,11 @@
 - [33 JavaScript Concept](https://github.com/leonardomso/33-js-concepts)
 - [Birth and the Death of JavaScript](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript)
 - [Namaste 🙏 JavaScript - Akshay Saini](https://www.youtube.com/watch?v=pN6jk0uUrD8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP)
+- https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+- Quirks Mode of Web browsers
+  - https://en.wikipedia.org/wiki/Quirks_mode
+  - https://www.freecodecamp.org/news/web-developer-interview-q-a-quirks-mode-almost-standards-mode-and-full-standards-mode-explained-847edba3dc48/
+- https://github.com/hail2u/html-best-practices
 
 ## ReactJS
 
@@ -171,3 +199,8 @@
 - [Firebase with React Hooks](https://github.com/briandesousa/firebase-with-react-hooks)
 - [Todo Application using Firebase and react | FreeCodeCamp](https://www.freecodecamp.org/news/how-to-build-a-todo-application-using-reactjs-and-firebase/)
 - [ReactJS Shop App](https://github.com/jaewonhimnae/react-shop-app)
+- React FireBase
+  - https://github.com/briandesousa/firebase-with-react-hooks
+- https://scrimba.com/learn/learnreact
+- REACT - https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d
+- https://blog.jsdisco.dev/100daysofmern-day-32

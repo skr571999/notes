@@ -154,3 +154,45 @@ git commit -m "COMMIT MESSAGE"
 
 base = "website/"
 ```
+
+## MySQL Installation Terminal
+
+```sh
+sudo apt update
+sudo apt install mysql-server
+sudo service mysql start
+sudo mysql_secure_installation
+sudo mysql -u root -p
+  > Apple@123
+
+sudo service mysql start
+sudo apt show mysql-server
+```
+
+- To see the password validation configurations
+
+  - https://stackoverflow.com/questions/43094726/your-password-does-not-satisfy-the-current-policy-requirements
+  - SHOW VARIABLES LIKE 'validate_password%';
+
+- To alter user password
+  - https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
+  - ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Apple@123';
+  - flush privileges;
+
+## VSCode Code Snippet
+
+```json
+{
+  "editor.formatOnSave": true,
+  "css.remoteStyleSheets": [
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  ]
+}
+```
+
+## Text Editors in bash
+
+- nano - to write something to file
+- cat - to view small file
+- less - to view large file
+- head / tail - to view some peace of text

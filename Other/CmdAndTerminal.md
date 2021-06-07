@@ -77,3 +77,7 @@ title: CMD and Terminal
 
 # whereis(bash) --> where(cmd)
 ```
+
+- lscpu --> to get cpu information
+- free -m --> to get ram information
+- to delete folder in terminal `rm -r Folder`

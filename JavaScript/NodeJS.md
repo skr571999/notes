@@ -1198,6 +1198,30 @@ app.get("/", (req, res) => {
 
 ### Using Passport for Authentication and Authorization
 
+### JWT - JSON Web Token
+
+- RFC 7519 - Standard that define how JWT should be structured
+- JWT used for Authorization
+- Authorization Strategies
+  - Session Token
+  - JSON web Token
+- HTTP - States less protocol -
+
+### Parts of the JWT
+
+1. Header
+2. Payload -
+3. Signature
+
+- Cryptography
+  1. Symmetric Key Cryptography
+  - Both Sender and Receive should have same key
+  2. Asymmetric Key Cryptography
+  - Public and Private Key
+- Encryption
+- Decryption
+- Hashing
+
 ## Data validation using Joi
 
 - Using Joi
@@ -1388,6 +1412,19 @@ process.env.VERIABLE_NAME;
     - 300+ - means the request is redirected to another URL
     - 400+ - an error is generated due to Client
     - 500+ - an error is generated due to server
+
+### Important HTTP Status Codes
+
+- References - https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+- 200 : OK
+- 201 : Created
+- 400 : Bad Request
+- 401 : Unauthorized -
+- 403 : Forbidden - Does not have access right to this resource
+- 404 : Not Found
+- 500 : Internal Server Error
+- 503 : Service Unavailable
 
 - Testing Tools for Routes
   - CURL
