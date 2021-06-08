@@ -123,3 +123,47 @@ title: Introduction
   - Test
   - Deployment
 - **Phase - III** - Maintenance
+
+## Learning Back-End
+
+- Language
+  - Module/Package System
+  - Built-in Module (os, file, http, request, url, path)
+  - Package Manager(npm, pip, yarn)
+  - Database Communication(MongoDb, MySQL)
+- Template Engine
+- Architecture(MVC or MVT)
+- Saving Data to Database
+- Data Validation
+- File Upload
+- Authentication
+- Making REST API
+- using External Services
+  - Sending Mail/SMS
+- Deployment
+
+### How to Become a Good Backend Engineer (Fundamentals)
+
+- https://youtu.be/V3ZPPPKEipA
+
+1. Communication Protocols
+
+- TCP, UDP
+- Bi direction communication - Web socket
+
+2. Web Servers
+3. Data Base Engineering
+
+- ACID Properties
+- MYSQL
+- NoSQL
+
+4. Proxies
+
+- Reverse proxies
+
+5. Caching
+6. Messing Systems
+7. API Web Frameworks
+8. Message Format
+9. Security

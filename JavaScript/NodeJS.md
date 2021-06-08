@@ -1404,6 +1404,16 @@ process.env.VERIABLE_NAME;
   - Put - Update
   - DELETE - Delete
 
+- HTTP Methods
+
+  - https://developer.mozilla.org/en-US/docs/Web/HTTP
+
+  - GET - used for retrieving data
+  - POST - to submit an entity of the specified resource
+  - PUT - used to replaces all current representation of the resource with request payload
+  - DELETE - used to delete specified resource
+  - PATCH - used to apply partial modifications to a resource
+
 - HTTP Status Codes
 
   - Tell the Status of the Response to the client
