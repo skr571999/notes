@@ -124,7 +124,7 @@ title: Introduction
   - Deployment
 - **Phase - III** - Maintenance
 
-## Learning Back-End
+## Learning Backend
 
 - Language
   - Module/Package System
@@ -141,6 +141,39 @@ title: Introduction
 - using External Services
   - Sending Mail/SMS
 - Deployment
+
+### Important Topics
+
+- Django cache
+  - Memory Cache - fast, use RAM
+  - Database Cache -
+  - File System Cache
+- Cron Job
+- Joins
+- Cookies and Session
+- Access token/Refresh token - JWT Token
+- MVC/MVT
+- ORM
+- POST vs GET
+- Authentication
+- Authorization
+- Normalization
+- Ajax
+- APIs
+- OOPs
+- Primary Key/Foreign Key
+- Views in SQL
+- Indexes in SQL
+- Socket
+- Serialization - Converting model instance to Python data type
+- Deserialization
+- Signals
+- CSRF -
+- ACID Properties of Database
+  - Atomicity
+  - Consistency
+  - Isolation
+  - Durability
 
 ### How to Become a Good Backend Engineer (Fundamentals)
 
@@ -167,3 +200,24 @@ title: Introduction
 7. API Web Frameworks
 8. Message Format
 9. Security
+
+## What is the use of the software?
+
+- Automate the tasks
+- Share information - Videos, Blogs, Books
+- Entertainment - Games, Movies/Shows, Songs
+- Communication
+
+## Software Engineering Path
+
+- Software Engineer
+- Software Manager
+- Software Architect
+
+## Software Employment Types
+
+- Full time Job
+- Part time
+- Contract Based
+- Freelancing
+- Hourly Based

@@ -12,7 +12,9 @@ title: Django
 
 ## Todo
 
-- Django Projects - https://www.geeksforgeeks.org/python-django-news-app/ - https://www.geeksforgeeks.org/weather-app-using-django-python/
+- Django Projects
+  - https://www.geeksforgeeks.org/python-django-news-app/
+  - https://www.geeksforgeeks.org/weather-app-using-django-python/
 - https://github.com/codingforentrepreneurs/eCommerce
 - Book Django for Beginner (2.1)
 - docs.djangoproject.com ==> Project
@@ -676,3 +678,32 @@ json_data = serializers.serialize('json', data)
 ## References
 
 - https://www.webforefront.com/django/
+
+## Adding CORS
+
+- https://pypi.org/project/django-cors-headers/
+
+```sh
+pip install django-cors-headers
+```
+
+```py
+INSTALLED_APPS = [
+    # ...
+    'corsheaders',
+    # ...
+]
+```
+
+```py
+MIDDLEWARE = [
+    # ...
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    # ...
+]
+```
+
+```py
+CORS_ORIGIN_ALLOW_ALL = True
+```

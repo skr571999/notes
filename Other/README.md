@@ -1,5 +1,5 @@
 ---
-title: Tools
+title: Other
 ---
 
 ## Setting up environment Variable in a Postman Collection
@@ -196,3 +196,21 @@ sudo apt show mysql-server
 - cat - to view small file
 - less - to view large file
 - head / tail - to view some peace of text
+
+## Sprint Plan
+
+- Backlogs
+- ToDo Sprint 01
+- ToDo Sprint 02
+- InDesign/Research
+- Development
+- Blocked
+- Testing
+- Review
+- Released
+
+### Task Status
+
+- Not Started
+- In Progress
+- Completed
