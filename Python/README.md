@@ -34,10 +34,7 @@ title: Python
 - https://www.python-course.eu/python3_course.php
 - https://www.thepythoncode.com/
 - Python String Formatting - https://pyformat.info/
-
-## How to setup Python Virtual Environment
-
-- [https://packaging.python.org/tutorials/installing-packages/#id16](https://packaging.python.org/tutorials/installing-packages/#id16)
+- https://packaging.python.org/overview/
 
 ## Python Introduction
 
@@ -54,6 +51,9 @@ title: Python
 - AI, ML
 - Web Scrapping
 - IOT
+- Scripting,
+- Cpython, Pypy, Anaconda
+- Extensible / Embedded
 
 ### Features of Python
 
@@ -87,49 +87,41 @@ title: Python
 
 ### Basic Python Programs
 
-- Printing something to the Screen
-
 ```py
+# - Printing something to the Screen
 print("Hello World")
-```
 
-- Variable Declaration
-
-```py
+# - Variable Declaration
 name = "Ram Kumar"
-```
 
-- Taking user Input
-
-```py
+# - Taking user Input
 name = input("Enter your name : ")
 print("Your name is : ", name)
-```
 
-- If-else Conditional Statement
-
-```py
+# - If-else Conditional Statement
 x = 12
 y = 3
 if x > y:
   print("x is greater than y")
 else:
   print("y is greater than x")
+
+# - Arithmetic Operator
 ```
-
-- Arithmetic Operator
-
----
 
 ### Questions
 
 - Write a program to perform Arithmetic Operations on two numbers taking from User?
 - Take two numbers from users and find the greater number out of them?
 
-<!--
-- Scripting,
-- Cpython, Pypy, Anaconda
-- Extensible / Embedded
+### Programming Syntax
+
+- Scripting
+- Functional
+- Object oriented
+- Modular
+
+### Other
 
 - Help command
   - help()
@@ -139,22 +131,15 @@ else:
   - help('LISTS')
   - help('FORMATTING')
   - help('OPERATORS')
-### Programming Syntax
+- Interactive Mode, Scripting Mode
+- REPL(Read Evaluate Print Loop)
+- Python launcher for Windows Usage
 
-- Scripting
-- Functional
-- Object oriented
-- Modular
--->
-<!-- - Interactive Mode, Scripting Mode -->
-<!-- - REPL(Read Evaluate Print Loop) -->
-<!-- - Python launcher for Windows Usage
-
-```py
-# py       # run the latest installed python shell
-# py -3    # run the latest 3.x version shell
-# py -3.8  # run the 3.8 version shell
-``` -->
+```sh
+py       # run the latest installed python shell
+py -3    # run the latest 3.x version shell
+py -3.8  # run the 3.8 version shell
+```
 
 ### Common Terminology
 
@@ -255,7 +240,6 @@ print("2" + True)
   - Escaping Characters
   - String Methods
 
-<!--
 ```py
 # /////////////// Syntax
 a = 'Hello world'
@@ -332,7 +316,6 @@ name = 'Guido'
 n = 37
 print(s.format_map(vars()))
 ```
--->
 
 ```py
 # //////////// String Methods
@@ -359,8 +342,14 @@ print(s.format_map(vars()))
   - Methods
 - tuple
 - range
+- Sequence - a particular order in which related things follow each other
+- Collection - a group of items
+  - range - sequence of numbers
+  - list - sequence of mutable values
+  - tuple - sequence of immutable values
+  - dict - collection of key/value pair
+  - set - collection of unique values
 
-<!--
 ```py
 # ////////// Syntax
 a = [1,2,3,4,5]
@@ -384,7 +373,6 @@ a.sort(reverse=True)
 a = ["a", "B", "c", "A", "b", "C"]
 a.sort(key=str.lower)
 ```
--->
 
 ### Operators
 
@@ -394,7 +382,7 @@ a.sort(key=str.lower)
 
 ### For looping Statement
 
-<!-- Looping statemnets are used to execute statements multiple times -->
+- Looping statements are used to execute statements multiple times
 
 ```py
 for i in range(5):
@@ -426,7 +414,6 @@ print(type(c))
 # set
 ```
 
-<!--
 ```py
 # Complex are of two type
 # 1. complex(x)==> x+0j
@@ -456,7 +443,6 @@ print(int('0x12a',16))
 print(int(123.43))
 print(int('10.5')) # Error
 ```
--->
 
 ### Extra Material
 
@@ -468,16 +454,6 @@ print(int('10.5')) # Error
 import sys
 sys.getsizeof(12)
 ```
-
-<!--
-- Sequence - a particular order in which related things follow each other
-- Collection - a group of items
-  - range - sequence of numbers
-  - list - sequence of mutable values
-  - tuple - sequence of immutable values
-  - dict - collection of key/value pair
-  - set - collection of unique values
--->
 
 ## Python Flow Control Statements
 
@@ -577,9 +553,9 @@ print(type(None))
     - Anonymous(lambda) function
     - Higher order
     - Decorator
-      <!-- - Function Annotations - are the meta information about the types used by the function parameter and return value -->
-      <!-- - Documentation String -->
-      <!-- - Scope -->
+    - Function Annotations - are the meta information about the types used by the function parameter and return value
+  - Documentation String
+  - Scope
 - Variables Types
   - Global Variables
     - These are the variables that are defined in the global scope
@@ -808,7 +784,7 @@ print(add_even_list(my_a))
 print(add_odd_list(my_a))
 ```
 
-<!-- - Inner Function
+- Inner Function
   - Non local variables
   - Closures
 
@@ -829,6 +805,7 @@ print(outer())
 print(outer()())  # calling the inner function
 a = outer()
 print(a())
+```
 
 ## NonLocal Variables
 
@@ -856,11 +833,13 @@ def outer():
 ```
 
 ### Closures
-# - This is a technique by which we can attach the variable in the enclosing scope(like of the function) visible in the outer scope even if the outer function has been removed from the current namespace.
-# - Conditions for the closures
-#   - We must have a nested function (function inside a function).
-#   - The enclosing function must return the nested function.
 
+- This is a technique by which we can attach the variable in the enclosing scope(like of the function) visible in the outer scope even if the outer function has been removed from the current namespace.
+- Conditions for the closures
+  - We must have a nested function (function inside a function).
+  - The enclosing function must return the nested function.
+
+```py
 # function returning the function
 def f3(x):
   def f4():
@@ -881,9 +860,8 @@ a = f4(12)
 del f4
 print(a(2))
 ```
- -->
 
-<!-- - DOC String in the function
+- DOC String in the function
 
 ```py
 def add(*x):
@@ -900,7 +878,7 @@ print(add.__doc__)
 # DOC function string in the main scope
 """This is the main scope"""
 print(__doc__)
-``` -->
+```
 
 ### Exception Handling Statements
 
@@ -1241,7 +1219,6 @@ while s:
 print(text)
 ```
 
-<!--
 ```py
 ### Transfer Statements
 # - break, continue, pass
@@ -1350,7 +1327,6 @@ c = 14
 d = a if a > b > c else b if b > c else c
 print(d)
 ```
--->
 
 ```py
 # Builtin functions
@@ -1532,7 +1508,6 @@ from functools import reduce
 print(reduce(lambda x, y: x * y, range(1, 6)))
 ```
 
-<!--
 ```py
 # global and local variable defined with the same name
 # case 1
@@ -1553,7 +1528,6 @@ def f1(a, b, *x):
   print(a, b, x)
 f1(12, "ram", "hello", "ram", 123)
 ```
--->
 
 ## Python Modules and Packages
 
@@ -1649,7 +1623,7 @@ if __name__ == "__main__":
     main()
 ```
 
-<!-- - System path append
+- System path append
 
 ```py
 import sys
@@ -1661,7 +1635,6 @@ import sys
 
   - dir() ==> without the argument will return the members of the current module
   - dir(moduleName) ==> will return the members of the argument passed module
-  -->
 
 - Module Reloading
 
@@ -2147,7 +2120,7 @@ with open('test.txt','r') as f:
 
 - **Need of Closing file** - Improperly closed file can cause loss of the Data or corrupted. Closing file manually may also work, so we use `with` statement which automatically close the file if our work is done with that file.
 
-<!-- ```py
+```py
 # ////////// Writing to file using print
 fs = open('hello.txt', 'w')
 
@@ -2160,7 +2133,7 @@ f = open('test.txt', 'w+') # place the cursor at start but delete all the conten
 f = open('test.txt', 'r+') #  place the cursor at start
 # f = open('test.txt', 'rb+') # binary mode is used for reading the image sand the videos
 f = open('test.txt', 'a+') # place the cursor at the end
-``` -->
+```
 
 ## Python OOPs
 
@@ -2189,14 +2162,14 @@ class Car:
 Car()
 ```
 
-<!-- ### Methods Usage
+### Methods Usage
 
 | If we use                   | we should use    |
 | --------------------------- | ---------------- |
 | Instance Variable           | Instance Methods |
 | static Variable             | Class Methods    |
 | not static & not non-static | Static Method    |
-|                             |                  | -->
+|                             |                  |
 
 ### Constructor
 
@@ -2468,11 +2441,11 @@ b = B()
 
 ```py
 print(list.mro())
+
+print(list.__mro__)
 ```
 
-<!-- print(list.__mro__) -->
-
-<!-- ```py
+```py
 class A:
     __slots__ = ['name']
     course = "Python"
@@ -2494,9 +2467,9 @@ print(A.course)
 
 with A() as a:
     print("Inside")
-``` -->
+```
 
-<!-- ```py
+```py
 # Calling the constructor of the parent class using the super will call the constructors
 #  of the multiple inherited class only once but using the MRO
 class A:
@@ -2514,7 +2487,7 @@ class C(A,B):
         super().__init__()
         print("C")
 C()
-``` -->
+```
 
 ### Encapsulation
 
@@ -2696,9 +2669,9 @@ b = (2,3)
 a +=b
 # a = a + b # error
 print(a)
-```
 
-<!-- class A:
+# Q-
+class A:
         def __b__(self):
                 return B()
         def __int__(self):
@@ -2707,7 +2680,8 @@ print(a)
                 return 12.2
 
 print(int(A()))
-print(float(A())) -->
+print(float(A()))
+```
 
 ## Python OOPs Part - 3
 
@@ -2753,7 +2727,7 @@ t1.start()
 f2()
 ```
 
-<!-- - Using method inside the Thread class object
+- Using method inside the Thread class object
 
 ```py
 import threading as t
@@ -2771,13 +2745,14 @@ ob1 = c1()
 t1 = t.Thread(target=ob1.m1)
 t1.start()
 f3()
-``` -->
+```
 
 ## Python Multi-threading
 
-<!-- - **Multitasking** - doing several tasks simultaneously.
+- **Multitasking** - doing several tasks simultaneously.
 - Types of multitasking
-  - **Process based** (os level) - Executing several task simultaneously where each task is in a separate independent process -->
+
+  - **Process based** (os level) - Executing several task simultaneously where each task is in a separate independent process
 
 - **Multithreading** - Executing several task simultaneously where each task is a separate independent part of the same program and each independent part is called thread.
   <!-- - Thread scheduler allocate the cpu to the threads -->
@@ -2893,7 +2868,7 @@ print(t.current_thread().isDaemon())
 print(t.current_thread().daemon)
 ```
 
-<!-- ### Time Difference
+### Time Difference
 
 ```py
 import time
@@ -2922,7 +2897,7 @@ f1()
 f2()
 end_time = time.time()
 print("T1 = ", end_time - start_time)
-``` -->
+```
 
 ## Builtin Modules
 
@@ -3014,70 +2989,69 @@ print(datetime.date.today().day)
 print(datetime.date.today().year)
 ```
 
-<!--
 - datetime : module
-	- date
-	  class date(year, month, day)
-		- year
-		- month
-		- day
-		- max
-		- min
-		- weekday()
-		- today()
-		- replace()
-		- isocalendar()
-			- Return a 3-tuple containing ISO year, week number, and weekday
-		- date.isoformat()
-			- string in ISO 8601 format, YYYY-MM-DD.
-		- date.isoweekday()
-			- Return the day of the week represented by the date.
-    			- Monday == 1 ... Sunday == 7
-	- time
-	   class time(hour, minute, second, microsecond) * all arguments are optional
-		    hour : 0-23
-	 	    minute : 0-59
-		    second : 0-59
-		     microsecond : 0..999999
-		- hour
-		- isoformat()
-			Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
-		- min
-		- max
-		- microsecond
-		- minute
-		- replace()
-		- second
-	- datetime
-	  class(year, month, day, *hour, *minute, *second, *microsecond)
-		- date()
-		- day
-		- hour
-		- isocalendar()
-		- isoformat()
-		- isoweekday()
-		- max
-		- min
-		- microsecond
-		- minute
-		- month
-		- replace
-		- second
-		- now()
-		- time()
-		- today()
-		- now() vs today()
-		- weekday()
-		- year
-		- strftime(format)
 
-	- formats
-	%a	Weekday, short version	Wed
-	%A	Weekday, full version	Wednesday
-	%w	Weekday as a number 0-6, 0 is Sunday	3
-	%d	Day of month 01-31	31
-	https://www.w3schools.com/python/python_datetime.asp
--->
+  - date
+    class date(year, month, day)
+    - year
+    - month
+    - day
+    - max
+    - min
+    - weekday()
+    - today()
+    - replace()
+    - isocalendar()
+      - Return a 3-tuple containing ISO year, week number, and weekday
+    - date.isoformat()
+      - string in ISO 8601 format, YYYY-MM-DD.
+    - date.isoweekday()
+      - Return the day of the week represented by the date. - Monday == 1 ... Sunday == 7
+  - time
+    class time(hour, minute, second, microsecond) \* all arguments are optional
+    hour : 0-23
+    minute : 0-59
+    second : 0-59
+    microsecond : 0..999999
+    - hour
+    - isoformat()
+      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+hh:mm].
+    - min
+    - max
+    - microsecond
+    - minute
+    - replace()
+    - second
+  - datetime
+    class(year, month, day, *hour, *minute, *second, *microsecond)
+
+    - date()
+    - day
+    - hour
+    - isocalendar()
+    - isoformat()
+    - isoweekday()
+    - max
+    - min
+    - microsecond
+    - minute
+    - month
+    - replace
+    - second
+    - now()
+    - time()
+    - today()
+    - now() vs today()
+    - weekday()
+    - year
+    - strftime(format)
+
+  - formats
+    %a Weekday, short version Wed
+    %A Weekday, full version Wednesday
+    %w Weekday as a number 0-6, 0 is Sunday 3
+    %d Day of month 01-31 31
+    https://www.w3schools.com/python/python_datetime.asp
 
 ### json
 
@@ -3723,9 +3697,7 @@ print(result.group(2))
 - TopLevel()
 - SpinBox()
 - PannedWindow()
-
 - It provides the following top-level windows:
-
   - tk_chooseColor - pops up a dialog box for the user to select a color.
   - tk_chooseDirectory - pops up a dialog box for the user to select a directory.
   - tk_dialog - creates a modal dialog and waits for a response.
@@ -3734,13 +3706,11 @@ print(result.group(2))
   - tk_messageBox - pops up a message window and waits for a user response.
   - tk_popup - posts a popup menu.
   - toplevel - creates and manipulates top level widgets.
-
 - EVENTS
-
-<!-- # NOTE : https://www.geeksforgeeks.org/python-gui-tkinter/
-# https://tkdocs.com/tutorial/index.html
-# https://wiki.python.org/moin/TkInter
-# https://www.python-course.eu/tkinter_layout_management.php -->
+- NOTE : https://www.geeksforgeeks.org/python-gui-tkinter/
+- https://tkdocs.com/tutorial/index.html
+- https://wiki.python.org/moin/TkInter
+- https://www.python-course.eu/tkinter_layout_management.php
 
 ## Async and Await
 
@@ -4003,13 +3973,11 @@ print(sys.getsizeof(a))
 
 ```py
 # and, or, not
-```
 
-<!--
 # after operation the operand is returned
 # if first value is true then it will be returned
 # if first value is false then second value will be returned
--->
+```
 
 ### Assignment Operator
 
@@ -4021,9 +3989,9 @@ print(sys.getsizeof(a))
 # x += 2 ==> x = x + 2
 ```
 
-<!--
-```py
 ### Operator Precedence
+
+```py
 # operator precedence : not ==> and ==> or
 
 a = 30
@@ -4058,7 +4026,6 @@ a, b, c = 12, 13, 14
 print(1 > 2 < 3 >= "hello" < 5)
 print(10 == 12 == 12 == 40)
 ```
--->
 
 ## Others Data types
 
@@ -4786,380 +4753,6 @@ print(cr.rowcount, "row affected")
 con.commit()
 con.close()
 ```
-
-<!--
-- SQL
-
-## Content
-
-- Tables
-- Relationship
-- Joins
-- Subqueries
-- Regular Expression
-
-## Common Terms
-
-- **Database** - is a collection of the data stored in a format that can be easily accessed.
-- **DBMS**(Database management System) - is an software application that is used to manage the data in the database.
-
-- Categories of the DBMS
-
-  - Relational(SQL)
-  - Non Relational(NoSQL)
-
-- **Relational DBMS** - are the databases in which store the data in the format of table that are linked to each other.
-
-  - Popular RDBMS
-    - MySQL
-    - SQL Server
-    - Oracle
-  - SQL(Structured Query Language) is the language we use to work with RDBMS.
-
-- NoSQL Databases
-
-## Installation
-
-## Features
-
-- SQL is not a case sensitive language
-- A sql statement should be ended with the semicolon(`;`)
-- SQL comments
-
-```sql
--- This is a Comment
-```
-
-- Database Operations(CRUD)
-  - Create(Insert)
-  - Read(Sele)
-  - Update
-  - Delete
-
-## Writing Query
-
-- Creating a database
-
-```sql
-CREATE DATABASE company;
-```
-
-- Selecting a database
-
-```sql
-USE company;
-```
-
-- Deleting a database
-
-```sql
-DROP DATABASE company;
-```
-
-- Creating a table
-
-```sql
-CREATE TABLE employe(
-  id INT PRIMARY KEY,
-  name VARCHAR(20) NOT NULL,
-  email VARCHAR(30) NOT NULL UNIQUE
-);
-```
-
-- Seeing the tables of the Database
-
-```sql
-SHOW TABLES;
-```
-
-- Seeing the description of the table
-
-```sql
-DESC employe;
-```
-
----
-
-## SELECT Clause
-
-- Example 1:
-
-```sql
-SELECT *
-FROM employe
-WHERE id > 10
-ORDER BY name
-LIMIT 4;
-```
-
-- performing calculation while retriving the columns of the data
-
-```sql
-SELECT name, sallery + 1000
-FROM employe;
-```
-
-- Doing aliasing of the column name
-
-```sql
-SELECT name, (sallery + 1000) /10 AS "New Sallery"
-FROM employe;
-
-SELECT CustomerName, CONCAT(Address,', ',PostalCode,', ',City,', ',Country) AS Address
-FROM Customers;
-```
-
-- selecting the unique rows of a column
-
-```sql
-SELECT DISTINCT name FROM employe;
-SELECT COUNT(DISTINCT name) FROM employe;
-SELECT COUNT(*) FROM employe;
-```
-
-## WHERE Clause
-
-- Using the operators
-  - Operators: =, >, <, >=, >=, <>, !=
-
-```sql
-SELECT *
-FROM employe
-WHERE sallery > 1000;
-```
-
-- Combining multiple search conditions
-  - AND, OR, NOT
-
-```sql
-SELECT *
-FROM employe
-WHERE id > 10 AND sallery > 2000;
-```
-
-- Operator Precedence
-
-```sql
-()
-* /
-+ -
-
-AND
-OR
-NOT
-
-SELECT * FROM employe WHERE NOT name = "Ram"
-```
-
-- Using Arithmetic expression
-
-```sql
-SELECT *
-FROM employe
-WHERE (sallery + 100) > 10000;
-```
-
-- IN and NOT IN opertor
-
-```sql
-SELECT *
-FROM employe
-WHERE id IN (1,2,3,4);
-
--- Using NOT IN
-SELECT *
-FROM employe
-WHERE id NOT IN (1,2,3,4);
-
-SELECT * FROM Customers
-WHERE Country IN (SELECT Country FROM Suppliers);
-```
-
-- BETWEEN Operator
-
-```sql
-SELECT *
-FROM employe
-WHERE sallery BETWEEN 1000 AND 3000;
-
--- The upper query is similar to
-SELECT *
-FROM employe
-WHERE sallery >= 1000 AND sallery <= 3000;
-```
-
-- LIKE Operator
-  - Search for a Pattern
-  - all the operation are not case sensitive
-
-```sql
-SELECT *
-FROM employe
-WHERE name LIKE '%kumar';
-
--- matching the name with 6 character name and last character 'r'
-SELECT *
-FROM employe
-WHERE name LIKE '_____r';
-```
-
-- IS NULL , IS NOT NULL
-
-```sql
-SELECT CustomerName, ContactName, Address
-FROM Customers
-WHERE Address IS NULL;
-
-SELECT CustomerName, ContactName, Address
-FROM Customers
-WHERE Address IS NOT NULL;
-```
-
-## ORDERED BY
-
-```sql
-SELECT * FROM Customers
-ORDER BY Country;
-
-SELECT * FROM Customers
-ORDER BY Country DESC;
-
-SELECT * FROM Customers
-ORDER BY Country, CustomerName;
-
-SELECT * FROM Customers
-ORDER BY Country ASC, CustomerName DESC;
-```
-
-## INSERT INTO
-
-```sql
-INSERT INTO student(rollno, name) VALUES (101, 'Ram Kumar');
-
-INSERT INTO student VALUES ('Ram Kumar', 101);
-```
-
-## UPDATE
-
-```sql
-UPDATE student SET name = "Mohit Kumar" WHERE rollno = 101;
-UPDATE student SET name = "Mohit Kumar", rollno=103 WHERE rollno = 101;
-```
-
-## DELETE
-
-```sql
-DELETE FROM student WHERE name = "Ram Kumar";
-
-DELETE FROM student;
-```
-
-## LIMIT
-
-```sql
-SELECT * FROM Customers LIMIT 3;
-SELECT * FROM Customers ORDER BY name LIMIT 3;
-```
-
-## FUNCTIONS
-
-```sql
-select max(rollno)  from student;
-
-select min(rollno)  from student;
-
-select count(rollno)  from student;
-
-select AVG(rollno)  from student;
-```
-
-## JOINS
-
-```sql
-SELECT * FROM student INNER JOIN course ON student.courseid = course.id ;
-
-SELECT * FROM student LEFT JOIN course ON student.courseid = course.id ;
-
-SELECT * FROM student RIGHT JOIN course ON student.courseid = course.id ;
-```
-
-MYSQL
-
-user: root
-Pass: root
-user: sachin
-pass: sachin
-
-- MySQL Shell
-- mysqlsh
-- \c root@localhost:3306
-- \sql
-- \source test1.sql
-- mysql bin
-- mysql -u root -p
-- source test.sql
-- exit: ctrl + D
-
-Introduction
-
-- How to use
-- installation
-- Uses of the SQL
-- CRUD
-- create and manage Databases
-- Design and create tables
-- Perform administration tasks
-  § Security
-  § user management
-  § import / Export
-- Data Types
-- SERIAL
-- INT
-- VARCHAR(l)
-- DECIMAL(M,N)
-  § M - total number of Digits
-  § N - digits after decimal
-- BLOB
-- DATE : 'YYYY-MM-DD'
-- TIMESTAMP: 'YYYY-MM-DD HH:MM:SS'
-- Create Table
-- constrains
-- NOT NULL
-- UNIQUE
-- PRIMARY KEY
-- DEFAULT value
-- AUTO_INCREMENT
-- CHECK
-- Inserting the Data to the table
-- Selecting the Data
-- SELECT \* FROM student;
-- SELECT name FROM student;
-- SELECT \* FROM student WHERE id = 2;
-- SELECT \* FROM student WHERE marks > 60;
-- SELECT \* FROM student WHERE course = 'HTML' AND marks > 50;
-- SELECT \* FROM student WHERE course = 'HTML' OR marks > 50;
-- Operators
-- <, >, >=, <=, <>, =, AND, OR
-- Functions
-- AVG()
-- COUNT()
-- MIN()
-- MAX()
-- Updating the Data
-- Deleting the Data
-- Advanced Select Queries
-- SELECT \* FROM student WHERE course IN ("HTML", "CSS", "JS");
-- SELECT \* FROM student WHERE course LIKE '%S%';
-- SELECT \* FROM student LIMIT 2;
-- SELECT \* FROM student ORDER BY marks ASC;
-- SELECT \* FROM student ORDER BY marks DESC;
-- SELECT \* FROM student ORDER BY marks ASC LIMIT 2;
-- SELECT course, count(\*) FROM student GROUP BY course;
-- SELECT course, count(_) FROM student GROUP BY course HAVING COUNT(_) > 3;
-- Foreign Keys
-- Joins
-
--->
 
 ## Random
 

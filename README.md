@@ -1,48 +1,36 @@
 # Software Engineering Notes
 
-## Programming Problem Solving
+## Development Stacks
 
-1. Programming Language
-2. DSA
-3. Coding Question Practice
-   - HackerRank
-   - LeetCode
-   - PepCoding
-
-## Development
-
-- Web
-  - FrontEnd
-  - Backend
+- Website
 - Mobile
+- Backend
 - Desktop
 - ML
-- Extension Development
-  - Chrome
-  - VSCode
-  - GSuite
+- Tools/Extension Development
 
-## Core Subjects
+## College Subjects
 
+- Core Subjects
+  - OS
+  - DBMS
+  - Computer Network
 - Programming Problem Solving
-
   - Principle of Programming Language
   - Data Structures
   - DAA
-
 - Development
-
   - Computer System Security
   - Web Designing
   - Human Computer Interface
   - Software Engineering
   - Web Technology
   - Big Data
-
-- OS
-- DBMS
-- Computer Network
-
-- Discrete Structure and Theory of Logic
-- Theory of Automata and Formal Language
-- Compiler Design
+- Other
+  - Discrete Structure and Theory of Logic
+  - Theory of Automata and Formal Language
+  - Compiler Design
+  - Computer Organization and Architecture
+  - Microprocessor
+  - Electronics Engineering
+  - Math
